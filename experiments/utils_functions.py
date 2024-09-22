@@ -2,6 +2,7 @@ import pickle
 import ujson
 import json
 import sys
+import ast
 import os
 from collections import defaultdict
 
@@ -172,6 +173,53 @@ def process_ontology(
         ontology_entities.append(new_entity)
 
     return ontology_entities, equivalant_cuis
+
+
+def number_hit(df, hit_index_column, hit_range):
+    """
+    Count the number of hits for each hit index.
+    ------
+    df : DataFrame
+    hit_index_column : str (column name of the hit index)
+    hit_range : int (Number of hits to consider = recall@k)
+    """
+    results = {i + 1: 0 for i in range(hit_range)}
+    res = 0
+    for hit_index in range(hit_range):
+        for idx, row in df.iterrows():
+            if row[hit_index_column] == hit_index:
+                res += 1
+        results[hit_index + 1] = res
+    return results
+
+
+def compute_recall(df, hit_index_column, hit_range, total_nb_mentions):
+    """
+    Function to compute the recall of the intial model (biencoder, crossencoder).
+    ------
+    df : DataFrame
+    hit_index_column : str ("biencoder_hit_index" or "crossencoder_hit_index")
+    hit_range : int (Number of hits to consider = recall@k)
+    total_nb_mentions : int (For unnormalized result = true performance)
+    """
+    unnormalized_recall = 0
+    normalized_recall = 0
+    results = []
+
+    for hit_index in range(hit_range):
+        res = 0
+        for idx, row in df.iterrows():
+            if row[hit_index_column] == hit_index:
+                res += 1
+        unnormalized_recall += res / total_nb_mentions
+        normalized_recall += res / len(df)
+
+        # Store the cumulative results for this hit_index
+        results.append((unnormalized_recall, normalized_recall))
+
+    return results
+
+    return results
 
 
 def extract_cui(text):
@@ -394,7 +442,13 @@ def topk_examples(
 
 
 def prompt_gpt(
-    mention, context, candidates, system_instructions, topk_examples, llm="gpt-4o-mini"
+    mention,
+    context,
+    candidates,
+    system_instructions,
+    topk_examples,
+    llm="gpt-4o-mini",
+    reasoning=False,
 ):
     """
     mention : str (name of the mention to be linked)
@@ -403,40 +457,71 @@ def prompt_gpt(
     system_instructions : str (instructions for the LLM)
     topk_examples : str (top k examples of similar contexts)
     model : str (name of the model to use)
+    reasoning : bool (whether to use reasoning or not)
     """
+    prompt_text = f"""
+    Here are a few examples: \n
+    {topk_examples} \n
+    This is the specific mention that needs to be linked to the correct entity: {mention} \n
+    This is the context where the mention appears: \n
+    {context} \n
+    
+    These are the candidate entities to choose from: \n
+    {candidates} \n
+    
+    You MUST PROVIDE an ANSWER among the candidates. \n
+    Return the answer in the following format: CUI
+    For instance : "MESH:D000000" "OMIM:000000" are valid answers. \n
+    Reason step by step but do not add provide any explanations to me ! I only want the final answer.
+    """
+
+    prompt_text_reasoning = f"""
+    Here are a few examples: \n
+    {topk_examples} \n
+
+    This is the specific mention that needs to be linked to the correct entity: {mention} \n
+    
+    This is the context where the mention appears: \n
+    {context} \n
+    
+    These are the candidate entities to choose from: \n
+    {candidates} \n
+    
+    You MUST PROVIDE an ANSWER among the candidates. \n
+    Use step-by-step reasoning. Return the final answer in the following format: CUI
+    For instance : "MESH:D000000" "OMIM:000000" are valid CUI. \n
+    """
+
+    initial_prompt = f""" 
+    Here are a few examples : \n
+    {topk_examples} \n
+
+    This is the specific mention that needs to be linked to the correct entity : {mention} \n
+    
+    This is the context where the mention appears : {context} \n
+    
+    These are the candidate entities to choose from: {candidates} \n
+    You must provide an answer among the candidates. \n
+    
+    Return the answer in the following format : CUI \n
+    
+    Do not add any explanations !
+    """
+    if reasoning:
+        prompt = prompt_text_reasoning
+    else:
+        prompt = prompt_text
+
     completion = openai.chat.completions.create(
         model=llm,
         messages=[
             {"role": "system", "content": system_instructions},
-            {
-                "role": "user",
-                "content": f""" 
-                Here are a few examples : \n
-                {topk_examples} \n
-
-                This is the specific mention that needs to be linked to the correct entity : {mention} \n
-                
-                This is the context where the mention appears : {context} \n
-                
-                These are the candidate entities to choose from: {candidates} \n
-                You must provide an answer among the candidates. \n
-                
-                Return the answer in the following format : CUI \n
-                
-                Do not add any explanations !
-                """,
-            },
+            {"role": "user", "content": prompt},
         ],
         max_tokens=2048,
         temperature=0,
     )
-    # Do not add any explanations !
-    # Do not return anything except the correct CUI from the list of candidates.
-    # If there are multiple possible entities, you can return multiple IDs.
 
-    # Be careful not to mix it with another mention that could appear in the context !
-
-    # This is the specific mention that needs to be linked to the correct entity : {mentions[i]}
     return completion.choices[0].message.content
 
 
@@ -454,6 +539,7 @@ def evaluate_gpt(
     index,
     nlp_model,
     llm="gpt-4o-mini",
+    reasoning=False,
 ):
     """
     Run "prompt" function for each mention in the list of mentions.
@@ -472,6 +558,7 @@ def evaluate_gpt(
     index : faiss index
     nlp_model : sentence-transformers model
     llm : str (name of the model)
+    reasoning : bool (whether to use reasoning or not)
     """
     results = {}
     for i in range(len(mentions)):
@@ -500,6 +587,7 @@ def evaluate_gpt(
             candidates=candidates,
             topk_examples=topk,
             llm=llm,
+            reasoning=reasoning,
         )
 
         cand = extract_cui(text)
@@ -526,6 +614,60 @@ def scoring(results, mention2gold):
     return score / len(results)
 
 
+def recall_fn(results, mention2gold, ks):
+    """
+    Return a dictionary of recall@k scores for the model
+    -------
+    results : dictionary {mention_id : [CUI1, CUI2, etc...]}
+    mention2gold : dictionary {mention_id : [gold CUI1, gold CUI2, etc...]}
+    ks : list of top-k values to compute recall@k for
+    """
+    recall_scores = {f"recall@{k}": 0 for k in ks}
+
+    for mention_id, predicted_cuis_str in results.items():
+        # Try to parse as JSON first, then fall back to Python-like format
+        if isinstance(predicted_cuis_str, str):
+            predicted_cuis_str = predicted_cuis_str.replace("None", "null")
+            try:
+                # Attempt to load as JSON
+                predicted_cuis = json.loads(predicted_cuis_str)
+            except json.JSONDecodeError:
+                # If JSON loading fails, attempt to parse using ast.literal_eval()
+                try:
+                    predicted_cuis = ast.literal_eval(predicted_cuis_str)
+                    if not isinstance(predicted_cuis, list):
+                        raise ValueError(
+                            f"Expected a list but got {type(predicted_cuis)} for mention_id {mention_id}"
+                        )
+                except (ValueError, SyntaxError) as e:
+                    print(f"Error decoding for mention_id {mention_id}: {e}")
+                    continue  # Skip this mention if there's an error
+        else:
+            predicted_cuis = predicted_cuis_str  # If it's already a list, use it as-is
+
+        # Get the gold CUIs for this mention
+        gold_cuis = mention2gold[mention_id]
+
+        for k in ks:
+            # Get the top-k predicted CUIs
+            top_k_predictions = predicted_cuis[:k]
+
+            # Calculate how many of the gold CUIs are in the top-k predictions
+            correct_predictions = len(set(top_k_predictions) & set(gold_cuis))
+
+            # Calculate recall@k for this mention
+            recall_at_k = correct_predictions / len(gold_cuis)
+
+            # Add the recall for this mention to the total recall for recall@k
+            recall_scores[f"recall@{k}"] += recall_at_k
+
+    # Average the recall scores over all mentions
+    total_mentions = len(results)
+    recall_scores = {k: v / total_mentions for k, v in recall_scores.items()}
+
+    return recall_scores
+
+
 def error_analysis(results, ontology, mention2gold, mention2context):
     """
     Returns a dict of mention_id for mentions that were not correctly predicted
@@ -539,9 +681,9 @@ def error_analysis(results, ontology, mention2gold, mention2context):
     error_mentions = defaultdict(dict)
     for mention_id, predicted_cui in results.items():
         gold_cui = mention2gold[mention_id]
-        if predicted_cui not in gold_cui:
+        if predicted_cui["predicted"] not in gold_cui:
             predicted_cui_metadata = get_candidates_data(
-                candidates=[predicted_cui], ontology=ontology
+                candidates=[predicted_cui["predicted"]], ontology=ontology
             )
             gold_cui_metadata = get_candidates_data(
                 candidates=[gold_cui[0]], ontology=ontology
@@ -556,48 +698,84 @@ def error_analysis(results, ontology, mention2gold, mention2context):
     return error_mentions
 
 
-def prompt_vllm(
+def generate_prompt_text(
     mention,
     context,
-    system_instructions,
     candidates,
     topk_examples,
-    llm,
-    tokenizer,
-    sampling_params,
+    reasoning=False,
+    recall=False,
+    recall_k=5,
+    analysis=None,
+    analysis_version="v1",
+    mention_id=None,
 ):
     """
+    Generate prompt text based on the prompt version and reasoning flag.
+    ----------------
     mention : str (name of the mention to be linked)
     context : str (context where the mention appears)
-    system_instructions : str (instructions for the LLM)
     candidates : list of list of CUIs : [[cui1], [cui2, cui3], ...]
     topk_examples : str (top k examples of similar contexts)
+    reasoning : bool (whether to generate reasoning or not in the output)
+    recall : bool (whether to generate a prompt for recall or not)
+    recall_k : int (number of candidates to rank)
+    analysis : list of dict of dict [{mention_id : {mention : CUI, analysis : str}},etc...] [Used in MoA]
+    analysis_version : str : Candidates from proposer alone (v1) all candidates + analysis from proposers (v2)
+    mention_id : str (mention_id) [Used for generating analysis text]
+    """
+    analysis_text = ""
+    if analysis and analysis_version == "v2":
+        analysis_text = (
+            f"Those are the analysis made by {len(analysis)} other experts:\n"
+        )
+        analysis_text += "\n".join(
+            [
+                f"- Analysis of expert {i + 1}: {a[mention_id]}"
+                for i, a in enumerate(analysis)
+            ]
+        )
+
+    reasoning_clause = (
+        "Use step-by-step reasoning."
+        if reasoning
+        else "Use step-by-step reasoning but do not add provide any explanations to me ! I only want the final answer"
+    )
+
+    if recall:
+        return f"""
+        Here are a few examples:\n{topk_examples}\n
+        This is the specific mention that needs to be linked to the correct entity: {mention}\n
+        This is the context where the mention appears:\n{context}\n
+        These are the candidate entities to choose from:\n{candidates}\n
+        {analysis_text}\n
+        Rank the top {recall_k} candidate entities from best to worst. {reasoning_clause}
+        Return the results in JSON format as a list of CUIs ["CUI1", "CUI2", "CUI3", ...].
+        For instance "["MESH:D000000", "MESH:D100000", "OMIM:000000"]" and "["MESH:D000001", "MESH:D100001", "OMIM:000001"]" are valid answers.
+        """
+
+    return f"""
+    Here are a few examples:\n{topk_examples}\n
+    This is the specific mention that needs to be linked to the correct entity: {mention}\n
+    This is the context where the mention appears:\n{context}\n
+    These are the candidate entities to choose from:\n{candidates}\n
+    {analysis_text}\n
+    You MUST PROVIDE an ANSWER among the candidates. {reasoning_clause}
+    Return the results in a json format with just the CUI: CUI (e.g., "MESH:D000000" is a valid answer).
+    """
+
+
+def prompt_vllm(system_instructions, llm, tokenizer, sampling_params, prompt):
+    """
+    system_instructions : str (instructions for the LLM)
     llm : LLM model
     tokenizer : AutoTokenizer
     sampling_params : SamplingParams config
+    prompt : str (prompt text)
     """
-    prompt_text = f"""
-    Here are a few examples: \n
-    {topk_examples} \n
-
-    This is the specific mention that needs to be linked to the correct entity: {mention} \n
-
-    This is the context where the mention appears: \n
-    {context} \n
-    
-    These are the candidate entities to choose from: \n
-    {candidates} \n
-    
-    You MUST PROVIDE an ANSWER among the candidates. \n
-    
-    Use step-by-step reasoning. Return the final answer in the following format: CUI
-    For instance : "MESH:D000000" "OMIM:000000" are valid CUI. \n
-    """
-    # Do not add provide any explanations ! But you must give AN answer.
-
     messages = [
         {"role": "system", "content": system_instructions},
-        {"role": "user", "content": prompt_text},
+        {"role": "user", "content": prompt},
     ]
     prompts = tokenizer.apply_chat_template(
         messages, tokenize=False, add_generation_prompt=True
@@ -627,6 +805,11 @@ def evaluate_vllm(
     train_mention2gold,
     k,
     sampling_params,
+    reasoning=False,
+    analysis_version="v1",
+    analysis=None,
+    recall=False,
+    recall_k=None,
 ):
     """
     Run "prompt" function for each mention in the list of mentions.
@@ -648,16 +831,26 @@ def evaluate_vllm(
     train_mention2gold : dict (mention_id to gold CUI)
     k : int (number of nearest neighbors)
     sampling_params : SamplingParams config
+    reasoning : bool (whether to use reasoning or not)
+    analysis_version : str (version of the analysis prompt) : Candidates from proposer alone ("v1") all candidates + analysis from proposers ("v2")
+    analysis : list of dict of dict [{mention_id : {mention : CUI, analysis : str}},etc...] [Used in MoA]
+    recall : bool (whether to generate a prompt for recall or not)
+    recall_k : int (number of candidates to rank)
     """
     results = defaultdict(dict)
     for i in range(len(mentions)):
         mention_id = mentions[i]
         mention_name = mention2text[mention_id]
         context = mention2context[mention_id]
-        candidates = get_candidates_data(
-            mention2biencoder_candidates[mentions[i]], ontology
-        )
-        # candidates = get_candidates_data_v2(mention2crossencoder_candidates[mention])
+
+        if analysis and analysis_version == "v1":
+            candidates_cui = [cand[mention_id]["predicted"] for cand in analysis]
+            candidates = get_candidates_data(candidates_cui, ontology)
+        else:
+            candidates = get_candidates_data(
+                mention2biencoder_candidates[mentions[i]], ontology
+            )
+
         topk = topk_examples(
             model=nlp_model,  # sentence transformer model
             index=index,
@@ -670,26 +863,271 @@ def evaluate_vllm(
             k=k,
         )
 
-        text = prompt_vllm(
+        prompt = generate_prompt_text(
             mention=mention_name,
             context=context,
-            system_instructions=system_instructions,
             candidates=candidates,
             topk_examples=topk,
+            reasoning=reasoning,
+            recall=recall,
+            recall_k=recall_k,
+            analysis_version=analysis_version,
+            analysis=analysis,
+            mention_id=mention_id if analysis else None,
+        )
+
+        text = prompt_vllm(
+            prompt=prompt,
+            system_instructions=system_instructions,
             llm=llm,
             tokenizer=tokenizer,
             sampling_params=sampling_params,
         )
-        cand = extract_last_cui(text)
-        print("mention ID :", mention_id, "|| LLM answer :", cand)
-        results[mention_id] = {"predicted": cand, "explanation": text}
+        if recall:
+            print("mention ID :", mention_id, "|| LLM answer :", text)
+            results[mention_id] = text
+
+        else:
+            cand = extract_last_cui(text)
+            print("mention ID :", mention_id, "|| LLM answer :", cand)
+            results[mention_id] = {"predicted": cand, "explanation": text}
+
         if i % 20 == 0:
             print(f"i = {i}")
 
     return results
 
 
-def prompt_vllm_aqlm(
+def evaluate_vllm_recall(
+    llm,
+    nlp_model,
+    tokenizer,
+    index,
+    system_instructions,
+    mentions,
+    ontology,
+    corpus,
+    mention2context,
+    mention2text,
+    TrainMap_context2mention,
+    train_mention2text,
+    train_mention2gold,
+    k,
+    sampling_params,
+    reasoning=False,
+    analysis=None,
+    recall_k=1,
+):
+    """
+    Run "prompt" function for each mention in the list of mentions.
+    Returns a dictionary {mention_id : predicted CUI}
+    -------
+    llm : LLM model
+    nlp_model : SentenceTransformer model
+    tokenizer : AutoTokenizer
+    index : faiss index
+    system_instructions : str (instructions for the LLM)
+    mentions : list (mention_ids)
+    ontology : BiomedicalOntology object
+    corpus : list of str (all context sentences)
+    mention2context : dict (mention_id : context)
+    mention2text : dict (mention_id : mention name)
+    TrainMap_context2mention : dict (context sentence to mention_id)
+    train_mention2text : dict (mention_id to mention name)
+    train_mention2gold : dict (mention_id to gold CUI)
+    k : int (number of NN from the index to retrieve for the prompt)
+    sampling_params : SamplingParams config
+    reasoning : bool (whether to use reasoning or not)
+    analysis : list of dict of dict (mention_id : {mention : CUI, analysis : str}) [whether to use MoA or not]
+    recall_k : int (top-k value for recall)
+    """
+    results = defaultdict(dict)
+    for i in range(len(mentions)):
+        mention_id = mentions[i]
+        mention_name = mention2text[mention_id]
+        context = mention2context[mention_id]
+
+        candidates_cui = [cand[mention_id]["predicted"] for cand in analysis]
+        candidates = get_candidates_data(candidates_cui, ontology)
+
+        topk = topk_examples(
+            model=nlp_model,  # sentence transformer model
+            index=index,
+            query=context,
+            corpus=corpus,
+            TrainMap_context2mention=TrainMap_context2mention,
+            train_mention2text=train_mention2text,
+            train_mention2gold=train_mention2gold,
+            ontology=ontology,
+            k=k,
+        )
+
+        prompt = generate_prompt_text(
+            mention=mention_name,
+            context=context,
+            candidates=candidates,
+            topk_examples=topk,
+            reasoning=reasoning,
+            recall=True,
+            recall_k=recall_k,
+            analysis=analysis,
+            mention_id=mention_id,
+        )
+
+        text = prompt_vllm(
+            prompt=prompt,
+            system_instructions=system_instructions,
+            llm=llm,
+            tokenizer=tokenizer,
+            sampling_params=sampling_params,
+        )
+
+        print("mention ID :", mention_id, "|| LLM answer :", text)
+        results[mention_id] = text
+        if i % 20 == 0:
+            print(f"i = {i}")
+
+    return results
+
+
+"""-----------------------------------------------------------------------------------------------------------------"""
+
+# def prompt_vllm_aqlm(
+#     mention,
+#     context,
+#     system_instructions,
+#     candidates,
+#     topk_examples,
+#     llm,
+#     tokenizer,
+#     sampling_params,
+# ):
+#     """
+#     mention : str (name of the mention to be linked)
+#     context : str (context where the mention appears)
+#     system_instructions : str (instructions for the LLM)
+#     candidates : list of list of CUIs : [[cui1], [cui2, cui3], ...]
+#     topk_examples : str (top k examples of similar contexts)
+#     llm : LLM model
+#     tokenizer : AutoTokenizer
+#     sampling_params : SamplingParams config
+#     """
+
+#     prompt_text = f"""
+#     System Instructions: {system_instructions} \n
+
+#     Here are a few examples: \n
+#     {topk_examples} \n
+
+#     This is the specific mention that needs to be linked to the correct entity: {mention} \n
+
+#     This is the context where the mention appears: \n
+#     {context} \n
+
+#     These are the candidate entities to choose from: \n
+#     {candidates} \n
+
+#     You MUST PROVIDE an ANSWER among the candidates. \n
+
+#     Return the answer in the following format: CUI
+#     For instance : "MESH:D000000" "OMIM:000000" are valid answers. \n
+#     Do not add provide any explanations ! But you MUST give ONE answer.
+#     """
+#     conversations = tokenizer.apply_chat_template(
+#         [{"role": "user", "content": prompt_text}],
+#         tokenize=False,
+#     )
+
+#     # Decode the generated tokens into text
+#     outputs = llm.generate(
+#         [conversations], sampling_params=sampling_params, use_tqdm=False
+#     )
+#     answer = outputs[0].outputs[0].text
+
+#     return answer
+
+
+# def evaluate_vllm_aqlm(
+#     llm,
+#     nlp_model,
+#     tokenizer,
+#     index,
+#     system_instructions,
+#     mentions,
+#     ontology,
+#     corpus,
+#     mention2context,
+#     mention2biencoder_candidates,
+#     mention2text,
+#     TrainMap_context2mention,
+#     train_mention2text,
+#     train_mention2gold,
+#     k,
+#     sampling_params,
+# ):
+#     """
+#     Run "prompt" function for each mention in the list of mentions.
+#     Returns a dictionary {mention_id : predicted CUI}
+#     -------
+#     llm : LLM model
+#     nlp_model : SentenceTransformer model
+#     tokenizer : AutoTokenizer
+#     index : faiss index
+#     system_instructions : str (instructions for the LLM)
+#     mentions : list (mention_ids)
+#     ontology : BiomedicalOntology object
+#     corpus : list of str (all context sentences)
+#     mention2context : dict (mention_id : context)
+#     mention2biencoder_candidates : dict (mention_id : list of candidate CUIs)
+#     mention2text : dict (mention_id : mention name)
+#     TrainMap_context2mention : dict (context sentence to mention_id)
+#     train_mention2text : dict (mention_id to mention name)
+#     train_mention2gold : dict (mention_id to gold CUI)
+#     k : int (number of nearest neighbors)
+#     sampling_params : SamplingParams config
+#     """
+#     results = {}
+#     for i in range(len(mentions)):
+#         mention_id = mentions[i]
+#         mention_name = mention2text[mention_id]
+#         context = mention2context[mention_id]
+#         candidates = get_candidates_data(
+#             mention2biencoder_candidates[mentions[i]], ontology
+#         )
+#         # candidates = get_candidates_data_v2(mention2crossencoder_candidates[mention])
+#         topk = topk_examples(
+#             model=nlp_model,  # sentence transformer model
+#             index=index,
+#             query=context,
+#             corpus=corpus,
+#             TrainMap_context2mention=TrainMap_context2mention,
+#             train_mention2text=train_mention2text,
+#             train_mention2gold=train_mention2gold,
+#             ontology=ontology,
+#             k=k,
+#         )
+#         text = prompt_vllm_aqlm(
+#             mention=mention_name,
+#             context=context,
+#             system_instructions=system_instructions,
+#             candidates=candidates,
+#             topk_examples=topk,
+#             llm=llm,
+#             tokenizer=tokenizer,
+#             sampling_params=sampling_params,
+#         )
+#         print("mention ID :", mention_id, "|| LLM answer :", text)
+#         cand = extract_cui(text)
+#         results[mention_id] = cand
+#         if i % 20 == 0:
+#             print(f"i = {i}")
+
+#     return results
+
+
+'''
+
+def prompt_vllm(
     mention,
     context,
     system_instructions,
@@ -698,6 +1136,8 @@ def prompt_vllm_aqlm(
     llm,
     tokenizer,
     sampling_params,
+    version="v1",
+    reasoning=False,
 ):
     """
     mention : str (name of the mention to be linked)
@@ -707,12 +1147,44 @@ def prompt_vllm_aqlm(
     topk_examples : str (top k examples of similar contexts)
     llm : LLM model
     tokenizer : AutoTokenizer
+    version : str (version of the prompt) : Prompt for proposer (v1) or prompt for recall for aggregator (v2)
     sampling_params : SamplingParams config
+    reasoning : bool (whether to use reasoning or not)
     """
 
-    prompt_text = f"""
-    System Instructions: {system_instructions} \n
+    prompt_text_v1 = f"""
+    Here are a few examples: \n
+    {topk_examples} \n
+    This is the specific mention that needs to be linked to the correct entity: {mention} \n
+    This is the context where the mention appears: \n
+    {context} \n
+
+    These are the candidate entities to choose from: \n
+    {candidates} \n
+
+    You MUST PROVIDE an ANSWER among the candidates. \n
+    Return the answer in the following format: CUI
+    For instance : "MESH:D000000" "OMIM:000000" are valid answers. \n
+    Reason step by step but do not add provide any explanations to me ! I only want the final answer.
+    """
+
+    prompt_text_v2 = f"""
+    Here are a few examples: \n
+    {topk_examples} \n
+    This is the specific mention that needs to be linked to the correct entity: {mention} \n
+    This is the context where the mention appears: \n
+    {context} \n
     
+    These are the candidate entities to choose from: \n
+    {candidates} \n
+    
+    Rank the candidate entities from best to worst. 
+    Return the results in a list : ["CUI1", "CUI2", "CUI3", ...]
+    For instance : ["MESH:D000000", "MESH:D100000", "OMIM:000000", etc...] is a valid answer.
+    Reason step by step but do not add provide any explanations to me ! I only want the final ranked CUIs.
+    """
+
+    prompt_text_v1_reasoning = f"""
     Here are a few examples: \n
     {topk_examples} \n
 
@@ -720,31 +1192,58 @@ def prompt_vllm_aqlm(
 
     This is the context where the mention appears: \n
     {context} \n
+
+    These are the candidate entities to choose from: \n
+    {candidates} \n
+
+    You MUST PROVIDE an ANSWER among the candidates. \n
+    Use step-by-step reasoning. Return the final answer in the following format: CUI
+    For instance : "MESH:D000000" "OMIM:000000" are valid CUI. \n
+    """
+
+    prompt_text_v2_reasoning = f"""
+    Here are a few examples: \n
+    {topk_examples} \n
+    This is the specific mention that needs to be linked to the correct entity: {mention} \n
+    This is the context where the mention appears: \n
+    {context} \n
     
     These are the candidate entities to choose from: \n
     {candidates} \n
     
-    You MUST PROVIDE an ANSWER among the candidates. \n
-
-    Return the answer in the following format: CUI
-    For instance : "MESH:D000000" "OMIM:000000" are valid answers. \n
-    Do not add provide any explanations ! But you MUST give ONE answer.
+    Rank the candidate entities from best to worst. 
+    Use step-by-step reasoning.
+    Return the results in a list : ["CUI1", "CUI2", "CUI3", ...]
+    For instance : ["MESH:D000000", "MESH:D100000", "OMIM:000000", etc...] is a valid answer.
     """
-    conversations = tokenizer.apply_chat_template(
-        [{"role": "user", "content": prompt_text}],
-        tokenize=False,
+
+    if version == "v1":
+        if reasoning:
+            prompt = prompt_text_v1_reasoning
+        else:
+            prompt = prompt_text_v1
+    elif version == "v2":
+        if reasoning:
+            prompt = prompt_text_v2_reasoning
+        else:
+            prompt = prompt_text_v2
+
+    messages = [
+        {"role": "system", "content": system_instructions},
+        {"role": "user", "content": prompt},
+    ]
+    prompts = tokenizer.apply_chat_template(
+        messages, tokenize=False, add_generation_prompt=True
     )
 
     # Decode the generated tokens into text
-    outputs = llm.generate(
-        [conversations], sampling_params=sampling_params, use_tqdm=False
-    )
+    outputs = llm.generate(prompts=prompts, sampling_params=sampling_params)
     answer = outputs[0].outputs[0].text
 
     return answer
 
 
-def evaluate_vllm_aqlm(
+def evaluate_vllm(
     llm,
     nlp_model,
     tokenizer,
@@ -761,6 +1260,8 @@ def evaluate_vllm_aqlm(
     train_mention2gold,
     k,
     sampling_params,
+    reasoning=False,
+    analysis=None,
 ):
     """
     Run "prompt" function for each mention in the list of mentions.
@@ -782,8 +1283,11 @@ def evaluate_vllm_aqlm(
     train_mention2gold : dict (mention_id to gold CUI)
     k : int (number of nearest neighbors)
     sampling_params : SamplingParams config
+    reasoning : bool (whether to use reasoning or not)
+    MoA : bool (whether to use MoA or not)
+    analysis : list of dict of dict (mention_id : {mention : CUI, analysis : str})
     """
-    results = {}
+    results = defaultdict(dict)
     for i in range(len(mentions)):
         mention_id = mentions[i]
         mention_name = mention2text[mention_id]
@@ -791,7 +1295,7 @@ def evaluate_vllm_aqlm(
         candidates = get_candidates_data(
             mention2biencoder_candidates[mentions[i]], ontology
         )
-        # candidates = get_candidates_data_v2(mention2crossencoder_candidates[mention])
+
         topk = topk_examples(
             model=nlp_model,  # sentence transformer model
             index=index,
@@ -803,20 +1307,261 @@ def evaluate_vllm_aqlm(
             ontology=ontology,
             k=k,
         )
-        text = prompt_vllm_aqlm(
-            mention=mention_name,
-            context=context,
-            system_instructions=system_instructions,
-            candidates=candidates,
-            topk_examples=topk,
-            llm=llm,
-            tokenizer=tokenizer,
-            sampling_params=sampling_params,
-        )
-        print("mention ID :", mention_id, "|| LLM answer :", text)
-        cand = extract_cui(text)
-        results[mention_id] = cand
+
+        if MoA:
+            text = MoA(
+                mention_id=mention_id,
+                mention=mention_name,
+                context=context,
+                system_instructions_MoA=system_instructions,
+                candidates=candidates,
+                llm=llm,
+                tokenizer=tokenizer,
+                sampling_params=sampling_params,
+                analysis=analysis,
+                reasoning=reasoning,
+            )
+        else:
+            text = prompt_vllm(
+                mention=mention_name,
+                context=context,
+                system_instructions=system_instructions,
+                candidates=candidates,
+                topk_examples=topk,
+                llm=llm,
+                tokenizer=tokenizer,
+                sampling_params=sampling_params,
+                reasoning=reasoning,
+            )
+        cand = extract_last_cui(text)
+        print("mention ID :", mention_id, "|| LLM answer :", cand)
+        results[mention_id] = {"predicted": cand, "explanation": text}
         if i % 20 == 0:
             print(f"i = {i}")
 
     return results
+
+
+def evaluate_vllm_recall(
+    llm,
+    nlp_model,
+    tokenizer,
+    index,
+    system_instructions,
+    mentions,
+    ontology,
+    corpus,
+    mention2context,
+    mention2text,
+    TrainMap_context2mention,
+    train_mention2text,
+    train_mention2gold,
+    k,
+    sampling_params,
+    analysis,
+    reasoning=False,
+    MoA=False,
+):
+    """
+    Run "prompt" function for each mention in the list of mentions.
+    Returns a dictionary {mention_id : predicted CUI}
+    -------
+    llm : LLM model
+    nlp_model : SentenceTransformer model
+    tokenizer : AutoTokenizer
+    index : faiss index
+    system_instructions : str (instructions for the LLM)
+    mentions : list (mention_ids)
+    ontology : BiomedicalOntology object
+    corpus : list of str (all context sentences)
+    mention2context : dict (mention_id : context)
+    mention2text : dict (mention_id : mention name)
+    TrainMap_context2mention : dict (context sentence to mention_id)
+    train_mention2text : dict (mention_id to mention name)
+    train_mention2gold : dict (mention_id to gold CUI)
+    k : int (number of nearest neighbors)
+    sampling_params : SamplingParams config
+    reasoning : bool (whether to use reasoning or not)
+    analysis : list of dict of dict (mention_id : {mention : CUI, analysis : str})
+    MoA : bool (whether to use MoA or not)
+    """
+    results = defaultdict(dict)
+    for i in range(len(mentions)):
+        mention_id = mentions[i]
+        mention_name = mention2text[mention_id]
+        context = mention2context[mention_id]
+
+        candidates_cui = [cand[mention_id]["predicted"] for cand in analysis]
+        candidates = get_candidates_data(candidates_cui, ontology)
+
+        topk = topk_examples(
+            model=nlp_model,  # sentence transformer model
+            index=index,
+            query=context,
+            corpus=corpus,
+            TrainMap_context2mention=TrainMap_context2mention,
+            train_mention2text=train_mention2text,
+            train_mention2gold=train_mention2gold,
+            ontology=ontology,
+            k=k,
+        )
+
+        if MoA:
+            text = MoA(
+                mention_id=mention_id,
+                mention=mention_name,
+                context=context,
+                system_instructions_MoA=system_instructions,
+                candidates=candidates,
+                llm=llm,
+                tokenizer=tokenizer,
+                sampling_params=sampling_params,
+                analysis=analysis,
+                reasoning=reasoning,
+                recall=True,
+            )
+        else:
+            text = prompt_vllm(
+                mention=mention_name,
+                context=context,
+                system_instructions=system_instructions,
+                candidates=candidates,
+                topk_examples=topk,
+                llm=llm,
+                tokenizer=tokenizer,
+                sampling_params=sampling_params,
+                version="v2",
+                reasoning=reasoning,
+            )
+
+        print("mention ID :", mention_id, "|| LLM answer :", text)
+        results[mention_id] = text
+        if i % 20 == 0:
+            print(f"i = {i}")
+
+    return results
+
+
+def MoA(
+    mention_id,
+    mention,
+    context,
+    system_instructions_MoA,
+    candidates,
+    llm,
+    tokenizer,
+    sampling_params,
+    analysis,
+    reasoning=False,
+    recall=False,
+):
+    """
+    mention_id : str (mention_id)
+    mention : str (name of the mention to be linked)
+    context : str (context where the mention appears)
+    system_instructions : str (instructions for the LLM)
+    candidates : list of list of CUIs : [[cui1], [cui2, cui3], ...]
+    llm : LLM model
+    tokenizer : AutoTokenizer
+    sampling_params : SamplingParams config
+    analysis : list of dict of dict (mention_id : {mention : CUI, analysis : str})
+    reasoning : bool (whether to use reasoning or not)
+    recall : bool (whether to use recall or not)
+    """
+    experts_analysis = ""
+    for i, a in enumerate(analysis):
+        experts_analysis += f"- Analysis of expert {i + 1}: {a[mention_id]}\n"
+
+    prompt_text = f"""
+    This is the specific mention that needs to be linked to the correct entity: {mention} \n
+    This is the context where the mention appears: \n
+    {context} \n
+    
+    These are the candidate entities to choose from: \n
+    {candidates} \n
+    
+    Those are the analysis made by the {len(analysis)} other experts: \n
+    {experts_analysis} \n
+    
+    You MUST PROVIDE an ANSWER among the candidates. \n
+    Return the answer in the following format: CUI
+    For instance : "MESH:D000000" "OMIM:000000" are valid answers. \n
+    Reason step by step but do not add provide any explanations to me ! I only want the final answer.
+    """
+
+    prompt_text_reasoning = f"""
+    This is the specific mention that needs to be linked to the correct entity: {mention} \n
+    This is the context where the mention appears: \n
+    {context} \n
+    
+    These are the candidate entities to choose from: \n
+    {candidates} \n
+    
+    Those are the analysis made by {len(analysis)} other experts: \n
+    {experts_analysis} \n
+    
+    You MUST PROVIDE an ANSWER among the candidates. \n
+    Use step-by-step reasoning. Return the final answer in the following format: CUI
+    For instance : "MESH:D000000" "OMIM:000000" are valid CUI. \n
+    """
+
+    prompt_text_recall = f"""
+    This is the specific mention that needs to be linked to the correct entity: {mention} \n
+    This is the context where the mention appears: \n
+    {context} \n
+    
+    These are the candidate entities to choose from: \n
+    {candidates} \n
+    
+    Those are the analysis made by the {len(analysis)} other experts: \n
+    {experts_analysis} \n
+    
+    Rank the candidate entities from the different experts only from best to worst. 
+    Return the results in a list : ["CUI1", "CUI2", "CUI3", ...]
+    For instance : ["MESH:D000000", "MESH:D100000", "OMIM:000000", etc...] is a valid answer.
+    Reason step by step but do not add provide any explanations to me ! I only want the final ranked CUIs.
+    """
+
+    prompt_text_recall_reasoning = f"""
+    This is the specific mention that needs to be linked to the correct entity: {mention} \n
+    This is the context where the mention appears: \n
+    {context} \n
+    
+    These are the candidate entities to choose from: \n
+    {candidates} \n
+    
+    Those are the analysis made by {len(analysis)} other experts: \n
+    {experts_analysis} \n
+    
+    Rank the candidate entities from the different experts only from best to worst.
+    Use step-by-step reasoning. Return the final answer in the following format: CUI
+    Return the results in a list : ["CUI1", "CUI2", "CUI3", ...]
+    For instance : ["MESH:D000000", "MESH:D100000", "OMIM:000000", etc...] is a valid answer.
+    """
+
+    if recall:
+        if reasoning:
+            prompt = prompt_text_recall_reasoning
+        else:
+            prompt = prompt_text_recall
+    else:
+        if reasoning:
+            prompt = prompt_text_reasoning
+        else:
+            prompt = prompt_text
+
+    messages = [
+        {"role": "system", "content": system_instructions_MoA},
+        {"role": "user", "content": prompt},
+    ]
+    prompts = tokenizer.apply_chat_template(
+        messages, tokenize=False, add_generation_prompt=True
+    )
+
+    # Decode the generated tokens into text
+    outputs = llm.generate(prompts=prompts, sampling_params=sampling_params)
+    answer = outputs[0].outputs[0].text
+
+    return answer
+    
+'''

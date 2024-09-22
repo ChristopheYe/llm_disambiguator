@@ -3,6 +3,8 @@ import ujson
 import json
 import sys
 import os
+import time
+
 from collections import defaultdict
 
 import pandas as pd
@@ -64,11 +66,15 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 device_1 = torch.device("cuda:0")  # First GPU (GPU 0)
 device_2 = torch.device("cuda:1")  # Second GPU (GPU 1)
 sampling_params = SamplingParams(
-    temperature=0, top_p=0.9, max_tokens=1000, stop=["<|eot_id|>"]
+    temperature=0, top_p=0.9, max_tokens=5000, stop=["<|eot_id|>"]
 )
 
 set_seed(12)
 
+# Start time
+start_time = time.time()
+
+### 1) Load the data (ontology + mentions)
 ontology_dir = "/mitchell/entity-linking/kbs/medic.tsv"
 name = "medic"
 ontology2 = BiomedicalOntology.load_medic(filepath=ontology_dir, name=name)
@@ -93,13 +99,14 @@ corpus, TrainMap_mention2context = add_context(df=train_df, docs=docs)
 _, _ = add_context(df=dataset_df, docs=docs)
 TrainMap_context2mention = {v: k for k, v in TrainMap_mention2context.items()}
 
+
+### 2) Create the RAG-like method for better ICL in the prompt
 model = SentenceTransformer("princeton-nlp/sup-simcse-bert-base-uncased")
 model.to(device_2)
 # Generate embeddings for the corpus
 corpus_embeddings = model.encode(corpus, convert_to_tensor=True)
 corpus_embeddings = corpus_embeddings.cpu().detach().numpy()
 
-# Assuming corpus_embeddings is already a NumPy array
 embedding_dimension = corpus_embeddings.shape[1]
 
 # Create the HNSW index with the correct arguments
@@ -150,23 +157,51 @@ filtered_results = results[cols].rename(
         "arboel_crossencoder_resolve_abbrev_min_hit_index": "crossencoder_hit_index",
     }
 )
-filtered_results = filtered_results[filtered_results["biencoder_hit_index"] < 20]
 
-biencoder_res = 0
-for idx, row in filtered_results.iterrows():
-    if row["biencoder_hit_index"] == 0:
-        biencoder_res += 1
+### 3) Compute the results from the original entity-linking models
+number_candidates = 20
+filtered_results = filtered_results[
+    filtered_results["crossencoder_hit_index"] < number_candidates
+]
 
-print("biencoder results :", biencoder_res / len(filtered_results))
+number_hits_biencoder = number_hit(
+    filtered_results, "biencoder_hit_index", number_candidates
+)
+number_hits_crossencoder = number_hit(
+    filtered_results, "crossencoder_hit_index", number_candidates
+)
 
-crossencoder_res = 0
-for idx, row in filtered_results.iterrows():
-    if row["crossencoder_hit_index"] == 0:
-        crossencoder_res += 1
+total_mentions = len(results)
+total_mentions_with_hit_index = len(filtered_results)
 
-print("crossencoder results :", crossencoder_res / len(filtered_results))
+print("total mentions :", total_mentions)
+print(
+    "total mentions with hit index = number of mentions to evaluate:",
+    total_mentions_with_hit_index,
+)
+print("number hits biencoder :", number_hits_biencoder)
+print("number hits crossencoder :", number_hits_crossencoder)
+
+biencoder_results = compute_recall(
+    filtered_results, "biencoder_hit_index", 5, total_mentions
+)
+print("Biencoder:")
+for i, (unnormalized, normalized) in enumerate(biencoder_results):
+    print(
+        f"recall {i+1}: Normalized = {normalized:.4f}, Unnormalized = {unnormalized:.4f}"
+    )
+
+crossencoder_results = compute_recall(
+    filtered_results, "crossencoder_hit_index", 5, total_mentions
+)
+print("Crossencoder:")
+for i, (unnormalized, normalized) in enumerate(crossencoder_results):
+    print(
+        f"recall {i+1}: Normalized = {normalized:.4f}, Unnormalized = {unnormalized:.4f}"
+    )
 
 
+### 4) Data preprocessing for the prompt used in the LLM
 train_mentions = []
 train_mention2context = {}
 train_mention2gold = {}
@@ -176,8 +211,6 @@ for idx, row in train_df.iterrows():
     train_mentions.append(row["mention_id"])
     train_mention2text[row["mention_id"]] = row["deabbreviated_text"]
     train_mention2context[row["mention_id"]] = row["limited_contextualized_mention"]
-
-number_candidates = 20
 
 mention2context = {}
 for idx, row in test_df.iterrows():
@@ -190,30 +223,90 @@ mention2gold = {}
 mention2hit = {}
 mention2text = {}
 for idx, row in filtered_results.iterrows():
-    # print(idx)
     # Only consider row if hit_index < max number of candidates
-    if row["biencoder_hit_index"] < number_candidates:
+    if row["crossencoder_hit_index"] < number_candidates:
         mention2biencoder_candidates[row["mention_id"]] = [
             el[0] for el in row["biencoder_candidates"][:number_candidates]
         ]
-        # mention2crossencoder_candidates[row['mention_id']] = [el[0] for el in row['crossencoder_candidates'][:number_candidates]]
         mention2gold[row["mention_id"]] = row["db_ids"]
         mentions.append(row["mention_id"])
         mention2text[row["mention_id"]] = row["deabbreviated_text"]
         mention2hit[row["mention_id"]] = row["biencoder_hit_index"]
 
+assert len(mentions) == len(
+    filtered_results
+), f"Length mismatch: mentions has {len(train_mentions)} elements, but it should have {len(filtered_results)} elements. Check the condition 'row['biencoder/crossencoder_hit_index'] < number_candidates' for both filtered_result."
+
+### 5) Run the LLM
 system_instructions = """You are a professional data annotator and curator.
 Your task is to identify the correct entity for a given mention based on the provided context and the descriptions of {number_candidates} candidate entities."""
 
+system_instructions_moa = """You are a professional data annotator and curator.
+Your task is to identify the correct entity for a given mention based on the provided context and the descriptions of {number_candidates} candidate entities.
+You will provided with the analysis of different professional annotators and you have to provide the final decision based on the analysis."""
+
+system_instructions_recall = """You are a professional data annotator and curator.
+Your task is to rank the candidate entities from best to worst for a given mention based on the provided context and the descriptions of each candidate entities."""
+
+
+with open(
+    "data/biencoder/default2/Meta-Llama-3.1-8B-Instruct_k=3_results.json", "r"
+) as f:
+    analysis1 = json.load(f)
+
+with open(
+    "data/biencoder/default2/Mistral-7B-Instruct-v0.3_k=3_results.json", "r"
+) as f:
+    analysis2 = json.load(f)
+
+with open(
+    "data/biencoder/default2/Mistral-Nemo-Instruct-2407_k=3_results.json", "r"
+) as f:
+    analysis3 = json.load(f)
+
+with open("data/biencoder/default2/Qwen2.5-7B-Instruct_k=3_results.json", "r") as f:
+    analysis4 = json.load(f)
+
+with open("data/biencoder/default2/Qwen2.5-14B-Instruct_k=3_results.json", "r") as f:
+    analysis5 = json.load(f)
+
+#######################################################################################
+
+# with open(
+#     "data/biencoder/reasoning2/Meta-Llama-3.1-8B-Instruct_k=3_reasoning_results.json", "r"
+# ) as f:
+#     analysis1 = json.load(f)
+
+# with open(
+#     "data/biencoder/reasoning2/Mistral-7B-Instruct-v0.3_k=3_reasoning_results.json", "r"
+# ) as f:
+#     analysis2 = json.load(f)
+
+# with open(
+#     "data/biencoder/reasoning2/Mistral-Nemo-Instruct-2407_k=3_reasoning_results.json", "r"
+# ) as f:
+#     analysis3 = json.load(f)
+
+# with open("data/biencoder/reasoning2/Qwen2.5-7B-Instruct_k=3_reasoning_results.json", "r") as f:
+#     analysis4 = json.load(f)
+
+# with open("data/biencoder/reasoning2/Qwen2.5-14B-Instruct_k=3_reasoning_results.json", "r") as f:
+#     analysis5 = json.load(f)
+
+analysis = [analysis1, analysis2, analysis3, analysis4, analysis5]
+analysis = None
+analysis_version = "v1"  # v1 for default, v2 for MoA
+recall = True
+recall_k = 5
 
 llm = LLM(
     model="mistralai/Mistral-Nemo-Instruct-2407",
     tensor_parallel_size=1,
     dtype="half",
-    gpu_memory_utilization=0.85,
+    gpu_memory_utilization=0.9,  # % of memory of the gpu that KV caching will take (allows for higher "max_model_len").
     max_logprobs=1000,
     device=device_2,
-    max_model_len=20000,
+    max_model_len=30000,
 )
 
 tokenizer = llm.get_tokenizer()
@@ -223,7 +316,7 @@ results = evaluate_vllm(
     nlp_model=model,
     tokenizer=tokenizer,
     index=index,
-    system_instructions=system_instructions,
+    system_instructions=system_instructions_recall,
     mentions=mentions,
     ontology=ontology2,
     corpus=corpus,
@@ -233,13 +326,33 @@ results = evaluate_vllm(
     TrainMap_context2mention=TrainMap_context2mention,
     train_mention2text=train_mention2text,
     train_mention2gold=train_mention2gold,
-    k=10,
+    k=3,
     sampling_params=sampling_params,
+    reasoning=False,
+    analysis_version=analysis_version,
+    analysis=analysis,
+    recall=recall,
+    recall_k=recall_k,
 )
 
-score = scoring(results=results, mention2gold=mention2gold)
-
-print("score :", score)
-
-with open("Mistral-Nemo-Instruct-2407_k=10_reasoning_results.json", "w") as f:
+with open(
+    "data/crossencoder/recall/Mistral-Nemo-Instruct-2407_k=3_results_test1.json", "w"
+) as f:
     json.dump(results, f, indent=4)
+
+if recall:
+    recall_r = recall_fn(
+        results=results, mention2gold=mention2gold, ks=list(range(1, recall_k + 1))
+    )
+    print("recall :", recall_r)
+else:
+    score = scoring(results=results, mention2gold=mention2gold)
+    print("score :", score)
+
+
+end_time = time.time()
+running_time = end_time - start_time
+hours, rem = divmod(running_time, 3600)
+minutes, seconds = divmod(rem, 60)
+
+print(f"Script executed in: {int(hours)}h,{int(minutes)}mins,{seconds:.2f}s")
