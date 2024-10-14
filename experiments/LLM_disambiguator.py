@@ -111,13 +111,13 @@ ontology2 = BiomedicalOntology.load_entrez(**entrez_dict)
 # ontology2 = BiomedicalOntology.load_umls(**umls_dict_st21pv)
 
 
-number_candidates = 20
+number_candidates = 50
 print("number of candidates to consider :", number_candidates)
 
 # EL_model = "arboel"
 EL_model = "sapbert"
 
-device = device_3
+device = device_2
 
 analysis = None
 analysis_version = "v1"  # v1 for default, v2 for MoA
@@ -125,8 +125,8 @@ recall = True
 recall_k = 5
 k = 3
 
-llm_model = "mistralai/Mistral-Nemo-Instruct-2407"
-llm_subname = "Mistral-Nemo-Instruct-2407"
+llm_model = "Qwen/Qwen2.5-7B-Instruct"
+llm_subname = "Qwen2.5-7B-Instruct"
 
 # llm_subname = "gpt-4o-2024-08-06"
 
@@ -373,7 +373,7 @@ llm = LLM(
 tokenizer = llm.get_tokenizer()
 
 # Path to the results
-directory = f"data/{dataset_name}/{EL_model}/{repo}"
+directory = f"results/{dataset_name}/{EL_model}/{repo}"
 filename = f"{llm_subname}_k={k}_cands={number_candidates}_recall={recall}{recall_k}_true_results2.json"
 path = os.path.join(directory, filename)
 
