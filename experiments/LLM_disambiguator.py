@@ -111,22 +111,22 @@ ontology2 = BiomedicalOntology.load_entrez(**entrez_dict)
 # ontology2 = BiomedicalOntology.load_umls(**umls_dict_st21pv)
 
 
-number_candidates = 10
+number_candidates = 20
 print("number of candidates to consider :", number_candidates)
 
-# EL_model = "crossencoder"
+# EL_model = "arboel"
 EL_model = "sapbert"
 
-device = device_2
+device = device_3
 
 analysis = None
 analysis_version = "v1"  # v1 for default, v2 for MoA
-recall = False
+recall = True
 recall_k = 5
 k = 3
 
-llm_model = "Qwen/Qwen2.5-7B-Instruct"
-llm_subname = "Qwen2.5-7B-Instruct"
+llm_model = "mistralai/Mistral-Nemo-Instruct-2407"
+llm_subname = "Mistral-Nemo-Instruct-2407"
 
 # llm_subname = "gpt-4o-2024-08-06"
 
@@ -176,22 +176,14 @@ dataset_names = [f"{dataset_name}"]
 model_names = [f"{EL_model}"]
 
 path_to_result = {f"{dataset_name}": {}}
-if EL_model == "biencoder":
+if EL_model == "arboel":  # arboel
     path_to_result[dataset_name][
-        "biencoder"
-    ] = f"/home2/cye73/results2/arboel/{dataset_name}/biencoder_output_eval.json"
-elif EL_model == "crossencoder":
-    path_to_result[dataset_name][
-        "crossencoder"
-    ] = f"/home2/cye73/results2/arboel/{dataset_name}/crossencoder_output_eval.json"
-    if dataset_name == "medmentions_st21pv":
-        path_to_result[dataset_name][
-            "crossencoder"
-        ] = f"/home2/cye73/results2/arboel/{dataset_name}/crossencoder_output_eval3.json"
+        "arboel"
+    ] = f"Candidates/{dataset_name}/arboel_{dataset_name}.json"
 elif EL_model == "sapbert":
     path_to_result[dataset_name][
         "sapbert"
-    ] = f"/home2/cye73/results2/sapbert/sapbert_{dataset_name}_real2.json"  # _real2.json
+    ] = f"Candidates/{dataset_name}/sapbert_{dataset_name}_real2.json"  # _real2.json
 
 
 eval_strategies = ["basic"]
@@ -219,31 +211,12 @@ base_cols = [
 ]
 
 # Add model-specific columns based on EL_model
-# if EL_model == "biencoder":
-#     model_cols = [
-#         "arboel_biencoder_resolve_abbrev",
-#         "arboel_biencoder_resolve_abbrev_min_hit_index",
-#     ]
-#     rename_map = {
-#         "arboel_biencoder_resolve_abbrev": "biencoder_candidates",
-#         "arboel_biencoder_resolve_abbrev_min_hit_index": "biencoder_hit_index",
-#     }
-# el
-if EL_model == "crossencoder":
-    model_cols = [
-        "crossencoder_resolve_abbrev",
-        "crossencoder_resolve_abbrev_min_hit_index",
-    ]
-    rename_map = {
-        "crossencoder_resolve_abbrev": "crossencoder_candidates",
-        "crossencoder_resolve_abbrev_min_hit_index": "crossencoder_hit_index",
-    }
-elif EL_model == "sapbert":
-    model_cols = ["sapbert_resolve_abbrev", "sapbert_resolve_abbrev_min_hit_index"]
-    rename_map = {
-        "sapbert_resolve_abbrev": "sapbert_candidates",
-        "sapbert_resolve_abbrev_min_hit_index": "sapbert_hit_index",
-    }
+
+model_cols = [f"{EL_model}_resolve_abbrev", f"{EL_model}_resolve_abbrev_min_hit_index"]
+rename_map = {
+    f"{EL_model}_resolve_abbrev": f"{EL_model}_candidates",
+    f"{EL_model}_resolve_abbrev_min_hit_index": f"{EL_model}_hit_index",
+}
 
 # Combine base and model-specific columns
 cols = base_cols + model_cols
@@ -289,20 +262,15 @@ for idx, row in test_df.iterrows():
 mentions = []
 mention2gold = {}
 mention2text = {}
-mention2biencoder_candidates = {}
-mention2crossencoder_candidates = {}
+mention2arboel_candidates = {}
 mention2sapbert_candidates = {}
 mention2hit = {}
 for idx, row in filtered_results.iterrows():
     # Only consider row if hit_index < max number of candidates
     if row[f"{EL_model}_hit_index"] < number_candidates:
-        if EL_model == "biencoder":
-            mention2biencoder_candidates[row["mention_id"]] = [
-                el[0] for el in row["biencoder_candidates"][:number_candidates]
-            ]
-        elif EL_model == "crossencoder":
-            mention2crossencoder_candidates[row["mention_id"]] = [
-                el[0] for el in row["crossencoder_candidates"][:number_candidates]
+        if EL_model == "arboel":
+            mention2arboel_candidates[row["mention_id"]] = [
+                el[0] for el in row["arboel_candidates"][:number_candidates]
             ]
         elif EL_model == "sapbert":
             mention2sapbert_candidates[row["mention_id"]] = [
@@ -316,39 +284,22 @@ for idx, row in filtered_results.iterrows():
 
 ############ V) COMPUTE THE RESULTS FROM THE ORIGINAL ENTITY-LINKING MODELS ############
 
-number_hits_biencoder = 0
-number_hits_crossencoder = 0
+number_hits_arboel = 0
 number_hits_sapbert = 0
 
-#### BIENCODER
-if EL_model == "biencoder":
-    number_hits_biencoder = number_hit(
-        mention2biencoder_candidates, mention2gold, number_candidates
+
+#### ARBOEL
+if EL_model == "arboel":
+    number_hits_arboel = number_hit(
+        mention2arboel_candidates, mention2gold, number_candidates
     )
-    print("number hits biencoder :", number_hits_biencoder)
+    print("number hits arboel :", number_hits_arboel)
 
-    biencoder_results = compute_recall(
-        number_hits_biencoder, number_candidates, total_mentions
-    )
-    print("Biencoder:")
-    for i, (unnormalized, normalized) in enumerate(biencoder_results):
-        print(
-            f"recall {i+1}: Normalized = {normalized:.4f}, Unnormalized = {unnormalized:.4f}"
-        )
-
-
-#### CROSSENCODER
-if EL_model == "crossencoder":
-    number_hits_crossencoder = number_hit(
-        mention2crossencoder_candidates, mention2gold, number_candidates
-    )
-    print("number hits crossencoder :", number_hits_crossencoder)
-
-    crossencoder_results = compute_recall(
-        number_hits_crossencoder, number_candidates, total_mentions
+    arboel_results = compute_recall(
+        number_hits_arboel, number_candidates, total_mentions
     )
     print("Crossencoder:")
-    for i, (unnormalized, normalized) in enumerate(crossencoder_results):
+    for i, (unnormalized, normalized) in enumerate(arboel_results):
         print(
             f"recall {i+1}: Normalized = {normalized:.4f}, Unnormalized = {unnormalized:.4f}"
         )
@@ -372,11 +323,10 @@ if EL_model == "sapbert":
 
 assert len(mentions) == len(
     filtered_results
-), f"Length mismatch: mentions has {len(mentions)} elements, but it should have {len(filtered_results)} elements. Check the condition 'row['biencoder/crossencoder_hit_index'] < number_candidates' for both filtered_result."
+), f"Length mismatch: mentions has {len(mentions)} elements, but it should have {len(filtered_results)} elements. Check the condition 'row['sapbert/arboel_hit_index'] < number_candidates' for both filtered_result."
 
 number_hits = {
-    "biencoder": number_hits_biencoder,
-    "crossencoder": number_hits_crossencoder,
+    "arboel": number_hits_arboel,
     "sapbert": number_hits_sapbert,
 }
 
@@ -392,56 +342,9 @@ You will provided with the analysis of different professional annotators and you
 system_instructions_recall = """You are a professional data annotator and curator.
 Your task is to rank the candidate entities from best to worst for a given mention based on the provided context and the descriptions of each candidate entities."""
 
-# with open(
-#     "data/biencoder/default2/Meta-Llama-3.1-8B-Instruct_k=3_results.json", "r"
-# ) as f:
-#     analysis1 = json.load(f)
-
-# with open(
-#     "data/biencoder/default2/Mistral-7B-Instruct-v0.3_k=3_results.json", "r"
-# ) as f:
-#     analysis2 = json.load(f)
-
-# with open(
-#     "data/biencoder/default2/Mistral-Nemo-Instruct-2407_k=3_results.json", "r"
-# ) as f:
-#     analysis3 = json.load(f)
-
-# with open("data/biencoder/default2/Qwen2.5-7B-Instruct_k=3_results.json", "r") as f:
-#     analysis4 = json.load(f)
-
-# with open("data/biencoder/default2/Qwen2.5-14B-Instruct_k=3_results.json", "r") as f:
-#     analysis5 = json.load(f)
-
-#######################################################################################
-
-# with open(
-#     "data/biencoder/reasoning2/Meta-Llama-3.1-8B-Instruct_k=3_reasoning_results.json", "r"
-# ) as f:
-#     analysis1 = json.load(f)
-
-# with open(
-#     "data/biencoder/reasoning2/Mistral-7B-Instruct-v0.3_k=3_reasoning_results.json", "r"
-# ) as f:
-#     analysis2 = json.load(f)
-
-# with open(
-#     "data/biencoder/reasoning2/Mistral-Nemo-Instruct-2407_k=3_reasoning_results.json", "r"
-# ) as f:
-#     analysis3 = json.load(f)
-
-# with open("data/biencoder/reasoning2/Qwen2.5-7B-Instruct_k=3_reasoning_results.json", "r") as f:
-#     analysis4 = json.load(f)
-
-# with open("data/biencoder/reasoning2/Qwen2.5-14B-Instruct_k=3_reasoning_results.json", "r") as f:
-#     analysis5 = json.load(f)
-
-# analysis = [analysis1, analysis2, analysis3, analysis4, analysis5]
-
 
 mention2candidates_dict = {
-    "biencoder": mention2biencoder_candidates,
-    "crossencoder": mention2crossencoder_candidates,
+    "arboel": mention2arboel_candidates,
     "sapbert": mention2sapbert_candidates,
 }
 
