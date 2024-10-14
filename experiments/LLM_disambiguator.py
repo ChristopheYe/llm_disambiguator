@@ -78,36 +78,59 @@ start_time = time.time()
 
 ############ I) LOAD THE DATA (ONTOLOGY + MENTIONS) ############
 
+# ----------------- START ARGUMENTS ----------------- #
+
 # # ncbi_disease
 # dataset_name = "ncbi_disease"
 # ontology_dir = "/mitchell/entity-linking/kbs/medic.tsv"
 # name = "medic"
 # ontology2 = BiomedicalOntology.load_medic(filepath=ontology_dir, name=name)
 
-
-# # gnormplus & nlm_gene
-# # dataset_name = "nlm_gene"
-# dataset_name = "gnormplus"
-# entrez_dict = {
-#     "name": "entrez",
-#     "filepath": "/mitchell/entity-linking/el-robustness-comparison/data/gene_info.tsv",
-#     "dataset": f"{dataset_name}",
-# }
-# ontology2 = BiomedicalOntology.load_entrez(**entrez_dict)
+# gnormplus & nlm_gene
+# dataset_name = "nlm_gene"
+dataset_name = "gnormplus"
+entrez_dict = {
+    "name": "entrez",
+    "filepath": "/mitchell/entity-linking/el-robustness-comparison/data/gene_info.tsv",
+    "dataset": f"{dataset_name}",
+}
+ontology2 = BiomedicalOntology.load_entrez(**entrez_dict)
 
 # # nlm_chem
 # dataset_name = "nlmchem"
 # mesh_dict = {"name": "mesh", "filepath": "/mitchell/entity-linking/2017AA/META/"}
 # ontology2 = BiomedicalOntology.load_mesh(**mesh_dict)
 
-# mm_st21pv
-dataset_name = "medmentions_st21pv"
-umls_dict_st21pv = {
-    "name": "umls",
-    "filepath": "/mitchell/entity-linking/2017AA/META/",
-    "path_st21pv_cui": "/home2/cye73/data_test2/arboel/medmentions_st21pv/umls_cuis_st21pv.json",
-}
-ontology2 = BiomedicalOntology.load_umls(**umls_dict_st21pv)
+# # mm_st21pv
+# dataset_name = "medmentions_st21pv"
+# umls_dict_st21pv = {
+#     "name": "umls",
+#     "filepath": "/mitchell/entity-linking/2017AA/META/",
+#     "path_st21pv_cui": "/home2/cye73/data_test2/arboel/medmentions_st21pv/umls_cuis_st21pv.json",
+# }
+# ontology2 = BiomedicalOntology.load_umls(**umls_dict_st21pv)
+
+
+number_candidates = 10
+print("number of candidates to consider :", number_candidates)
+
+# EL_model = "crossencoder"
+EL_model = "sapbert"
+
+device = device_2
+
+analysis = None
+analysis_version = "v1"  # v1 for default, v2 for MoA
+recall = False
+recall_k = 5
+k = 3
+
+llm_model = "Qwen/Qwen2.5-7B-Instruct"
+llm_subname = "Qwen2.5-7B-Instruct"
+
+# llm_subname = "gpt-4o-2024-08-06"
+
+# ----------------- END ARGUMENTS ----------------- #
 
 path_to_abbrev = "/home2/cye73/data_test2/abbreviations.json"
 dataset = load_bigbio_dataset(dataset_name)
@@ -131,7 +154,7 @@ TrainMap_context2mention = {v: k for k, v in TrainMap_mention2context.items()}
 ############ II) CREATE THE RAG-LIKE SYSTEM FOR BETTER ICL IN THE PROMPT ############
 model = SentenceTransformer("princeton-nlp/sup-simcse-bert-base-uncased")
 # model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2") # It's worse
-model.to(device_2)
+model.to(device)
 # Generate embeddings for the corpus
 corpus_embeddings = model.encode(corpus, convert_to_tensor=True)
 corpus_embeddings = corpus_embeddings.cpu().detach().numpy()
@@ -150,60 +173,90 @@ index.add(corpus_embeddings)
 
 
 dataset_names = [f"{dataset_name}"]
-path_to_result = {
-    f"{dataset_name}": {
-        # "arboel_biencoder": f"/home2/cye73/results2/arboel/{dataset_name}/biencoder_output_eval.json",
-        # "arboel_crossencoder": f"/home2/cye73/results2/arboel/{dataset_name}/crossencoder_output_eval.json",
-        "sapbert": f"/home2/cye73/results2/sapbert/sapbert_{dataset_name}_real.json",
-    }
-}
+model_names = [f"{EL_model}"]
 
-model_names = [
-    # "arboel_biencoder",
-    # "arboel_crossencoder",
-    "sapbert"
-]
+path_to_result = {f"{dataset_name}": {}}
+if EL_model == "biencoder":
+    path_to_result[dataset_name][
+        "biencoder"
+    ] = f"/home2/cye73/results2/arboel/{dataset_name}/biencoder_output_eval.json"
+elif EL_model == "crossencoder":
+    path_to_result[dataset_name][
+        "crossencoder"
+    ] = f"/home2/cye73/results2/arboel/{dataset_name}/crossencoder_output_eval.json"
+    if dataset_name == "medmentions_st21pv":
+        path_to_result[dataset_name][
+            "crossencoder"
+        ] = f"/home2/cye73/results2/arboel/{dataset_name}/crossencoder_output_eval3.json"
+elif EL_model == "sapbert":
+    path_to_result[dataset_name][
+        "sapbert"
+    ] = f"/home2/cye73/results2/sapbert/sapbert_{dataset_name}_real2.json"  # _real2.json
 
-evaluator = Evaluate(dataset_names, model_names, path_to_result, path_to_abbrev)
+
+eval_strategies = ["basic"]
+evaluator = Evaluate(
+    dataset_names=dataset_names,
+    model_names=model_names,
+    path_to_result=path_to_result,
+    eval_strategies=eval_strategies,
+    abbreviations_path=path_to_abbrev,
+)
 evaluator.load_results()
 evaluator.process_datasets()
-evaluator.evaluate(eval_strategies=["basic"])
+evaluator.evaluate()
 
 results = evaluator.full_results["basic"][f"{dataset_name}"]
 
-cols = [
+# Base columns common to all models
+base_cols = [
     "document_id",
     "offsets",
     "deabbreviated_text",
     "db_ids",
     "mention_id",
     "joined_offsets",
-    # "arboel_biencoder_resolve_abbrev",
-    # "arboel_biencoder_resolve_abbrev_min_hit_index",
-    # "arboel_crossencoder_resolve_abbrev",
-    # "arboel_crossencoder_resolve_abbrev_min_hit_index",
-    "sapbert_resolve_abbrev",
-    "sapbert_resolve_abbrev_min_hit_index",
 ]
-filtered_results = results[cols].rename(
-    columns={
-        # "arboel_biencoder_resolve_abbrev": "biencoder_candidates",
-        # "arboel_biencoder_resolve_abbrev_min_hit_index": "biencoder_hit_index",
-        # "arboel_crossencoder_resolve_abbrev": "crossencoder_candidates",
-        # "arboel_crossencoder_resolve_abbrev_min_hit_index": "crossencoder_hit_index",
+
+# Add model-specific columns based on EL_model
+# if EL_model == "biencoder":
+#     model_cols = [
+#         "arboel_biencoder_resolve_abbrev",
+#         "arboel_biencoder_resolve_abbrev_min_hit_index",
+#     ]
+#     rename_map = {
+#         "arboel_biencoder_resolve_abbrev": "biencoder_candidates",
+#         "arboel_biencoder_resolve_abbrev_min_hit_index": "biencoder_hit_index",
+#     }
+# el
+if EL_model == "crossencoder":
+    model_cols = [
+        "crossencoder_resolve_abbrev",
+        "crossencoder_resolve_abbrev_min_hit_index",
+    ]
+    rename_map = {
+        "crossencoder_resolve_abbrev": "crossencoder_candidates",
+        "crossencoder_resolve_abbrev_min_hit_index": "crossencoder_hit_index",
+    }
+elif EL_model == "sapbert":
+    model_cols = ["sapbert_resolve_abbrev", "sapbert_resolve_abbrev_min_hit_index"]
+    rename_map = {
         "sapbert_resolve_abbrev": "sapbert_candidates",
         "sapbert_resolve_abbrev_min_hit_index": "sapbert_hit_index",
     }
-)
+
+# Combine base and model-specific columns
+cols = base_cols + model_cols
+print(results.columns)
+# Select and rename columns in results
+filtered_results = results[cols].rename(columns=rename_map)
+# Filter results based on hit index
+filtered_results = filtered_results[
+    filtered_results[f"{EL_model}_hit_index"] < number_candidates
+]
+
 
 ############ III) FILTER THE CANDIDATES ############
-
-number_candidates = 10
-print("number of candidates to consider :", number_candidates)
-
-# EL_model = "crossencoder"
-EL_model = "sapbert"
-
 filtered_results = filtered_results[
     filtered_results[f"{EL_model}_hit_index"] < number_candidates
 ]
@@ -239,6 +292,7 @@ mention2text = {}
 mention2biencoder_candidates = {}
 mention2crossencoder_candidates = {}
 mention2sapbert_candidates = {}
+mention2hit = {}
 for idx, row in filtered_results.iterrows():
     # Only consider row if hit_index < max number of candidates
     if row[f"{EL_model}_hit_index"] < number_candidates:
@@ -257,9 +311,14 @@ for idx, row in filtered_results.iterrows():
         mention2gold[row["mention_id"]] = row["db_ids"]
         mentions.append(row["mention_id"])
         mention2text[row["mention_id"]] = row["deabbreviated_text"]
+        mention2hit[row["mention_id"]] = row[f"{EL_model}_hit_index"]
 
 
 ############ V) COMPUTE THE RESULTS FROM THE ORIGINAL ENTITY-LINKING MODELS ############
+
+number_hits_biencoder = 0
+number_hits_crossencoder = 0
+number_hits_sapbert = 0
 
 #### BIENCODER
 if EL_model == "biencoder":
@@ -315,6 +374,11 @@ assert len(mentions) == len(
     filtered_results
 ), f"Length mismatch: mentions has {len(mentions)} elements, but it should have {len(filtered_results)} elements. Check the condition 'row['biencoder/crossencoder_hit_index'] < number_candidates' for both filtered_result."
 
+number_hits = {
+    "biencoder": number_hits_biencoder,
+    "crossencoder": number_hits_crossencoder,
+    "sapbert": number_hits_sapbert,
+}
 
 ############ VI) RUN THE LLM ############
 
@@ -373,11 +437,7 @@ Your task is to rank the candidate entities from best to worst for a given menti
 #     analysis5 = json.load(f)
 
 # analysis = [analysis1, analysis2, analysis3, analysis4, analysis5]
-analysis = None
-analysis_version = "v1"  # v1 for default, v2 for MoA
-recall = False
-recall_k = 5
-k = 3
+
 
 mention2candidates_dict = {
     "biencoder": mention2biencoder_candidates,
@@ -398,18 +458,26 @@ repo = "recall" if recall else "accuracy"
 
 
 llm = LLM(
-    model="Qwen/Qwen2.5-7B-Instruct",
+    model=llm_model,
     tensor_parallel_size=1,
     dtype="half",
-    gpu_memory_utilization=0.8,  # % of memory of the gpu that KV caching will take (allows for higher "max_model_len").
+    gpu_memory_utilization=0.75,  # % of memory of the gpu that KV caching will take (allows for higher "max_model_len").
     max_logprobs=1000,
-    device=device_1,
-    max_model_len=32000,
+    device=device,
+    max_model_len=30000,
 )
 
 tokenizer = llm.get_tokenizer()
 
-path = f"data/{dataset_name}/{EL_model}/{repo}/Qwen2.5-7B-Instruct_k={k}_cands={number_candidates}_recall={recall}{recall_k}_true_results.json"
+# Path to the results
+directory = f"data/{dataset_name}/{EL_model}/{repo}"
+filename = f"{llm_subname}_k={k}_cands={number_candidates}_recall={recall}{recall_k}_true_results2.json"
+path = os.path.join(directory, filename)
+
+# Create the directory if it doesn't exist
+if not os.path.exists(directory):
+    os.makedirs(directory)
+
 print("path :", path)
 
 results = evaluate(
@@ -444,13 +512,46 @@ with open(path, "w") as f:
     json.dump(results, f, indent=4)
 
 if recall:
-    recall_r = recall_fn(
+    recall_r, nb_cands, errors = recall_fn(
         results=results, mention2gold=mention2gold, ks=list(range(1, recall_k + 1))
     )
+    print("Number of mentions:", total_mentions)
+    # Number of candidates - the number of mentions where the answer is 'None' because of token limits imposed by the LLM
     print("recall :", recall_r)
+    number_cands = sum(
+        [number_hits[f"{EL_model}"][i] for i in range(1, number_candidates + 1)]
+    )
+    print(
+        "Number of evaluated candidates (only one with correct CUI in the candidates) :",
+        number_cands,
+    )
+    print(
+        "Number of mentions being ignored because not correctly formatted by the LLM:",
+        errors,
+    )
+    normalized_recall = {
+        f"normalized_{k}": v * number_cands / total_mentions
+        for k, v in recall_r.items()
+    }
+    print("Normalized_recall :", normalized_recall)
 else:
-    score = scoring(results=results, mention2gold=mention2gold)
-    print("score :", score)
+    score, match, nb_cands, errors = scoring(results=results, mention2gold=mention2gold)
+    print("Number of mentions:", total_mentions)
+    # Number of candidates - the number of mentions where the answer is 'None' because of token limits imposed by the LLM
+    print(
+        "Number of evaluated candidates (only one with correct CUI in the candidates):",
+        nb_cands,
+    )
+    print(
+        "Number of mentions being ignored because not correctly formatted by the LLM:",
+        errors,
+    )
+    print(
+        "Number of correct predictions:",
+        match,
+    )
+    print("Accuracy :", score)
+    print("Normalized accuracy:", score * nb_cands / total_mentions)
 
 
 end_time = time.time()
