@@ -182,21 +182,16 @@ def main(config):
 
     # Load the DataFrame from CSV, ensuring 'document_id' and 'mention_id' are strings
     filtered_results = pd.read_csv(
-        "datasets/ncbi_disease_final_sapbert.csv",
+        f"datasets/ncbi_disease_final_{EL_model}.csv",
         dtype={"document_id": str, "mention_id": str},
     )
-    # Convert the necessary columns back to lists
-    filtered_results = pd.read_csv(
-        "datasets/ncbi_disease_final_sapbert.csv",
-        dtype={"document_id": str, "mention_id": str},
-    )
-    filtered_results["sapbert_candidates"] = filtered_results[
-        "sapbert_candidates"
+    filtered_results[f"{EL_model}_candidates"] = filtered_results[
+        f"{EL_model}_candidates"
     ].apply(json.loads)
     filtered_results["offsets"] = filtered_results["offsets"].apply(ast.literal_eval)
     filtered_results["db_ids"] = filtered_results["db_ids"].apply(ast.literal_eval)
     filtered_results = filtered_results[
-        filtered_results[f"{EL_model}_hit_index"] < config.number_candidates
+        filtered_results[f"{EL_model}_hit_index"] < number_candidates
     ]
 
     ############ II) CREATE THE RAG-LIKE SYSTEM FOR BETTER ICL IN THE PROMPT ############

@@ -81,8 +81,8 @@ start_time = time.time()
 # ontology2 = BiomedicalOntology.load_medic(filepath=ontology_dir, name=name)
 
 # gnormplus & nlm_gene
-# dataset_name = "nlm_gene"
-dataset_name = "gnormplus"
+dataset_name = "nlm_gene"
+# dataset_name = "gnormplus"
 entrez_dict = {
     "name": "entrez",
     "filepath": "/mitchell/entity-linking/el-robustness-comparison/data/gene_info.tsv",
@@ -105,7 +105,7 @@ ontology2 = BiomedicalOntology.load_entrez(**entrez_dict)
 # ontology2 = BiomedicalOntology.load_umls(**umls_dict_st21pv)
 
 
-number_candidates = 20
+number_candidates = 10
 print("number of candidates to consider :", number_candidates)
 
 # EL_model = "arboel"
@@ -117,10 +117,10 @@ analysis = None
 analysis_version = "v1"  # v1 for default, v2 for MoA
 recall = False
 recall_k = 5
-k = 10
+k = 3
 
-llm_model = "mistralai/Mistral-Nemo-Instruct-2407"
-llm_subname = "Mistral-Nemo-Instruct-2407"
+llm_model = "Qwen/Qwen2.5-7B-Instruct"
+llm_subname = "Qwen2.5-7B-Instruct"
 
 # llm_subname = "gpt-4o-2024-08-06"
 
@@ -173,11 +173,11 @@ path_to_result = {f"{dataset_name}": {}}
 if EL_model == "arboel":  # arboel
     path_to_result[dataset_name][
         "arboel"
-    ] = f"Candidates/{dataset_name}/arboel_{dataset_name}.json"
+    ] = f"candidates/{dataset_name}/arboel_{dataset_name}.json"
 elif EL_model == "sapbert":
     path_to_result[dataset_name][
         "sapbert"
-    ] = f"Candidates/{dataset_name}/sapbert_{dataset_name}_real2.json"  # _real2.json
+    ] = f"candidates/{dataset_name}/sapbert_{dataset_name}_real2.json"  # _real2.json
 
 
 eval_strategies = ["basic"]
