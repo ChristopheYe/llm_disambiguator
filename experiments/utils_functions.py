@@ -393,6 +393,7 @@ def add_context(df, docs, length=64):
 
         if start_word_idx is None or end_word_idx is None:
             limited_contextualized_mentions.append(doc)
+            # print(idx)
             continue
 
         words = doc.split()
@@ -891,6 +892,8 @@ def evaluate(
     results = defaultdict(dict)
     for i in range(len(mentions)):
         mention_id = mentions[i]
+        if i == 0:
+            print("mention ID :", type(mention_id))
         mention_name = mention2text[mention_id]
         context = mention2context[mention_id]
 
