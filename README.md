@@ -9,7 +9,7 @@ conda env create -f llm_disambiguator_env.yaml
 conda activate llm_disambiguator
 ```
 
-## Example Usage: Model Training, Inference, and Evaluation
+## Example Usage: Run Inference and Evaluation
 ```
 python llm_disambiguator_main.py --dataset_name ncbi_disease --EL_model arboel --llm_model "Qwen/Qwen2.5-7B-Instruct" --llm_subname "Qwen2.5-7B-Instruct"
 ```
