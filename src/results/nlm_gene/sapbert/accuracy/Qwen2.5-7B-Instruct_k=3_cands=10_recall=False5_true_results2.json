@@ -1,0 +1,6402 @@
+{
+    "12486105.1": {
+        "predicted": "NCBIGene:4065",
+        "explanation": "{\"NCBIGene:4065\"}"
+    },
+    "12486105.5": {
+        "predicted": "NCBIGene:4065",
+        "explanation": "{\"NCBIGene:4065\"}"
+    },
+    "12486105.7": {
+        "predicted": "NCBIGene:396058",
+        "explanation": "{\"NCBIGene:396058\"}"
+    },
+    "12486105.8": {
+        "predicted": "NCBIGene:4065",
+        "explanation": "{\"NCBIGene:4065\"}"
+    },
+    "12486105.9": {
+        "predicted": "NCBIGene:16411",
+        "explanation": "{\"cui\": \"NCBIGene:16411\"}"
+    },
+    "12486105.10": {
+        "predicted": "NCBIGene:16411",
+        "explanation": "{\"cui\": \"NCBIGene:16411\"}"
+    },
+    "12486105.11": {
+        "predicted": "NCBIGene:396058",
+        "explanation": "{\"NCBIGene:396058\"}"
+    },
+    "12486105.14": {
+        "predicted": "NCBIGene:396058",
+        "explanation": "{\"NCBIGene:396058\"}"
+    },
+    "12486105.18": {
+        "predicted": "NCBIGene:4065",
+        "explanation": "{\"NCBIGene:4065\"}"
+    },
+    "12486105.19": {
+        "predicted": "NCBIGene:396058",
+        "explanation": "{\"NCBIGene:396058\"}"
+    },
+    "12486105.20": {
+        "predicted": "NCBIGene:396058",
+        "explanation": "{\"NCBIGene:396058\"}"
+    },
+    "12486105.21": {
+        "predicted": "NCBIGene:396058",
+        "explanation": "{\"NCBIGene:396058\"}"
+    },
+    "12486105.24": {
+        "predicted": "NCBIGene:396058",
+        "explanation": "{\"NCBIGene:396058\"}"
+    },
+    "12486105.26": {
+        "predicted": "NCBIGene:4065",
+        "explanation": "{\"NCBIGene:4065\"}"
+    },
+    "12486105.27": {
+        "predicted": "NCBIGene:396058",
+        "explanation": "{\"NCBIGene:396058\"}"
+    },
+    "12486105.28": {
+        "predicted": "NCBIGene:396058",
+        "explanation": "{\"NCBIGene:396058\"}"
+    },
+    "12486105.30": {
+        "predicted": "NCBIGene:4065",
+        "explanation": "{\"NCBIGene:4065\"}"
+    },
+    "12486105.31": {
+        "predicted": "NCBIGene:396058",
+        "explanation": "{\"NCBIGene:396058\"}"
+    },
+    "12486105.34": {
+        "predicted": "NCBIGene:16183",
+        "explanation": "{\"cui\": \"NCBIGene:16183\"}"
+    },
+    "12486105.35": {
+        "predicted": "NCBIGene:403801",
+        "explanation": "{\"NCBIGene:403801\"}"
+    },
+    "12486105.36": {
+        "predicted": "NCBIGene:396058",
+        "explanation": "{\"NCBIGene:396058\"}"
+    },
+    "12486105.37": {
+        "predicted": "NCBIGene:4065",
+        "explanation": "{\"NCBIGene:4065\"}"
+    },
+    "17319906.1": {
+        "predicted": "NCBIGene:83767",
+        "explanation": "{\"NCBIGene:83767\"}"
+    },
+    "17319906.2": {
+        "predicted": "NCBIGene:83767",
+        "explanation": "{\"NCBIGene:83767\"}"
+    },
+    "17319906.3": {
+        "predicted": "NCBIGene:51206",
+        "explanation": "{\"NCBIGene:51206\"}"
+    },
+    "17319906.9": {
+        "predicted": "NCBIGene:34519",
+        "explanation": "{\"NCBIGene:34519\"}"
+    },
+    "17319906.10": {
+        "predicted": "NCBIGene:34519",
+        "explanation": "{\"NCBIGene:34519\"}"
+    },
+    "17319906.14": {
+        "predicted": "NCBIGene:83767",
+        "explanation": "{\"NCBIGene:83767\"}"
+    },
+    "17319906.15": {
+        "predicted": "NCBIGene:83767",
+        "explanation": "{\"NCBIGene:83767\"}"
+    },
+    "17319906.16": {
+        "predicted": "NCBIGene:83767",
+        "explanation": "{\"NCBIGene:83767\"}"
+    },
+    "17319906.17": {
+        "predicted": "NCBIGene:83767",
+        "explanation": "{\"NCBIGene:83767\"}"
+    },
+    "17319906.18": {
+        "predicted": "NCBIGene:83767",
+        "explanation": "{\"NCBIGene:83767\"}"
+    },
+    "17319906.19": {
+        "predicted": "NCBIGene:10163",
+        "explanation": "{\"NCBIGene:10163\"}"
+    },
+    "17319906.20": {
+        "predicted": "NCBIGene:83767",
+        "explanation": "{\"NCBIGene:83767\"}"
+    },
+    "17319906.21": {
+        "predicted": "NCBIGene:83767",
+        "explanation": "{\"NCBIGene:83767\"}"
+    },
+    "17319906.23": {
+        "predicted": "NCBIGene:34068",
+        "explanation": "{\"NCBIGene:34068\"}"
+    },
+    "17319906.25": {
+        "predicted": "NCBIGene:51206",
+        "explanation": "{\"cui\": \"NCBIGene:51206\"}"
+    },
+    "17319906.29": {
+        "predicted": "NCBIGene:83767",
+        "explanation": "{\"NCBIGene:83767\"}"
+    },
+    "17319906.30": {
+        "predicted": "NCBIGene:83767",
+        "explanation": "{\"NCBIGene:83767\"}"
+    },
+    "17319906.32": {
+        "predicted": "NCBIGene:83767",
+        "explanation": "{\"NCBIGene:83767\"}"
+    },
+    "17319906.33": {
+        "predicted": "NCBIGene:83767",
+        "explanation": "{\"NCBIGene:83767\"}"
+    },
+    "17319906.38": {
+        "predicted": "NCBIGene:83767",
+        "explanation": "{\"NCBIGene:83767\"}"
+    },
+    "17319906.39": {
+        "predicted": "NCBIGene:83767",
+        "explanation": "{\"NCBIGene:83767\"}"
+    },
+    "17319906.40": {
+        "predicted": "NCBIGene:83767",
+        "explanation": "{\"NCBIGene:83767\"}"
+    },
+    "17319906.41": {
+        "predicted": "NCBIGene:8936",
+        "explanation": "{\"cui\": \"NCBIGene:8936\"}"
+    },
+    "17319906.42": {
+        "predicted": "NCBIGene:51206",
+        "explanation": "{\"NCBIGene:51206\"}"
+    },
+    "18454191.11": {
+        "predicted": "NCBIGene:851691",
+        "explanation": "{\"NCBIGene:851691\"}"
+    },
+    "18454191.12": {
+        "predicted": "NCBIGene:398197",
+        "explanation": "{\"NCBIGene:398197\"}"
+    },
+    "18454191.14": {
+        "predicted": "NCBIGene:472",
+        "explanation": "{\"cui\": \"NCBIGene:472\"}"
+    },
+    "18454191.16": {
+        "predicted": "NCBIGene:1111",
+        "explanation": "{\"cui\": \"NCBIGene:1111\"}"
+    },
+    "18454191.17": {
+        "predicted": "NCBIGene:11200",
+        "explanation": "{\"cui\": \"NCBIGene:11200\"}"
+    },
+    "18454191.18": {
+        "predicted": "NCBIGene:398197",
+        "explanation": "{\"cui\": \"NCBIGene:398197\"}"
+    },
+    "18454191.19": {
+        "predicted": "NCBIGene:822211",
+        "explanation": "{\"cui\": \"NCBIGene:822211\"}"
+    },
+    "19023445.1": {
+        "predicted": "NCBIGene:8890",
+        "explanation": "{\"NCBIGene:8890\"}"
+    },
+    "19023445.2": {
+        "predicted": "NCBIGene:8890",
+        "explanation": "{\"NCBIGene:8890\"}"
+    },
+    "19023445.6": {
+        "predicted": "NCBIGene:563613",
+        "explanation": "{\"cui\": \"NCBIGene:563613\"}"
+    },
+    "19023445.7": {
+        "predicted": "NCBIGene:563613",
+        "explanation": "{\"NCBIGene:563613\"}"
+    },
+    "19023445.9": {
+        "predicted": "NCBIGene:23645",
+        "explanation": "{\"NCBIGene:23645\"}"
+    },
+    "19023445.15": {
+        "predicted": "NCBIGene:563613",
+        "explanation": "{\"cui\": \"NCBIGene:563613\"}"
+    },
+    "19023445.17": {
+        "predicted": "NCBIGene:23645",
+        "explanation": "{\"cui\": \"NCBIGene:23645\"}"
+    },
+    "19023445.22": {
+        "predicted": "NCBIGene:563613",
+        "explanation": "{\"NCBIGene:563613\"}"
+    },
+    "19358334.4": {
+        "predicted": "NCBIGene:408047",
+        "explanation": "{\"NCBIGene:408047\"}"
+    },
+    "19358334.5": {
+        "predicted": "NCBIGene:408047",
+        "explanation": "{\"NCBIGene:408047\"}"
+    },
+    "19358334.9": {
+        "predicted": "NCBIGene:16542",
+        "explanation": "{\"NCBIGene:16542\"}"
+    },
+    "19358334.10": {
+        "predicted": "NCBIGene:7040",
+        "explanation": "{\"NCBIGene:7040\"}"
+    },
+    "19358334.11": {
+        "predicted": "NCBIGene:352940",
+        "explanation": "{\"NCBIGene:352940\"}"
+    },
+    "19358334.12": {
+        "predicted": "NCBIGene:14186",
+        "explanation": "{\"cui\": \"NCBIGene:14186\"}"
+    },
+    "19358334.13": {
+        "predicted": "NCBIGene:8822",
+        "explanation": "{\"cui\": \"NCBIGene:8822\"}"
+    },
+    "19358334.16": {
+        "predicted": "NCBIGene:22431",
+        "explanation": "{\"NCBIGene:22431\"}"
+    },
+    "19358334.17": {
+        "predicted": "NCBIGene:19241",
+        "explanation": "{\"NCBIGene:19241\"}"
+    },
+    "19358334.23": {
+        "predicted": "NCBIGene:408047",
+        "explanation": "{\"NCBIGene:408047\"}"
+    },
+    "19358334.24": {
+        "predicted": "NCBIGene:408047",
+        "explanation": "{\"NCBIGene:408047\"}"
+    },
+    "19427376.1": {
+        "predicted": "NCBIGene:443107",
+        "explanation": "{\"cui\": \"NCBIGene:443107\"}"
+    },
+    "19427376.3": {
+        "predicted": "NCBIGene:443107",
+        "explanation": "{\"NCBIGene:443107\"}"
+    },
+    "19427376.5": {
+        "predicted": "NCBIGene:24180",
+        "explanation": "{\"NCBIGene:24180\"}"
+    },
+    "19427376.7": {
+        "predicted": "NCBIGene:1394",
+        "explanation": "{\"NCBIGene:1394\"}"
+    },
+    "19427376.8": {
+        "predicted": "NCBIGene:24180",
+        "explanation": "{\"cui\": \"NCBIGene:24180\"}"
+    },
+    "19427376.9": {
+        "predicted": "NCBIGene:185",
+        "explanation": "{\"cui\": \"NCBIGene:185\"}"
+    },
+    "19427376.17": {
+        "predicted": "NCBIGene:5743",
+        "explanation": "{\"cui\": \"NCBIGene:5743\"}"
+    },
+    "19427376.20": {
+        "predicted": "NCBIGene:107057170",
+        "explanation": "{\"cui\": \"NCBIGene:107057170\"}"
+    },
+    "19427376.25": {
+        "predicted": "NCBIGene:1394",
+        "explanation": "{\"cui\": \"NCBIGene:1394\"}"
+    },
+    "19427376.26": {
+        "predicted": "NCBIGene:443107",
+        "explanation": "{\"cui\": \"NCBIGene:443107\"}"
+    },
+    "19521535.2": {
+        "predicted": "NCBIGene:10419",
+        "explanation": "{\"NCBIGene:10419\"}"
+    },
+    "19521535.6": {
+        "predicted": "NCBIGene:10419",
+        "explanation": "{\"NCBIGene:10419\"}"
+    },
+    "19521535.7": {
+        "predicted": "NCBIGene:175717",
+        "explanation": "{\"NCBIGene:175717\"}"
+    },
+    "19521535.8": {
+        "predicted": "NCBIGene:172616",
+        "explanation": "{\"NCBIGene:172616\"}"
+    },
+    "19521535.10": {
+        "predicted": "NCBIGene:179943",
+        "explanation": "{\"cui\": \"NCBIGene:179943\"}"
+    },
+    "19521535.11": {
+        "predicted": "NCBIGene:176380",
+        "explanation": "{\"NCBIGene:176380\"}"
+    },
+    "19521535.12": {
+        "predicted": "NCBIGene:42130",
+        "explanation": "{\"cui\": \"NCBIGene:42130\"}"
+    },
+    "19521535.13": {
+        "predicted": "NCBIGene:43856",
+        "explanation": "{\"NCBIGene:43856\"}"
+    },
+    "19521535.14": {
+        "predicted": "NCBIGene:172616",
+        "explanation": "{\"cui\": \"NCBIGene:172616\"}"
+    },
+    "19521535.15": {
+        "predicted": "NCBIGene:10419",
+        "explanation": "{\"cui\": \"NCBIGene:10419\"}"
+    },
+    "19521535.16": {
+        "predicted": "NCBIGene:172616",
+        "explanation": "{\"cui\": \"NCBIGene:172616\"}"
+    },
+    "19521535.17": {
+        "predicted": "NCBIGene:176380",
+        "explanation": "{\"NCBIGene:176380\"}"
+    },
+    "19521535.18": {
+        "predicted": "NCBIGene:176380",
+        "explanation": "{\"cui\": \"NCBIGene:176380\"}"
+    },
+    "19521535.19": {
+        "predicted": "NCBIGene:179943",
+        "explanation": "{\"cui\": \"NCBIGene:179943\"}"
+    },
+    "19521535.20": {
+        "predicted": "NCBIGene:175717",
+        "explanation": "{\"cui\": \"NCBIGene:175717\"}"
+    },
+    "19521535.21": {
+        "predicted": "NCBIGene:10419",
+        "explanation": "{\"cui\": \"NCBIGene:10419\"}"
+    },
+    "19521535.22": {
+        "predicted": "NCBIGene:172616",
+        "explanation": "{\"cui\": \"NCBIGene:172616\"}"
+    },
+    "19521535.23": {
+        "predicted": "NCBIGene:176380",
+        "explanation": "{\"cui\": \"NCBIGene:176380\"}"
+    },
+    "19706770.1": {
+        "predicted": "NCBIGene:5290",
+        "explanation": "{\"NCBIGene:5290\"}"
+    },
+    "19706770.3": {
+        "predicted": "NCBIGene:2064",
+        "explanation": "{\"NCBIGene:2064\"}"
+    },
+    "19706770.4": {
+        "predicted": "NCBIGene:2260",
+        "explanation": "{\"NCBIGene:2260\"}"
+    },
+    "19706770.5": {
+        "predicted": "NCBIGene:4609",
+        "explanation": "{\"NCBIGene:4609\"}"
+    },
+    "19706770.6": {
+        "predicted": "NCBIGene:396341",
+        "explanation": "{\"NCBIGene:396341\"}"
+    },
+    "19706770.7": {
+        "predicted": "NCBIGene:5290",
+        "explanation": "{\"NCBIGene:5290\"}"
+    },
+    "19706770.9": {
+        "predicted": "NCBIGene:894",
+        "explanation": "{\"NCBIGene:894\"}"
+    },
+    "19706770.10": {
+        "predicted": "NCBIGene:1956",
+        "explanation": "{\"NCBIGene:1956\"}"
+    },
+    "19706770.11": {
+        "predicted": "NCBIGene:352940",
+        "explanation": "{\"NCBIGene:352940\"}"
+    },
+    "19706770.12": {
+        "predicted": "NCBIGene:4854",
+        "explanation": "{\"cui\": \"NCBIGene:4854\"}"
+    },
+    "19706770.13": {
+        "predicted": "NCBIGene:844201",
+        "explanation": "{\"cui\": \"NCBIGene:844201\"}"
+    },
+    "19706770.14": {
+        "predicted": "NCBIGene:393132",
+        "explanation": "{\"cui\": \"NCBIGene:393132\"}"
+    },
+    "19706770.15": {
+        "predicted": "NCBIGene:373975",
+        "explanation": "{\"cui\": \"NCBIGene:373975\"}"
+    },
+    "19706770.16": {
+        "predicted": "NCBIGene:426284",
+        "explanation": "{\"NCBIGene:426284\"}"
+    },
+    "19706770.17": {
+        "predicted": "NCBIGene:421142",
+        "explanation": "{\"NCBIGene:421142\"}"
+    },
+    "19706770.18": {
+        "predicted": "NCBIGene:2745841",
+        "explanation": "{\"cui\": \"NCBIGene:2745841\"}"
+    },
+    "19706770.19": {
+        "predicted": "NCBIGene:373975",
+        "explanation": "{\"NCBIGene:373975\"}"
+    },
+    "19706770.20": {
+        "predicted": "NCBIGene:426284",
+        "explanation": "{\"NCBIGene:426284\"}"
+    },
+    "19706770.21": {
+        "predicted": "NCBIGene:553608",
+        "explanation": "{\"NCBIGene:553608\"}"
+    },
+    "19706770.22": {
+        "predicted": "NCBIGene:426284",
+        "explanation": "{\"NCBIGene:426284\"}"
+    },
+    "19706770.23": {
+        "predicted": "NCBIGene:424971",
+        "explanation": "{\"cui\": \"NCBIGene:424971\"}"
+    },
+    "19706770.24": {
+        "predicted": "NCBIGene:5290",
+        "explanation": "{\"NCBIGene:5290\"}"
+    },
+    "19741124.2": {
+        "predicted": "NCBIGene:3732",
+        "explanation": "{\"NCBIGene:3732\"}"
+    },
+    "19741124.5": {
+        "predicted": "NCBIGene:324137",
+        "explanation": "{\"NCBIGene:324137\"}"
+    },
+    "19741124.13": {
+        "predicted": "NCBIGene:31298",
+        "explanation": "{\"NCBIGene:31298\"}"
+    },
+    "19741124.22": {
+        "predicted": "NCBIGene:31298",
+        "explanation": "{\"NCBIGene:31298\"}"
+    },
+    "20226780.9": {
+        "predicted": "NCBIGene:823942",
+        "explanation": "{\"NCBIGene:823942\"}"
+    },
+    "20226780.10": {
+        "predicted": "NCBIGene:823942",
+        "explanation": "{\"NCBIGene:823942\"}"
+    },
+    "20226780.11": {
+        "predicted": "NCBIGene:823942",
+        "explanation": "{\"NCBIGene:823942\"}"
+    },
+    "20226780.12": {
+        "predicted": "NCBIGene:25884",
+        "explanation": "{\"NCBIGene:25884\"}"
+    },
+    "20226780.14": {
+        "predicted": "NCBIGene:823942",
+        "explanation": "{\"NCBIGene:823942\"}"
+    },
+    "20226780.16": {
+        "predicted": "NCBIGene:25884",
+        "explanation": "{\"NCBIGene:25884\"}"
+    },
+    "20226780.17": {
+        "predicted": "NCBIGene:823942",
+        "explanation": "{\"NCBIGene:823942\"}"
+    },
+    "20226780.19": {
+        "predicted": "NCBIGene:30161",
+        "explanation": "{\"NCBIGene:30161\"}"
+    },
+    "20226780.20": {
+        "predicted": "NCBIGene:823942",
+        "explanation": "{\"cui\": \"NCBIGene:823942\"}"
+    },
+    "20226780.21": {
+        "predicted": "NCBIGene:12667",
+        "explanation": "{\"cui\": \"NCBIGene:12667\"}"
+    },
+    "20226780.22": {
+        "predicted": "NCBIGene:399093",
+        "explanation": "{\"cui\": \"NCBIGene:399093\"}"
+    },
+    "20226780.23": {
+        "predicted": "NCBIGene:823942",
+        "explanation": "{\"cui\": \"NCBIGene:823942\"}"
+    },
+    "20226780.24": {
+        "predicted": "NCBIGene:33432",
+        "explanation": "{\"NCBIGene:33432\"}"
+    },
+    "20226780.25": {
+        "predicted": "NCBIGene:30161",
+        "explanation": "{\"NCBIGene:30161\"}"
+    },
+    "20459769.1": {
+        "predicted": "NCBIGene:1956",
+        "explanation": "{\"NCBIGene:1956\"}"
+    },
+    "20459769.2": {
+        "predicted": "NCBIGene:2064",
+        "explanation": "{\"cui\": \"NCBIGene:2064\"}"
+    },
+    "20459769.4": {
+        "predicted": "NCBIGene:1956",
+        "explanation": "{\"NCBIGene:1956\"}"
+    },
+    "20459769.5": {
+        "predicted": "NCBIGene:1956",
+        "explanation": "{\"NCBIGene:1956\"}"
+    },
+    "20459769.6": {
+        "predicted": "NCBIGene:1956",
+        "explanation": "{\"NCBIGene:1956\"}"
+    },
+    "20459769.8": {
+        "predicted": "NCBIGene:1956",
+        "explanation": "{\"NCBIGene:1956\"}"
+    },
+    "20459769.9": {
+        "predicted": "NCBIGene:2064",
+        "explanation": "{\"cui\": \"NCBIGene:2064\"}"
+    },
+    "20459769.10": {
+        "predicted": "NCBIGene:2064",
+        "explanation": "{\"cui\": \"NCBIGene:2064\"}"
+    },
+    "20459769.11": {
+        "predicted": "NCBIGene:1956",
+        "explanation": "{\"NCBIGene:1956\"}"
+    },
+    "20459769.12": {
+        "predicted": "NCBIGene:2064",
+        "explanation": "{\"NCBIGene:2064\"}"
+    },
+    "20459769.14": {
+        "predicted": "NCBIGene:142",
+        "explanation": "{\"NCBIGene:142\"}"
+    },
+    "20459769.16": {
+        "predicted": "NCBIGene:829480",
+        "explanation": "{\"NCBIGene:829480\"}"
+    },
+    "20459769.18": {
+        "predicted": "NCBIGene:282152",
+        "explanation": "{\"NCBIGene:282152\"}"
+    },
+    "20459769.19": {
+        "predicted": "NCBIGene:1956",
+        "explanation": "{\"NCBIGene:1956\"}"
+    },
+    "20459769.20": {
+        "predicted": "NCBIGene:2064",
+        "explanation": "{\"cui\": \"NCBIGene:2064\"}"
+    },
+    "20459769.21": {
+        "predicted": "NCBIGene:1956",
+        "explanation": "{\"NCBIGene:1956\"}"
+    },
+    "20459769.22": {
+        "predicted": "NCBIGene:2064",
+        "explanation": "{\"NCBIGene:2064\"}"
+    },
+    "20459769.23": {
+        "predicted": "NCBIGene:3354888",
+        "explanation": "{\"NCBIGene:3354888\"}"
+    },
+    "20459769.24": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"NCBIGene:41957\"}"
+    },
+    "20459769.25": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"NCBIGene:41957\"}"
+    },
+    "20459769.26": {
+        "predicted": "NCBIGene:31310",
+        "explanation": "{\"NCBIGene:31310\"}"
+    },
+    "20459769.27": {
+        "predicted": "NCBIGene:37290",
+        "explanation": "{\"cui\": \"NCBIGene:37290\"}"
+    },
+    "20507639.1": {
+        "predicted": "NCBIGene:6774",
+        "explanation": "{\"NCBIGene:6774\"}"
+    },
+    "20507639.2": {
+        "predicted": "NCBIGene:387",
+        "explanation": "{\"NCBIGene:387\"}"
+    },
+    "20507639.3": {
+        "predicted": "NCBIGene:395337",
+        "explanation": "{\"NCBIGene:395337\"}"
+    },
+    "20507639.4": {
+        "predicted": "NCBIGene:395337",
+        "explanation": "{\"NCBIGene:395337\"}"
+    },
+    "20507639.5": {
+        "predicted": "NCBIGene:2768677",
+        "explanation": "{\"NCBIGene:2768677\"}"
+    },
+    "20507639.6": {
+        "predicted": "NCBIGene:3688",
+        "explanation": "{\"NCBIGene:3688\"}"
+    },
+    "20507639.8": {
+        "predicted": "NCBIGene:395337",
+        "explanation": "{\"NCBIGene:395337\"}"
+    },
+    "20507639.9": {
+        "predicted": "NCBIGene:6774",
+        "explanation": "{\"NCBIGene:6774\"}"
+    },
+    "20507639.10": {
+        "predicted": "NCBIGene:6774",
+        "explanation": "{\"cui\": \"NCBIGene:6774\"}"
+    },
+    "20507639.11": {
+        "predicted": "NCBIGene:387",
+        "explanation": "{\"NCBIGene:387\"}"
+    },
+    "20507639.12": {
+        "predicted": "NCBIGene:43916",
+        "explanation": "{\"NCBIGene:43916\"}"
+    },
+    "20507639.13": {
+        "predicted": "NCBIGene:32743",
+        "explanation": "{\"NCBIGene:32743\"}"
+    },
+    "20507639.15": {
+        "predicted": "NCBIGene:5781",
+        "explanation": "{\"NCBIGene:5781\"}"
+    },
+    "20507639.16": {
+        "predicted": "NCBIGene:3688",
+        "explanation": "{\"NCBIGene:3688\"}"
+    },
+    "20507639.17": {
+        "predicted": "NCBIGene:395337",
+        "explanation": "{\"NCBIGene:395337\"}"
+    },
+    "20507639.18": {
+        "predicted": "NCBIGene:6774",
+        "explanation": "{\"cui\": \"NCBIGene:6774\"}"
+    },
+    "20507639.19": {
+        "predicted": "NCBIGene:398251",
+        "explanation": "{\"NCBIGene:398251\"}"
+    },
+    "20507639.20": {
+        "predicted": "NCBIGene:53585",
+        "explanation": "{\"NCBIGene:53585\"}"
+    },
+    "20507639.21": {
+        "predicted": "NCBIGene:58081",
+        "explanation": "{\"cui\": \"NCBIGene:58081\"}"
+    },
+    "20507639.24": {
+        "predicted": "NCBIGene:32743",
+        "explanation": "{\"NCBIGene:32743\"}"
+    },
+    "20507639.25": {
+        "predicted": "NCBIGene:387",
+        "explanation": "{\"NCBIGene:387\"}"
+    },
+    "20507639.26": {
+        "predicted": "NCBIGene:5781",
+        "explanation": "{\"cui\": \"NCBIGene:5781\"}"
+    },
+    "20507639.28": {
+        "predicted": "NCBIGene:43916",
+        "explanation": "{\"NCBIGene:43916\"}"
+    },
+    "20507639.29": {
+        "predicted": "NCBIGene:403954",
+        "explanation": "{\"cui\": \"NCBIGene:403954\"}"
+    },
+    "20507639.30": {
+        "predicted": "NCBIGene:30767",
+        "explanation": "{\"cui\": \"NCBIGene:30767\"}"
+    },
+    "20507639.31": {
+        "predicted": "NCBIGene:387",
+        "explanation": "{\"NCBIGene:387\"}"
+    },
+    "20507639.32": {
+        "predicted": "NCBIGene:43916",
+        "explanation": "{\"NCBIGene:43916\"}"
+    },
+    "20507639.33": {
+        "predicted": "NCBIGene:30767",
+        "explanation": "{\"NCBIGene:30767\"}"
+    },
+    "20507639.34": {
+        "predicted": "NCBIGene:403954",
+        "explanation": "{\"NCBIGene:403954\"}"
+    },
+    "20507639.35": {
+        "predicted": "NCBIGene:43916",
+        "explanation": "{\"cui\": \"NCBIGene:43916\"}"
+    },
+    "21159167.1": {
+        "predicted": "NCBIGene:399480",
+        "explanation": "{\"NCBIGene:399480\"}"
+    },
+    "21159167.2": {
+        "predicted": "NCBIGene:42866",
+        "explanation": "{\"NCBIGene:42866\"}"
+    },
+    "21159167.4": {
+        "predicted": "NCBIGene:399480",
+        "explanation": "{\"NCBIGene:399480\"}"
+    },
+    "21159167.5": {
+        "predicted": "NCBIGene:31872",
+        "explanation": "{\"NCBIGene:31872\"}"
+    },
+    "21159167.6": {
+        "predicted": "NCBIGene:399480",
+        "explanation": "{\"NCBIGene:399480\"}"
+    },
+    "21159167.7": {
+        "predicted": "NCBIGene:477575",
+        "explanation": "{\"NCBIGene:477575\"}"
+    },
+    "21159167.8": {
+        "predicted": "NCBIGene:399480",
+        "explanation": "{\"NCBIGene:399480\"}"
+    },
+    "21159167.9": {
+        "predicted": "NCBIGene:596",
+        "explanation": "{\"NCBIGene:596\"}"
+    },
+    "21159167.10": {
+        "predicted": "NCBIGene:5243",
+        "explanation": "{\"NCBIGene:5243\"}"
+    },
+    "21159167.11": {
+        "predicted": "NCBIGene:820496",
+        "explanation": "{\"NCBIGene:820496\"}"
+    },
+    "21159167.12": {
+        "predicted": "NCBIGene:596",
+        "explanation": "{\"NCBIGene:596\"}"
+    },
+    "21159167.13": {
+        "predicted": "NCBIGene:672",
+        "explanation": "{\"NCBIGene:672\"}"
+    },
+    "21159167.14": {
+        "predicted": "NCBIGene:675",
+        "explanation": "{\"NCBIGene:675\"}"
+    },
+    "21159167.15": {
+        "predicted": "NCBIGene:394460",
+        "explanation": "{\"NCBIGene:394460\"}"
+    },
+    "21159167.16": {
+        "predicted": "NCBIGene:422165",
+        "explanation": "{\"NCBIGene:422165\"}"
+    },
+    "21159167.17": {
+        "predicted": "NCBIGene:2100",
+        "explanation": "{\"NCBIGene:2100\"}"
+    },
+    "21159167.18": {
+        "predicted": "NCBIGene:373928",
+        "explanation": "{\"NCBIGene:373928\"}"
+    },
+    "21159167.19": {
+        "predicted": "NCBIGene:416477",
+        "explanation": "{\"NCBIGene:416477\"}"
+    },
+    "21159167.20": {
+        "predicted": "NCBIGene:399480",
+        "explanation": "{\"NCBIGene:399480\"}"
+    },
+    "21159167.21": {
+        "predicted": "NCBIGene:477575",
+        "explanation": "{\"NCBIGene:477575\"}"
+    },
+    "21159167.22": {
+        "predicted": "NCBIGene:399480",
+        "explanation": "{\"NCBIGene:399480\"}"
+    },
+    "21159167.23": {
+        "predicted": "NCBIGene:477575",
+        "explanation": "{\"NCBIGene:477575\"}"
+    },
+    "21159167.25": {
+        "predicted": "NCBIGene:9619",
+        "explanation": "{\"NCBIGene:9619\"}"
+    },
+    "21159167.26": {
+        "predicted": "NCBIGene:823930",
+        "explanation": "{\"NCBIGene:823930\"}"
+    },
+    "21159167.27": {
+        "predicted": "NCBIGene:823927",
+        "explanation": "{\"NCBIGene:823927\"}"
+    },
+    "21159167.29": {
+        "predicted": "NCBIGene:19",
+        "explanation": "{\"cui\": \"NCBIGene:19\"}"
+    },
+    "21159167.30": {
+        "predicted": "NCBIGene:823933",
+        "explanation": "{\"NCBIGene:823933\"}"
+    },
+    "21159167.31": {
+        "predicted": "NCBIGene:818031",
+        "explanation": "{\"NCBIGene:818031\"}"
+    },
+    "21159167.32": {
+        "predicted": "NCBIGene:399480",
+        "explanation": "{\"NCBIGene:399480\"}"
+    },
+    "21159167.33": {
+        "predicted": "NCBIGene:477575",
+        "explanation": "{\"NCBIGene:477575\"}"
+    },
+    "21159167.34": {
+        "predicted": "NCBIGene:3354888",
+        "explanation": "{\"NCBIGene:3354888\"}"
+    },
+    "21182077.15": {
+        "predicted": "NCBIGene:14972",
+        "explanation": "{\"cui\": \"NCBIGene:14972\"}"
+    },
+    "21182077.17": {
+        "predicted": "NCBIGene:3575",
+        "explanation": "{\"NCBIGene:3575\"}"
+    },
+    "21182077.18": {
+        "predicted": "NCBIGene:496789",
+        "explanation": "{\"NCBIGene:496789\"}"
+    },
+    "21182077.19": {
+        "predicted": "NCBIGene:100859707",
+        "explanation": "{\"cui\": \"NCBIGene:100859707\"}"
+    },
+    "21182077.20": {
+        "predicted": "NCBIGene:100145683",
+        "explanation": "{\"cui\": \"NCBIGene:100145683\"}"
+    },
+    "21182077.21": {
+        "predicted": "NCBIGene:16169",
+        "explanation": "{\"NCBIGene:16169\"}"
+    },
+    "21182077.22": {
+        "predicted": "NCBIGene:420193",
+        "explanation": "{\"NCBIGene:420193\"}"
+    },
+    "21182077.23": {
+        "predicted": "NCBIGene:100145683",
+        "explanation": "{\"cui\": \"NCBIGene:100145683\"}"
+    },
+    "21182077.25": {
+        "predicted": "NCBIGene:403801",
+        "explanation": "{\"NCBIGene:403801\"}"
+    },
+    "21182077.26": {
+        "predicted": "NCBIGene:735295",
+        "explanation": "{\"NCBIGene:735295\"}"
+    },
+    "21182077.28": {
+        "predicted": "NCBIGene:12142",
+        "explanation": "{\"NCBIGene:12142\"}"
+    },
+    "21182077.30": {
+        "predicted": "NCBIGene:3559",
+        "explanation": "{\"NCBIGene:3559\"}"
+    },
+    "21664439.1": {
+        "predicted": "NCBIGene:7040",
+        "explanation": "{\"NCBIGene:7040\"}"
+    },
+    "21664439.9": {
+        "predicted": "NCBIGene:5599",
+        "explanation": "{\"NCBIGene:5599\"}"
+    },
+    "21664439.14": {
+        "predicted": "NCBIGene:326116",
+        "explanation": "{\"NCBIGene:326116\"}"
+    },
+    "21664439.21": {
+        "predicted": "NCBIGene:326116",
+        "explanation": "{\"NCBIGene:326116\"}"
+    },
+    "21664439.25": {
+        "predicted": "NCBIGene:5599",
+        "explanation": "{\"NCBIGene:5599\"}"
+    },
+    "21688347.6": {
+        "predicted": "NCBIGene:39750",
+        "explanation": "{\"NCBIGene:39750\"}"
+    },
+    "21688347.8": {
+        "predicted": "NCBIGene:100148329",
+        "explanation": "{\"NCBIGene:100148329\"}"
+    },
+    "21688347.9": {
+        "predicted": "NCBIGene:100534909",
+        "explanation": "{\"NCBIGene:100534909\"}"
+    },
+    "21688347.10": {
+        "predicted": "NCBIGene:393930",
+        "explanation": "{\"NCBIGene:393930\"}"
+    },
+    "21688347.11": {
+        "predicted": "NCBIGene:58055",
+        "explanation": "{\"NCBIGene:58055\"}"
+    },
+    "21688347.12": {
+        "predicted": "NCBIGene:58052",
+        "explanation": "{\"NCBIGene:58052\"}"
+    },
+    "21688347.13": {
+        "predicted": "NCBIGene:142987",
+        "explanation": "{\"NCBIGene:142987\"}"
+    },
+    "21688347.14": {
+        "predicted": "NCBIGene:30394",
+        "explanation": "{\"NCBIGene:30394\"}"
+    },
+    "21688347.15": {
+        "predicted": "NCBIGene:437006",
+        "explanation": "{\"NCBIGene:437006\"}"
+    },
+    "21688347.16": {
+        "predicted": "NCBIGene:402998",
+        "explanation": "{\"NCBIGene:402998\"}"
+    },
+    "21688347.17": {
+        "predicted": "NCBIGene:396562",
+        "explanation": "{\"cui\": \"NCBIGene:396562\"}"
+    },
+    "21688347.18": {
+        "predicted": "NCBIGene:30569",
+        "explanation": "{\"NCBIGene:30569\"}"
+    },
+    "21688347.19": {
+        "predicted": "NCBIGene:39750",
+        "explanation": "{\"NCBIGene:39750\"}"
+    },
+    "21688347.20": {
+        "predicted": "NCBIGene:30569",
+        "explanation": "{\"cui\": \"NCBIGene:30569\"}"
+    },
+    "21688347.21": {
+        "predicted": "NCBIGene:100758767",
+        "explanation": "{\"NCBIGene:100758767\"}"
+    },
+    "22484090.7": {
+        "predicted": "NCBIGene:395196",
+        "explanation": "{\"cui\": \"NCBIGene:395196\"}"
+    },
+    "22484090.8": {
+        "predicted": "NCBIGene:7124",
+        "explanation": "{\"cui\": \"NCBIGene:7124\"}"
+    },
+    "22484090.9": {
+        "predicted": "NCBIGene:395337",
+        "explanation": "{\"cui\": \"NCBIGene:395337\"}"
+    },
+    "22484090.10": {
+        "predicted": "NCBIGene:443472",
+        "explanation": "{\"cui\": \"NCBIGene:443472\"}"
+    },
+    "22484090.11": {
+        "predicted": "NCBIGene:34495",
+        "explanation": "{\"NCBIGene:34495\"}"
+    },
+    "22484090.13": {
+        "predicted": "NCBIGene:428264",
+        "explanation": "{\"cui\": \"NCBIGene:428264\"}"
+    },
+    "22495828.1": {
+        "predicted": "NCBIGene:32341",
+        "explanation": "{\"NCBIGene:32341\"}"
+    },
+    "22495828.2": {
+        "predicted": "NCBIGene:5329",
+        "explanation": "{\"NCBIGene:5329\"}"
+    },
+    "22495828.3": {
+        "predicted": "NCBIGene:450020",
+        "explanation": "{\"NCBIGene:450020\"}"
+    },
+    "22495828.4": {
+        "predicted": "NCBIGene:3675",
+        "explanation": "{\"NCBIGene:3675\"}"
+    },
+    "22495828.5": {
+        "predicted": "NCBIGene:32341",
+        "explanation": "{\"NCBIGene:32341\"}"
+    },
+    "22495828.6": {
+        "predicted": "NCBIGene:5329",
+        "explanation": "{\"NCBIGene:5329\"}"
+    },
+    "22495828.7": {
+        "predicted": "NCBIGene:32341",
+        "explanation": "{\"cui\": \"NCBIGene:32341\"}"
+    },
+    "22495828.8": {
+        "predicted": "NCBIGene:5329",
+        "explanation": "{\"NCBIGene:5329\"}"
+    },
+    "22495828.10": {
+        "predicted": "NCBIGene:548363",
+        "explanation": "{\"NCBIGene:548363\"}"
+    },
+    "22495828.11": {
+        "predicted": "NCBIGene:2335",
+        "explanation": "{\"NCBIGene:2335\"}"
+    },
+    "22495828.12": {
+        "predicted": "NCBIGene:395532",
+        "explanation": "{\"NCBIGene:395532\"}"
+    },
+    "22495828.13": {
+        "predicted": "NCBIGene:450020",
+        "explanation": "{\"cui\": \"NCBIGene:450020\"}"
+    },
+    "22495828.14": {
+        "predicted": "NCBIGene:1508",
+        "explanation": "{\"NCBIGene:1508\"}"
+    },
+    "22495828.15": {
+        "predicted": "NCBIGene:5329",
+        "explanation": "{\"NCBIGene:5329\"}"
+    },
+    "22495828.16": {
+        "predicted": "NCBIGene:450020",
+        "explanation": "{\"NCBIGene:450020\"}"
+    },
+    "22495828.20": {
+        "predicted": "NCBIGene:32341",
+        "explanation": "{\"cui\": \"NCBIGene:32341\"}"
+    },
+    "22495828.21": {
+        "predicted": "NCBIGene:5329",
+        "explanation": "{\"cui\": \"NCBIGene:5329\"}"
+    },
+    "22495828.22": {
+        "predicted": "NCBIGene:450020",
+        "explanation": "{\"NCBIGene:450020\"}"
+    },
+    "22495828.23": {
+        "predicted": "NCBIGene:5329",
+        "explanation": "{\"cui\": \"NCBIGene:5329\"}"
+    },
+    "22495828.24": {
+        "predicted": "NCBIGene:32341",
+        "explanation": "{\"NCBIGene:32341\"}"
+    },
+    "22495828.25": {
+        "predicted": "NCBIGene:3675",
+        "explanation": "{\"NCBIGene:3675\"}"
+    },
+    "22495828.26": {
+        "predicted": "NCBIGene:5329",
+        "explanation": "{\"NCBIGene:5329\"}"
+    },
+    "22495828.27": {
+        "predicted": "NCBIGene:450020",
+        "explanation": "{\"NCBIGene:450020\"}"
+    },
+    "22495828.28": {
+        "predicted": "NCBIGene:3675",
+        "explanation": "{\"NCBIGene:3675\"}"
+    },
+    "22495828.29": {
+        "predicted": "NCBIGene:37233",
+        "explanation": "{\"cui\": \"NCBIGene:37233\"}"
+    },
+    "22495828.30": {
+        "predicted": "NCBIGene:396442",
+        "explanation": "{\"NCBIGene:396442\"}"
+    },
+    "22495828.33": {
+        "predicted": "NCBIGene:38978",
+        "explanation": "{\"cui\": \"NCBIGene:38978\"}"
+    },
+    "22495828.34": {
+        "predicted": "NCBIGene:396422",
+        "explanation": "{\"NCBIGene:396422\"}"
+    },
+    "22495828.35": {
+        "predicted": "NCBIGene:32341",
+        "explanation": "{\"cui\": \"NCBIGene:32341\"}"
+    },
+    "22495828.36": {
+        "predicted": "NCBIGene:5329",
+        "explanation": "{\"NCBIGene:5329\"}"
+    },
+    "22495828.37": {
+        "predicted": "NCBIGene:450020",
+        "explanation": "{\"NCBIGene:450020\"}"
+    },
+    "22495828.38": {
+        "predicted": "NCBIGene:5329",
+        "explanation": "{\"NCBIGene:5329\"}"
+    },
+    "22495828.39": {
+        "predicted": "NCBIGene:450020",
+        "explanation": "{\"cui\": \"NCBIGene:450020\"}"
+    },
+    "22495828.40": {
+        "predicted": "NCBIGene:3675",
+        "explanation": "{\"cui\": \"NCBIGene:3675\"}"
+    },
+    "22495828.41": {
+        "predicted": "NCBIGene:38978",
+        "explanation": "{\"cui\": \"NCBIGene:38978\"}"
+    },
+    "22495828.42": {
+        "predicted": "NCBIGene:100036705",
+        "explanation": "{\"NCBIGene:100036705\"}"
+    },
+    "22495828.43": {
+        "predicted": "NCBIGene:32341",
+        "explanation": "{\"NCBIGene:32341\"}"
+    },
+    "22495828.44": {
+        "predicted": "NCBIGene:5329",
+        "explanation": "{\"NCBIGene:5329\"}"
+    },
+    "22495828.45": {
+        "predicted": "NCBIGene:450020",
+        "explanation": "{\"NCBIGene:450020\"}"
+    },
+    "22495828.46": {
+        "predicted": "NCBIGene:5329",
+        "explanation": "{\"NCBIGene:5329\"}"
+    },
+    "22495828.47": {
+        "predicted": "NCBIGene:1508",
+        "explanation": "{\"NCBIGene:1508\"}"
+    },
+    "22750516.1": {
+        "predicted": "NCBIGene:75019",
+        "explanation": "{\"NCBIGene:75019\"}"
+    },
+    "22750516.2": {
+        "predicted": "NCBIGene:100758017",
+        "explanation": "{\"NCBIGene:100758017\"}"
+    },
+    "22750516.3": {
+        "predicted": "NCBIGene:1587",
+        "explanation": "{\"NCBIGene:1587\"}"
+    },
+    "22750516.4": {
+        "predicted": "NCBIGene:8755",
+        "explanation": "{\"NCBIGene:8755\"}"
+    },
+    "22905138.2": {
+        "predicted": "NCBIGene:4283",
+        "explanation": "{\"NCBIGene:4283\"}"
+    },
+    "22905138.7": {
+        "predicted": "NCBIGene:4283",
+        "explanation": "{\"NCBIGene:4283\"}"
+    },
+    "22905138.8": {
+        "predicted": "NCBIGene:3627",
+        "explanation": "{\"NCBIGene:3627\"}"
+    },
+    "22905138.13": {
+        "predicted": "NCBIGene:420695",
+        "explanation": "{\"cui\": \"NCBIGene:420695\"}"
+    },
+    "22905138.17": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"NCBIGene:6347\"}"
+    },
+    "22905138.19": {
+        "predicted": "NCBIGene:6366",
+        "explanation": "{\"NCBIGene:6366\"}"
+    },
+    "22905138.20": {
+        "predicted": "NCBIGene:4283",
+        "explanation": "{\"NCBIGene:4283\"}"
+    },
+    "22905138.21": {
+        "predicted": "NCBIGene:3627",
+        "explanation": "{\"NCBIGene:3627\"}"
+    },
+    "22905138.24": {
+        "predicted": "NCBIGene:4283",
+        "explanation": "{\"NCBIGene:4283\"}"
+    },
+    "22905138.25": {
+        "predicted": "NCBIGene:3627",
+        "explanation": "{\"NCBIGene:3627\"}"
+    },
+    "22905138.26": {
+        "predicted": "NCBIGene:100490785",
+        "explanation": "{\"NCBIGene:100490785\"}"
+    },
+    "22905138.28": {
+        "predicted": "NCBIGene:12842",
+        "explanation": "{\"NCBIGene:12842\"}"
+    },
+    "22905138.31": {
+        "predicted": "NCBIGene:100490108",
+        "explanation": "{\"cui\": \"NCBIGene:100490108\"}"
+    },
+    "22905138.32": {
+        "predicted": "NCBIGene:3627",
+        "explanation": "{\"NCBIGene:3627\"}"
+    },
+    "23125486.1": {
+        "predicted": "NCBIGene:101910198",
+        "explanation": "{\"NCBIGene:101910198\"}"
+    },
+    "23125486.2": {
+        "predicted": "NCBIGene:5594",
+        "explanation": "{\"NCBIGene:5594\"}"
+    },
+    "23125486.4": {
+        "predicted": "NCBIGene:399170",
+        "explanation": "{\"NCBIGene:399170\"}"
+    },
+    "23125486.5": {
+        "predicted": "NCBIGene:101910198",
+        "explanation": "{\"NCBIGene:101910198\"}"
+    },
+    "23125486.7": {
+        "predicted": "NCBIGene:5594",
+        "explanation": "{\"NCBIGene:5594\"}"
+    },
+    "23125486.8": {
+        "predicted": "NCBIGene:395196",
+        "explanation": "{\"NCBIGene:395196\"}"
+    },
+    "23125486.9": {
+        "predicted": "NCBIGene:6279",
+        "explanation": "{\"NCBIGene:6279\"}"
+    },
+    "23125486.10": {
+        "predicted": "NCBIGene:6280",
+        "explanation": "{\"NCBIGene:6280\"}"
+    },
+    "23125486.12": {
+        "predicted": "NCBIGene:101910198",
+        "explanation": "{\"NCBIGene:101910198\"}"
+    },
+    "23125486.13": {
+        "predicted": "NCBIGene:5594",
+        "explanation": "{\"cui\": \"NCBIGene:5594\"}"
+    },
+    "23125486.15": {
+        "predicted": "NCBIGene:559245",
+        "explanation": "{\"cui\": \"NCBIGene:559245\"}"
+    },
+    "23125486.17": {
+        "predicted": "NCBIGene:421352",
+        "explanation": "{\"cui\": \"NCBIGene:421352\"}"
+    },
+    "23125486.18": {
+        "predicted": "NCBIGene:474360",
+        "explanation": "{\"NCBIGene:474360\"}"
+    },
+    "23125486.19": {
+        "predicted": "NCBIGene:5594",
+        "explanation": "{\"cui\": \"NCBIGene:5594\"}"
+    },
+    "23125486.20": {
+        "predicted": "NCBIGene:3592",
+        "explanation": "{\"NCBIGene:3592\"}"
+    },
+    "23125486.21": {
+        "predicted": "NCBIGene:30009",
+        "explanation": "{\"NCBIGene:30009\"}"
+    },
+    "23125486.22": {
+        "predicted": "NCBIGene:30009",
+        "explanation": "{\"NCBIGene:30009\"}"
+    },
+    "23125486.24": {
+        "predicted": "NCBIGene:16153",
+        "explanation": "{\"NCBIGene:16153\"}"
+    },
+    "23125486.25": {
+        "predicted": "NCBIGene:16153",
+        "explanation": "{\"NCBIGene:16153\"}"
+    },
+    "23125486.26": {
+        "predicted": "NCBIGene:21926",
+        "explanation": "{\"NCBIGene:21926\"}"
+    },
+    "23125486.27": {
+        "predicted": "NCBIGene:3558",
+        "explanation": "{\"cui\": \"NCBIGene:3558\"}"
+    },
+    "23125486.28": {
+        "predicted": "NCBIGene:3592",
+        "explanation": "{\"cui\": \"NCBIGene:3592\"}"
+    },
+    "23125486.29": {
+        "predicted": "NCBIGene:30009",
+        "explanation": "{\"cui\": \"NCBIGene:30009\"}"
+    },
+    "23125486.30": {
+        "predicted": "NCBIGene:829620",
+        "explanation": "{\"cui\": \"NCBIGene:829620\"}"
+    },
+    "23125486.33": {
+        "predicted": "NCBIGene:3569",
+        "explanation": "{\"NCBIGene:3569\"}"
+    },
+    "23125486.34": {
+        "predicted": "NCBIGene:50943",
+        "explanation": "{\"NCBIGene:50943\"}"
+    },
+    "23125486.35": {
+        "predicted": "NCBIGene:50943",
+        "explanation": "{\"NCBIGene:50943\"}"
+    },
+    "23125486.36": {
+        "predicted": "NCBIGene:6097",
+        "explanation": "{\"NCBIGene:6097\"}"
+    },
+    "23125486.37": {
+        "predicted": "NCBIGene:50943",
+        "explanation": "{\"NCBIGene:50943\"}"
+    },
+    "23125486.38": {
+        "predicted": "NCBIGene:829620",
+        "explanation": "{\"cui\": \"NCBIGene:829620\"}"
+    },
+    "23125486.39": {
+        "predicted": "NCBIGene:395196",
+        "explanation": "{\"NCBIGene:395196\"}"
+    },
+    "23125486.40": {
+        "predicted": "NCBIGene:404671",
+        "explanation": "{\"NCBIGene:404671\"}"
+    },
+    "23125486.41": {
+        "predicted": "NCBIGene:403801",
+        "explanation": "{\"cui\": \"NCBIGene:403801\"}"
+    },
+    "23125486.42": {
+        "predicted": "NCBIGene:3569",
+        "explanation": "{\"NCBIGene:3569\"}"
+    },
+    "23125486.44": {
+        "predicted": "NCBIGene:395196",
+        "explanation": "{\"cui\": \"NCBIGene:395196\"}"
+    },
+    "23125486.45": {
+        "predicted": "NCBIGene:3569",
+        "explanation": "{\"NCBIGene:3569\"}"
+    },
+    "23125486.46": {
+        "predicted": "NCBIGene:3558",
+        "explanation": "{\"cui\": \"NCBIGene:3558\"}"
+    },
+    "23125486.47": {
+        "predicted": "NCBIGene:403801",
+        "explanation": "{\"cui\": \"NCBIGene:403801\"}"
+    },
+    "23125486.48": {
+        "predicted": "NCBIGene:7124",
+        "explanation": "{\"NCBIGene:7124\"}"
+    },
+    "23125486.49": {
+        "predicted": "NCBIGene:428264",
+        "explanation": "{\"cui\": \"NCBIGene:428264\"}"
+    },
+    "23125486.50": {
+        "predicted": "NCBIGene:3596",
+        "explanation": "{\"cui\": \"NCBIGene:3596\"}"
+    },
+    "23125486.53": {
+        "predicted": "NCBIGene:101910198",
+        "explanation": "{\"NCBIGene:101910198\"}"
+    },
+    "23125486.54": {
+        "predicted": "NCBIGene:5594",
+        "explanation": "{\"NCBIGene:5594\"}"
+    },
+    "23125486.55": {
+        "predicted": "NCBIGene:395196",
+        "explanation": "{\"NCBIGene:395196\"}"
+    },
+    "23125486.57": {
+        "predicted": "NCBIGene:50943",
+        "explanation": "{\"NCBIGene:50943\"}"
+    },
+    "23374751.6": {
+        "predicted": "NCBIGene:443472",
+        "explanation": "{\"cui\": \"NCBIGene:443472\"}"
+    },
+    "23374751.16": {
+        "predicted": "NCBIGene:443472",
+        "explanation": "{\"NCBIGene:443472\"}"
+    },
+    "23374751.17": {
+        "predicted": "NCBIGene:15978",
+        "explanation": "{\"cui\": \"NCBIGene:15978\"}"
+    },
+    "23374751.18": {
+        "predicted": "NCBIGene:7124",
+        "explanation": "{\"NCBIGene:7124\"}"
+    },
+    "23374751.19": {
+        "predicted": "NCBIGene:6348",
+        "explanation": "{\"NCBIGene:6348\"}"
+    },
+    "23374751.21": {
+        "predicted": "NCBIGene:6354",
+        "explanation": "{\"NCBIGene:6354\"}"
+    },
+    "23374751.22": {
+        "predicted": "NCBIGene:427406",
+        "explanation": "{\"NCBIGene:427406\"}"
+    },
+    "23374751.24": {
+        "predicted": "NCBIGene:16409",
+        "explanation": "{\"NCBIGene:16409\"}"
+    },
+    "23374751.25": {
+        "predicted": "NCBIGene:13733",
+        "explanation": "{\"NCBIGene:13733\"}"
+    },
+    "23376484.11": {
+        "predicted": "NCBIGene:31717",
+        "explanation": "{\"NCBIGene:31717\"}"
+    },
+    "23376484.19": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"NCBIGene:41957\"}"
+    },
+    "23376484.23": {
+        "predicted": "NCBIGene:397078",
+        "explanation": "{\"cui\": \"NCBIGene:397078\"}"
+    },
+    "23376484.24": {
+        "predicted": "NCBIGene:3172",
+        "explanation": "{\"NCBIGene:3172\"}"
+    },
+    "23520487.8": {
+        "predicted": "NCBIGene:10203",
+        "explanation": "{\"NCBIGene:10203\"}"
+    },
+    "23520487.10": {
+        "predicted": "NCBIGene:100135202",
+        "explanation": "{\"cui\": \"NCBIGene:100135202\"}"
+    },
+    "23520487.11": {
+        "predicted": "NCBIGene:5175",
+        "explanation": "{\"NCBIGene:5175\"}"
+    },
+    "23520487.12": {
+        "predicted": "NCBIGene:5788",
+        "explanation": "{\"NCBIGene:5788\"}"
+    },
+    "23520487.13": {
+        "predicted": "NCBIGene:5175",
+        "explanation": "{\"NCBIGene:5175\"}"
+    },
+    "23520487.14": {
+        "predicted": "NCBIGene:5788",
+        "explanation": "{\"NCBIGene:5788\"}"
+    },
+    "23520487.15": {
+        "predicted": "NCBIGene:100135021",
+        "explanation": "{\"cui\": \"NCBIGene:100135021\"}"
+    },
+    "23520487.16": {
+        "predicted": "NCBIGene:21926",
+        "explanation": "{\"cui\": \"NCBIGene:21926\"}"
+    },
+    "23648511.11": {
+        "predicted": "NCBIGene:4914",
+        "explanation": "{\"cui\": \"NCBIGene:4914\"}"
+    },
+    "23648511.21": {
+        "predicted": "NCBIGene:429",
+        "explanation": "{\"NCBIGene:429\"}"
+    },
+    "23648511.27": {
+        "predicted": "NCBIGene:447525",
+        "explanation": "{\"cui\": \"NCBIGene:447525\"}"
+    },
+    "23991091.1": {
+        "predicted": "NCBIGene:406947",
+        "explanation": "{\"NCBIGene:406947\"}"
+    },
+    "23991091.2": {
+        "predicted": "NCBIGene:406947",
+        "explanation": "{\"NCBIGene:406947\"}"
+    },
+    "23991091.3": {
+        "predicted": "NCBIGene:406947",
+        "explanation": "{\"cui\": \"NCBIGene:406947\"}"
+    },
+    "23991091.4": {
+        "predicted": "NCBIGene:406947",
+        "explanation": "{\"cui\": \"NCBIGene:406947\"}"
+    },
+    "23991091.5": {
+        "predicted": "NCBIGene:2875",
+        "explanation": "{\"NCBIGene:2875\"}"
+    },
+    "23991091.6": {
+        "predicted": "NCBIGene:549559",
+        "explanation": "{\"NCBIGene:549559\"}"
+    },
+    "23991091.15": {
+        "predicted": "NCBIGene:102465831",
+        "explanation": "{\"cui\": \"NCBIGene:102465831\"}"
+    },
+    "23991091.17": {
+        "predicted": "NCBIGene:507176",
+        "explanation": "{\"NCBIGene:507176\"}"
+    },
+    "23991091.18": {
+        "predicted": "NCBIGene:102465831",
+        "explanation": "{\"cui\": \"NCBIGene:102465831\"}"
+    },
+    "23991091.19": {
+        "predicted": "NCBIGene:406947",
+        "explanation": "{\"NCBIGene:406947\"}"
+    },
+    "23991091.20": {
+        "predicted": "NCBIGene:406947",
+        "explanation": "{\"NCBIGene:406947\"}"
+    },
+    "24014394.1": {
+        "predicted": "NCBIGene:90624",
+        "explanation": "{\"cui\": \"NCBIGene:90624\"}"
+    },
+    "24014394.2": {
+        "predicted": "NCBIGene:90624",
+        "explanation": "{\"cui\": \"NCBIGene:90624\"}"
+    },
+    "24014394.3": {
+        "predicted": "NCBIGene:90624",
+        "explanation": "{\"NCBIGene:90624\"}"
+    },
+    "24014394.4": {
+        "predicted": "NCBIGene:90624",
+        "explanation": "{\"NCBIGene:90624\"}"
+    },
+    "24014394.5": {
+        "predicted": "NCBIGene:852104",
+        "explanation": "{\"NCBIGene:852104\"}"
+    },
+    "24014394.6": {
+        "predicted": "NCBIGene:90624",
+        "explanation": "{\"NCBIGene:90624\"}"
+    },
+    "24014394.7": {
+        "predicted": "NCBIGene:90624",
+        "explanation": "{\"NCBIGene:90624\"}"
+    },
+    "24014394.8": {
+        "predicted": "NCBIGene:852104",
+        "explanation": "{\"cui\": \"NCBIGene:852104\"}"
+    },
+    "24014394.9": {
+        "predicted": "NCBIGene:852104",
+        "explanation": "{\"NCBIGene:852104\"}"
+    },
+    "24014394.11": {
+        "predicted": "NCBIGene:90624",
+        "explanation": "{\"NCBIGene:90624\"}"
+    },
+    "24014394.12": {
+        "predicted": "NCBIGene:90624",
+        "explanation": "{\"NCBIGene:90624\"}"
+    },
+    "24204877.8": {
+        "predicted": "NCBIGene:395196",
+        "explanation": "{\"NCBIGene:395196\"}"
+    },
+    "24204877.9": {
+        "predicted": "NCBIGene:100188894",
+        "explanation": "{\"NCBIGene:100188894\"}"
+    },
+    "24204877.10": {
+        "predicted": "NCBIGene:474360",
+        "explanation": "{\"NCBIGene:474360\"}"
+    },
+    "24204877.11": {
+        "predicted": "NCBIGene:395337",
+        "explanation": "{\"NCBIGene:395337\"}"
+    },
+    "24204877.12": {
+        "predicted": "NCBIGene:3586",
+        "explanation": "{\"NCBIGene:3586\"}"
+    },
+    "24204877.13": {
+        "predicted": "NCBIGene:3596",
+        "explanation": "{\"NCBIGene:3596\"}"
+    },
+    "24204877.14": {
+        "predicted": "NCBIGene:3605",
+        "explanation": "{\"NCBIGene:3605\"}"
+    },
+    "24204877.15": {
+        "predicted": "NCBIGene:404671",
+        "explanation": "{\"NCBIGene:404671\"}"
+    },
+    "24204877.16": {
+        "predicted": "NCBIGene:7124",
+        "explanation": "{\"NCBIGene:7124\"}"
+    },
+    "24204877.17": {
+        "predicted": "NCBIGene:403801",
+        "explanation": "{\"NCBIGene:403801\"}"
+    },
+    "24204877.18": {
+        "predicted": "NCBIGene:6352",
+        "explanation": "{\"NCBIGene:6352\"}"
+    },
+    "24204877.19": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"NCBIGene:6347\"}"
+    },
+    "24204877.20": {
+        "predicted": "NCBIGene:20302",
+        "explanation": "{\"NCBIGene:20302\"}"
+    },
+    "24204877.21": {
+        "predicted": "NCBIGene:395551",
+        "explanation": "{\"NCBIGene:395551\"}"
+    },
+    "24204877.22": {
+        "predicted": "NCBIGene:36571",
+        "explanation": "{\"NCBIGene:36571\"}"
+    },
+    "24204877.23": {
+        "predicted": "NCBIGene:7040",
+        "explanation": "{\"NCBIGene:7040\"}"
+    },
+    "24204877.25": {
+        "predicted": "NCBIGene:546644",
+        "explanation": "{\"NCBIGene:546644\"}"
+    },
+    "24204877.26": {
+        "predicted": "NCBIGene:13733",
+        "explanation": "{\"NCBIGene:13733\"}"
+    },
+    "24204877.27": {
+        "predicted": "NCBIGene:16409",
+        "explanation": "{\"NCBIGene:16409\"}"
+    },
+    "24204877.29": {
+        "predicted": "NCBIGene:36571",
+        "explanation": "{\"NCBIGene:36571\"}"
+    },
+    "24204877.30": {
+        "predicted": "NCBIGene:21803",
+        "explanation": "{\"NCBIGene:21803\"}"
+    },
+    "24204877.33": {
+        "predicted": "NCBIGene:13733",
+        "explanation": "{\"cui\": \"NCBIGene:13733\"}"
+    },
+    "24204877.34": {
+        "predicted": "NCBIGene:546644",
+        "explanation": "{\"cui\": \"NCBIGene:546644\"}"
+    },
+    "24204877.35": {
+        "predicted": "NCBIGene:16409",
+        "explanation": "{\"cui\": \"NCBIGene:16409\"}"
+    },
+    "24204877.37": {
+        "predicted": "NCBIGene:7040",
+        "explanation": "{\"NCBIGene:7040\"}"
+    },
+    "24288432.1": {
+        "predicted": "NCBIGene:397701",
+        "explanation": "{\"NCBIGene:397701\"}"
+    },
+    "24288432.3": {
+        "predicted": "NCBIGene:2247",
+        "explanation": "{\"NCBIGene:2247\"}"
+    },
+    "24288432.5": {
+        "predicted": "NCBIGene:4325",
+        "explanation": "{\"NCBIGene:4325\"}"
+    },
+    "24288432.7": {
+        "predicted": "NCBIGene:2249",
+        "explanation": "{\"NCBIGene:2249\"}"
+    },
+    "24288432.8": {
+        "predicted": "NCBIGene:140885",
+        "explanation": "{\"NCBIGene:140885\"}"
+    },
+    "24288432.9": {
+        "predicted": "NCBIGene:419267",
+        "explanation": "{\"NCBIGene:419267\"}"
+    },
+    "24288432.10": {
+        "predicted": "NCBIGene:100135015",
+        "explanation": "{\"NCBIGene:100135015\"}"
+    },
+    "24288432.11": {
+        "predicted": "NCBIGene:100135015",
+        "explanation": "{\"cui\": \"NCBIGene:100135015\"}"
+    },
+    "24288432.12": {
+        "predicted": "NCBIGene:379663",
+        "explanation": "{\"NCBIGene:379663\"}"
+    },
+    "24288432.13": {
+        "predicted": "NCBIGene:4321",
+        "explanation": "{\"cui\": \"NCBIGene:4321\"}"
+    },
+    "24288432.14": {
+        "predicted": "NCBIGene:397701",
+        "explanation": "{\"NCBIGene:397701\"}"
+    },
+    "24288432.15": {
+        "predicted": "NCBIGene:396267",
+        "explanation": "{\"NCBIGene:396267\"}"
+    },
+    "24288432.16": {
+        "predicted": "NCBIGene:443095",
+        "explanation": "{\"NCBIGene:443095\"}"
+    },
+    "24288432.17": {
+        "predicted": "NCBIGene:397701",
+        "explanation": "{\"NCBIGene:397701\"}"
+    },
+    "24288432.18": {
+        "predicted": "NCBIGene:549077",
+        "explanation": "{\"NCBIGene:549077\"}"
+    },
+    "24586582.1": {
+        "predicted": "NCBIGene:818764",
+        "explanation": "{\"cui\": \"NCBIGene:818764\"}"
+    },
+    "24586582.2": {
+        "predicted": "NCBIGene:6776",
+        "explanation": "{\"NCBIGene:6776\"}"
+    },
+    "24586582.3": {
+        "predicted": "NCBIGene:818764",
+        "explanation": "{\"cui\": \"NCBIGene:818764\"}"
+    },
+    "24586582.7": {
+        "predicted": "NCBIGene:2672",
+        "explanation": "{\"NCBIGene:2672\"}"
+    },
+    "24586582.9": {
+        "predicted": "NCBIGene:12579",
+        "explanation": "{\"NCBIGene:12579\"}"
+    },
+    "24586582.11": {
+        "predicted": "NCBIGene:100038054",
+        "explanation": "{\"NCBIGene:100038054\"}"
+    },
+    "24586582.12": {
+        "predicted": "NCBIGene:12575",
+        "explanation": "{\"NCBIGene:12575\"}"
+    },
+    "24586582.13": {
+        "predicted": "NCBIGene:818764",
+        "explanation": "{\"NCBIGene:818764\"}"
+    },
+    "24586582.14": {
+        "predicted": "NCBIGene:818764",
+        "explanation": "{\"cui\": \"NCBIGene:818764\"}"
+    },
+    "24586582.15": {
+        "predicted": "NCBIGene:369197",
+        "explanation": "{\"NCBIGene:369197\"}"
+    },
+    "24586582.16": {
+        "predicted": "NCBIGene:818764",
+        "explanation": "{\"NCBIGene:818764\"}"
+    },
+    "24586582.17": {
+        "predicted": "NCBIGene:369197",
+        "explanation": "{\"NCBIGene:369197\"}"
+    },
+    "24586582.21": {
+        "predicted": "NCBIGene:369197",
+        "explanation": "{\"NCBIGene:369197\"}"
+    },
+    "24586582.23": {
+        "predicted": "NCBIGene:369197",
+        "explanation": "{\"NCBIGene:369197\"}"
+    },
+    "24586582.25": {
+        "predicted": "NCBIGene:369197",
+        "explanation": "{\"NCBIGene:369197\"}"
+    },
+    "24586582.26": {
+        "predicted": "NCBIGene:818764",
+        "explanation": "{\"NCBIGene:818764\"}"
+    },
+    "24586582.27": {
+        "predicted": "NCBIGene:818764",
+        "explanation": "{\"cui\": \"NCBIGene:818764\"}"
+    },
+    "24586582.30": {
+        "predicted": "NCBIGene:369197",
+        "explanation": "{\"NCBIGene:369197\"}"
+    },
+    "24725474.1": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"cui\": \"NCBIGene:6772\"}"
+    },
+    "24725474.2": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"cui\": \"NCBIGene:6772\"}"
+    },
+    "24725474.4": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"NCBIGene:6772\"}"
+    },
+    "24725474.5": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"NCBIGene:6772\"}"
+    },
+    "24725474.7": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"NCBIGene:6772\"}"
+    },
+    "24725474.8": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"cui\": \"NCBIGene:6772\"}"
+    },
+    "24725474.9": {
+        "predicted": "NCBIGene:416630",
+        "explanation": "{\"cui\": \"NCBIGene:416630\"}"
+    },
+    "24725474.10": {
+        "predicted": "NCBIGene:3659",
+        "explanation": "{\"cui\": \"NCBIGene:3659\"}"
+    },
+    "24725474.11": {
+        "predicted": "NCBIGene:4283",
+        "explanation": "{\"cui\": \"NCBIGene:4283\"}"
+    },
+    "24725474.12": {
+        "predicted": "NCBIGene:3627",
+        "explanation": "{\"NCBIGene:3627\"}"
+    },
+    "24725474.13": {
+        "predicted": "NCBIGene:6373",
+        "explanation": "{\"NCBIGene:6373\"}"
+    },
+    "24725474.14": {
+        "predicted": "NCBIGene:3434",
+        "explanation": "{\"NCBIGene:3434\"}"
+    },
+    "24725474.15": {
+        "predicted": "NCBIGene:8519",
+        "explanation": "{\"NCBIGene:8519\"}"
+    },
+    "24725474.16": {
+        "predicted": "NCBIGene:395313",
+        "explanation": "{\"NCBIGene:395313\"}"
+    },
+    "24725474.17": {
+        "predicted": "NCBIGene:968",
+        "explanation": "{\"NCBIGene:968\"}"
+    },
+    "24725474.18": {
+        "predicted": "NCBIGene:9332",
+        "explanation": "{\"NCBIGene:9332\"}"
+    },
+    "24725474.19": {
+        "predicted": "NCBIGene:29126",
+        "explanation": "{\"NCBIGene:29126\"}"
+    },
+    "24725474.20": {
+        "predicted": "NCBIGene:80380",
+        "explanation": "{\"NCBIGene:80380\"}"
+    },
+    "24725474.21": {
+        "predicted": "NCBIGene:5133",
+        "explanation": "{\"NCBIGene:5133\"}"
+    },
+    "24725474.22": {
+        "predicted": "NCBIGene:5788",
+        "explanation": "{\"NCBIGene:5788\"}"
+    },
+    "24725474.23": {
+        "predicted": "NCBIGene:403801",
+        "explanation": "{\"NCBIGene:403801\"}"
+    },
+    "24725474.24": {
+        "predicted": "NCBIGene:50943",
+        "explanation": "{\"NCBIGene:50943\"}"
+    },
+    "24725474.25": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"cui\": \"NCBIGene:6772\"}"
+    },
+    "24725474.26": {
+        "predicted": "NCBIGene:3627",
+        "explanation": "{\"cui\": \"NCBIGene:3627\"}"
+    },
+    "24725474.27": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"cui\": \"NCBIGene:6772\"}"
+    },
+    "24725474.28": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"cui\": \"NCBIGene:6772\"}"
+    },
+    "24725474.29": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"NCBIGene:6772\"}"
+    },
+    "24725474.30": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"NCBIGene:6772\"}"
+    },
+    "24725474.31": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"cui\": \"NCBIGene:6772\"}"
+    },
+    "24725474.32": {
+        "predicted": "NCBIGene:3627",
+        "explanation": "{\"cui\": \"NCBIGene:3627\"}"
+    },
+    "24725474.33": {
+        "predicted": "NCBIGene:3627",
+        "explanation": "{\"cui\": \"NCBIGene:3627\"}"
+    },
+    "24725474.34": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"cui\": \"NCBIGene:6772\"}"
+    },
+    "24725474.35": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"NCBIGene:6772\"}"
+    },
+    "24725474.36": {
+        "predicted": "NCBIGene:3627",
+        "explanation": "{\"NCBIGene:3627\"}"
+    },
+    "24725474.37": {
+        "predicted": "NCBIGene:395313",
+        "explanation": "{\"NCBIGene:395313\"}"
+    },
+    "24725474.38": {
+        "predicted": "NCBIGene:968",
+        "explanation": "{\"cui\": \"NCBIGene:968\"}"
+    },
+    "24725474.39": {
+        "predicted": "NCBIGene:9332",
+        "explanation": "{\"cui\": \"NCBIGene:9332\"}"
+    },
+    "24725474.40": {
+        "predicted": "NCBIGene:403801",
+        "explanation": "{\"cui\": \"NCBIGene:403801\"}"
+    },
+    "24725474.41": {
+        "predicted": "NCBIGene:80380",
+        "explanation": "{\"NCBIGene:80380\"}"
+    },
+    "24725474.42": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"NCBIGene:6772\"}"
+    },
+    "24725474.43": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"NCBIGene:6772\"}"
+    },
+    "24725474.44": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"cui\": \"NCBIGene:6772\"}"
+    },
+    "24725474.45": {
+        "predicted": "NCBIGene:3627",
+        "explanation": "{\"cui\": \"NCBIGene:3627\"}"
+    },
+    "24725474.46": {
+        "predicted": "NCBIGene:395313",
+        "explanation": "{\"NCBIGene:395313\"}"
+    },
+    "24725474.47": {
+        "predicted": "NCBIGene:968",
+        "explanation": "{\"cui\": \"NCBIGene:968\"}"
+    },
+    "24725474.48": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"NCBIGene:6772\"}"
+    },
+    "24725474.49": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"cui\": \"NCBIGene:6772\"}"
+    },
+    "24725474.50": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"cui\": \"NCBIGene:6772\"}"
+    },
+    "24725474.51": {
+        "predicted": "NCBIGene:6772",
+        "explanation": "{\"NCBIGene:6772\"}"
+    },
+    "24731097.7": {
+        "predicted": "NCBIGene:12166",
+        "explanation": "{\"cui\": \"NCBIGene:12166\"}"
+    },
+    "24731097.10": {
+        "predicted": "NCBIGene:18095",
+        "explanation": "{\"NCBIGene:18095\"}"
+    },
+    "24731097.13": {
+        "predicted": "NCBIGene:18095",
+        "explanation": "{\"cui\": \"NCBIGene:18095\"}"
+    },
+    "24853300.2": {
+        "predicted": "NCBIGene:12307",
+        "explanation": "{\"NCBIGene:12307\"}"
+    },
+    "24853300.3": {
+        "predicted": "NCBIGene:12307",
+        "explanation": "{\"cui\": \"NCBIGene:12307\"}"
+    },
+    "24853300.4": {
+        "predicted": "NCBIGene:448208",
+        "explanation": "{\"NCBIGene:448208\"}"
+    },
+    "24853300.5": {
+        "predicted": "NCBIGene:31002",
+        "explanation": "{\"NCBIGene:31002\"}"
+    },
+    "24853300.7": {
+        "predicted": "NCBIGene:3354888",
+        "explanation": "{\"NCBIGene:3354888\"}"
+    },
+    "24853300.8": {
+        "predicted": "NCBIGene:40665",
+        "explanation": "{\"NCBIGene:40665\"}"
+    },
+    "24853300.9": {
+        "predicted": "NCBIGene:2902",
+        "explanation": "{\"NCBIGene:2902\"}"
+    },
+    "24853300.10": {
+        "predicted": "NCBIGene:100127346",
+        "explanation": "{\"NCBIGene:100127346\"}"
+    },
+    "24853300.11": {
+        "predicted": "NCBIGene:32083",
+        "explanation": "{\"NCBIGene:32083\"}"
+    },
+    "24886643.21": {
+        "predicted": "NCBIGene:16189",
+        "explanation": "{\"NCBIGene:16189\"}"
+    },
+    "24886643.23": {
+        "predicted": "NCBIGene:100188894",
+        "explanation": "{\"NCBIGene:100188894\"}"
+    },
+    "24886643.24": {
+        "predicted": "NCBIGene:829620",
+        "explanation": "{\"NCBIGene:829620\"}"
+    },
+    "24886643.26": {
+        "predicted": "NCBIGene:100297263",
+        "explanation": "{\"NCBIGene:100297263\"}"
+    },
+    "24886643.29": {
+        "predicted": "NCBIGene:395111",
+        "explanation": "{\"NCBIGene:395111\"}"
+    },
+    "24886643.31": {
+        "predicted": "NCBIGene:100335029",
+        "explanation": "{\"cui\": \"NCBIGene:100335029\"}"
+    },
+    "24886643.32": {
+        "predicted": "NCBIGene:16189",
+        "explanation": "{\"NCBIGene:16189\"}"
+    },
+    "25439058.1": {
+        "predicted": "NCBIGene:834623",
+        "explanation": "{\"NCBIGene:834623\"}"
+    },
+    "25439058.2": {
+        "predicted": "NCBIGene:823741",
+        "explanation": "{\"NCBIGene:823741\"}"
+    },
+    "25439058.3": {
+        "predicted": "NCBIGene:823741",
+        "explanation": "{\"NCBIGene:823741\"}"
+    },
+    "25439058.5": {
+        "predicted": "NCBIGene:816870",
+        "explanation": "{\"NCBIGene:816870\"}"
+    },
+    "25439058.6": {
+        "predicted": "NCBIGene:816870",
+        "explanation": "{\"NCBIGene:816870\"}"
+    },
+    "25439058.7": {
+        "predicted": "NCBIGene:828165",
+        "explanation": "{\"NCBIGene:828165\"}"
+    },
+    "25439058.8": {
+        "predicted": "NCBIGene:828165",
+        "explanation": "{\"NCBIGene:828165\"}"
+    },
+    "25439058.9": {
+        "predicted": "NCBIGene:818224",
+        "explanation": "{\"NCBIGene:818224\"}"
+    },
+    "25439058.10": {
+        "predicted": "NCBIGene:818224",
+        "explanation": "{\"NCBIGene:818224\"}"
+    },
+    "25439058.11": {
+        "predicted": "NCBIGene:831244",
+        "explanation": "{\"NCBIGene:831244\"}"
+    },
+    "25439058.12": {
+        "predicted": "NCBIGene:831244",
+        "explanation": "{\"NCBIGene:831244\"}"
+    },
+    "25439058.13": {
+        "predicted": "NCBIGene:831244",
+        "explanation": "{\"NCBIGene:831244\"}"
+    },
+    "25439058.14": {
+        "predicted": "NCBIGene:818224",
+        "explanation": "{\"cui\": \"NCBIGene:818224\"}"
+    },
+    "25439058.15": {
+        "predicted": "NCBIGene:816870",
+        "explanation": "{\"NCBIGene:816870\"}"
+    },
+    "25439058.16": {
+        "predicted": "NCBIGene:831244",
+        "explanation": "{\"NCBIGene:831244\"}"
+    },
+    "25439058.17": {
+        "predicted": "NCBIGene:831244",
+        "explanation": "{\"NCBIGene:831244\"}"
+    },
+    "25439058.18": {
+        "predicted": "NCBIGene:818224",
+        "explanation": "{\"cui\": \"NCBIGene:818224\"}"
+    },
+    "25439058.19": {
+        "predicted": "NCBIGene:816870",
+        "explanation": "{\"NCBIGene:816870\"}"
+    },
+    "25439058.20": {
+        "predicted": "NCBIGene:831244",
+        "explanation": "{\"NCBIGene:831244\"}"
+    },
+    "25439058.21": {
+        "predicted": "NCBIGene:831244",
+        "explanation": "{\"NCBIGene:831244\"}"
+    },
+    "25439058.22": {
+        "predicted": "NCBIGene:823741",
+        "explanation": "{\"NCBIGene:823741\"}"
+    },
+    "25439058.23": {
+        "predicted": "NCBIGene:834623",
+        "explanation": "{\"NCBIGene:834623\"}"
+    },
+    "25439058.24": {
+        "predicted": "NCBIGene:824626",
+        "explanation": "{\"NCBIGene:824626\"}"
+    },
+    "25439058.25": {
+        "predicted": "NCBIGene:817331",
+        "explanation": "{\"NCBIGene:817331\"}"
+    },
+    "25439058.29": {
+        "predicted": "NCBIGene:834623",
+        "explanation": "{\"NCBIGene:834623\"}"
+    },
+    "25439058.30": {
+        "predicted": "NCBIGene:834623",
+        "explanation": "{\"NCBIGene:834623\"}"
+    },
+    "25439058.32": {
+        "predicted": "NCBIGene:834623",
+        "explanation": "{\"cui\": \"NCBIGene:834623\"}"
+    },
+    "25439058.34": {
+        "predicted": "NCBIGene:834623",
+        "explanation": "{\"cui\": \"NCBIGene:834623\"}"
+    },
+    "25464900.1": {
+        "predicted": "NCBIGene:494767",
+        "explanation": "{\"NCBIGene:494767\"}"
+    },
+    "25464900.15": {
+        "predicted": "NCBIGene:494767",
+        "explanation": "{\"cui\": \"NCBIGene:494767\"}"
+    },
+    "25464900.16": {
+        "predicted": "NCBIGene:494767",
+        "explanation": "{\"cui\": \"NCBIGene:494767\"}"
+    },
+    "25464900.17": {
+        "predicted": "NCBIGene:281228",
+        "explanation": "{\"cui\": \"NCBIGene:281228\"}"
+    },
+    "25464900.19": {
+        "predicted": "NCBIGene:4300",
+        "explanation": "{\"NCBIGene:4300\"}"
+    },
+    "25464900.21": {
+        "predicted": "NCBIGene:4301",
+        "explanation": "{\"NCBIGene:4301\"}"
+    },
+    "25464900.29": {
+        "predicted": "NCBIGene:494767",
+        "explanation": "{\"NCBIGene:494767\"}"
+    },
+    "25464900.30": {
+        "predicted": "NCBIGene:281228",
+        "explanation": "{\"NCBIGene:281228\"}"
+    },
+    "25479410.1": {
+        "predicted": "NCBIGene:5599",
+        "explanation": "{\"NCBIGene:5599\"}"
+    },
+    "25479410.9": {
+        "predicted": "NCBIGene:398251",
+        "explanation": "{\"NCBIGene:398251\"}"
+    },
+    "25479410.12": {
+        "predicted": "NCBIGene:3627",
+        "explanation": "{\"cui\": \"NCBIGene:3627\"}"
+    },
+    "25479410.21": {
+        "predicted": "NCBIGene:5599",
+        "explanation": "{\"cui\": \"NCBIGene:5599\"}"
+    },
+    "25751262.1": {
+        "predicted": "NCBIGene:20657",
+        "explanation": "{\"NCBIGene:20657\"}"
+    },
+    "25751262.5": {
+        "predicted": "NCBIGene:830814",
+        "explanation": "{\"NCBIGene:830814\"}"
+    },
+    "25751262.6": {
+        "predicted": "NCBIGene:6649",
+        "explanation": "{\"NCBIGene:6649\"}"
+    },
+    "25751262.7": {
+        "predicted": "NCBIGene:832395",
+        "explanation": "{\"NCBIGene:832395\"}"
+    },
+    "25751262.8": {
+        "predicted": "NCBIGene:2768677",
+        "explanation": "{\"NCBIGene:2768677\"}"
+    },
+    "25751262.9": {
+        "predicted": "NCBIGene:36001",
+        "explanation": "{\"NCBIGene:36001\"}"
+    },
+    "25751262.10": {
+        "predicted": "NCBIGene:832395",
+        "explanation": "{\"NCBIGene:832395\"}"
+    },
+    "25751262.11": {
+        "predicted": "NCBIGene:2768677",
+        "explanation": "{\"NCBIGene:2768677\"}"
+    },
+    "25751262.12": {
+        "predicted": "NCBIGene:832395",
+        "explanation": "{\"NCBIGene:832395\"}"
+    },
+    "25751262.13": {
+        "predicted": "NCBIGene:832395",
+        "explanation": "{\"NCBIGene:832395\"}"
+    },
+    "25751262.14": {
+        "predicted": "NCBIGene:1956",
+        "explanation": "{\"NCBIGene:1956\"}"
+    },
+    "25751262.15": {
+        "predicted": "NCBIGene:2064",
+        "explanation": "{\"NCBIGene:2064\"}"
+    },
+    "25751262.16": {
+        "predicted": "NCBIGene:558502",
+        "explanation": "{\"NCBIGene:558502\"}"
+    },
+    "25751262.17": {
+        "predicted": "NCBIGene:53425",
+        "explanation": "{\"NCBIGene:53425\"}"
+    },
+    "25751262.18": {
+        "predicted": "NCBIGene:2322",
+        "explanation": "{\"NCBIGene:2322\"}"
+    },
+    "25751262.19": {
+        "predicted": "NCBIGene:428219",
+        "explanation": "{\"NCBIGene:428219\"}"
+    },
+    "25751262.21": {
+        "predicted": "NCBIGene:396442",
+        "explanation": "{\"NCBIGene:396442\"}"
+    },
+    "25751262.22": {
+        "predicted": "NCBIGene:2534",
+        "explanation": "{\"NCBIGene:2534\"}"
+    },
+    "25751262.23": {
+        "predicted": "NCBIGene:379629",
+        "explanation": "{\"cui\": \"NCBIGene:379629\"}"
+    },
+    "25751262.24": {
+        "predicted": "NCBIGene:101885596",
+        "explanation": "{\"NCBIGene:101885596\"}"
+    },
+    "25751262.25": {
+        "predicted": "NCBIGene:447804",
+        "explanation": "{\"NCBIGene:447804\"}"
+    },
+    "25751262.30": {
+        "predicted": "NCBIGene:32981",
+        "explanation": "{\"cui\": \"NCBIGene:32981\"}"
+    },
+    "25751262.32": {
+        "predicted": "NCBIGene:832395",
+        "explanation": "{\"NCBIGene:832395\"}"
+    },
+    "25751262.33": {
+        "predicted": "NCBIGene:31872",
+        "explanation": "{\"NCBIGene:31872\"}"
+    },
+    "25751262.34": {
+        "predicted": "NCBIGene:3354888",
+        "explanation": "{\"NCBIGene:3354888\"}"
+    },
+    "25751262.35": {
+        "predicted": "NCBIGene:832395",
+        "explanation": "{\"NCBIGene:832395\"}"
+    },
+    "25751262.37": {
+        "predicted": "NCBIGene:27237",
+        "explanation": "{\"NCBIGene:27237\"}"
+    },
+    "25751262.40": {
+        "predicted": "NCBIGene:417409",
+        "explanation": "{\"cui\": \"NCBIGene:417409\"}"
+    },
+    "25751262.41": {
+        "predicted": "NCBIGene:8437",
+        "explanation": "{\"cui\": \"NCBIGene:8437\"}"
+    },
+    "25751262.42": {
+        "predicted": "NCBIGene:569876",
+        "explanation": "{\"cui\": \"NCBIGene:569876\"}"
+    },
+    "25751262.44": {
+        "predicted": "NCBIGene:14570",
+        "explanation": "{\"NCBIGene:14570\"}"
+    },
+    "25751262.46": {
+        "predicted": "NCBIGene:832395",
+        "explanation": "{\"NCBIGene:832395\"}"
+    },
+    "25753817.3": {
+        "predicted": "NCBIGene:549075",
+        "explanation": "{\"NCBIGene:549075\"}"
+    },
+    "25753817.4": {
+        "predicted": "NCBIGene:30632",
+        "explanation": "{\"cui\": \"NCBIGene:30632\"}"
+    },
+    "25753817.5": {
+        "predicted": "NCBIGene:2247",
+        "explanation": "{\"NCBIGene:2247\"}"
+    },
+    "25753817.6": {
+        "predicted": "NCBIGene:2253",
+        "explanation": "{\"NCBIGene:2253\"}"
+    },
+    "25753817.8": {
+        "predicted": "NCBIGene:418090",
+        "explanation": "{\"cui\": \"NCBIGene:418090\"}"
+    },
+    "25849622.1": {
+        "predicted": "NCBIGene:3605",
+        "explanation": "{\"NCBIGene:3605\"}"
+    },
+    "25849622.2": {
+        "predicted": "NCBIGene:100334678",
+        "explanation": "{\"NCBIGene:100334678\"}"
+    },
+    "25849622.5": {
+        "predicted": "NCBIGene:3572",
+        "explanation": "{\"NCBIGene:3572\"}"
+    },
+    "25849622.6": {
+        "predicted": "NCBIGene:100334678",
+        "explanation": "{\"NCBIGene:100334678\"}"
+    },
+    "25849622.7": {
+        "predicted": "NCBIGene:100334678",
+        "explanation": "{\"NCBIGene:100334678\"}"
+    },
+    "25849622.10": {
+        "predicted": "NCBIGene:100188894",
+        "explanation": "{\"NCBIGene:100188894\"}"
+    },
+    "25849622.11": {
+        "predicted": "NCBIGene:794053",
+        "explanation": "{\"NCBIGene:794053\"}"
+    },
+    "25849622.12": {
+        "predicted": "NCBIGene:3605",
+        "explanation": "{\"NCBIGene:3605\"}"
+    },
+    "25849622.13": {
+        "predicted": "NCBIGene:100334678",
+        "explanation": "{\"NCBIGene:100334678\"}"
+    },
+    "25849622.14": {
+        "predicted": "NCBIGene:3572",
+        "explanation": "{\"NCBIGene:3572\"}"
+    },
+    "25849622.15": {
+        "predicted": "NCBIGene:3572",
+        "explanation": "{\"NCBIGene:3572\"}"
+    },
+    "25849622.17": {
+        "predicted": "NCBIGene:3976",
+        "explanation": "{\"NCBIGene:3976\"}"
+    },
+    "25849622.18": {
+        "predicted": "NCBIGene:386653",
+        "explanation": "{\"NCBIGene:386653\"}"
+    },
+    "25849622.19": {
+        "predicted": "NCBIGene:395337",
+        "explanation": "{\"NCBIGene:395337\"}"
+    },
+    "25849622.20": {
+        "predicted": "NCBIGene:3605",
+        "explanation": "{\"NCBIGene:3605\"}"
+    },
+    "25849622.21": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"cui\": \"NCBIGene:6347\"}"
+    },
+    "25849622.22": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"NCBIGene:6347\"}"
+    },
+    "25849622.23": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"NCBIGene:6347\"}"
+    },
+    "25849622.24": {
+        "predicted": "NCBIGene:395337",
+        "explanation": "{\"NCBIGene:395337\"}"
+    },
+    "25849622.29": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"NCBIGene:41957\"}"
+    },
+    "25849622.30": {
+        "predicted": "NCBIGene:100334678",
+        "explanation": "{\"cui\": \"NCBIGene:100334678\"}"
+    },
+    "25849622.31": {
+        "predicted": "NCBIGene:427718",
+        "explanation": "{\"cui\": \"NCBIGene:427718\"}"
+    },
+    "25849622.32": {
+        "predicted": "NCBIGene:386653",
+        "explanation": "{\"NCBIGene:386653\"}"
+    },
+    "25849622.33": {
+        "predicted": "NCBIGene:395337",
+        "explanation": "{\"NCBIGene:395337\"}"
+    },
+    "25849622.34": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"NCBIGene:6347\"}"
+    },
+    "25849622.35": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"NCBIGene:6347\"}"
+    },
+    "25849622.36": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"NCBIGene:6347\"}"
+    },
+    "25849622.37": {
+        "predicted": "NCBIGene:3569",
+        "explanation": "{\"cui\": \"NCBIGene:3569\"}"
+    },
+    "25849622.40": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"NCBIGene:41957\"}"
+    },
+    "25849622.41": {
+        "predicted": "NCBIGene:100334678",
+        "explanation": "{\"NCBIGene:100334678\"}"
+    },
+    "25849622.42": {
+        "predicted": "NCBIGene:3605",
+        "explanation": "{\"cui\": \"NCBIGene:3605\"}"
+    },
+    "25849622.43": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"NCBIGene:6347\"}"
+    },
+    "25849622.45": {
+        "predicted": "NCBIGene:3569",
+        "explanation": "{\"cui\": \"NCBIGene:3569\"}"
+    },
+    "25849622.47": {
+        "predicted": "NCBIGene:100334678",
+        "explanation": "{\"cui\": \"NCBIGene:100334678\"}"
+    },
+    "25849622.48": {
+        "predicted": "NCBIGene:100188894",
+        "explanation": "{\"NCBIGene:100188894\"}"
+    },
+    "25849622.49": {
+        "predicted": "NCBIGene:3596",
+        "explanation": "{\"cui\": \"NCBIGene:3596\"}"
+    },
+    "25849622.51": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"cui\": \"NCBIGene:6347\"}"
+    },
+    "25849622.52": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"NCBIGene:6347\"}"
+    },
+    "25849622.53": {
+        "predicted": "NCBIGene:5008",
+        "explanation": "{\"cui\": \"NCBIGene:5008\"}"
+    },
+    "25849622.54": {
+        "predicted": "NCBIGene:16190",
+        "explanation": "{\"cui\": \"NCBIGene:16190\"}"
+    },
+    "25849622.55": {
+        "predicted": "NCBIGene:9180",
+        "explanation": "{\"NCBIGene:9180\"}"
+    },
+    "25849622.56": {
+        "predicted": "NCBIGene:3572",
+        "explanation": "{\"NCBIGene:3572\"}"
+    },
+    "25849622.57": {
+        "predicted": "NCBIGene:23765",
+        "explanation": "{\"NCBIGene:23765\"}"
+    },
+    "25849622.58": {
+        "predicted": "NCBIGene:171095",
+        "explanation": "{\"cui\": \"NCBIGene:171095\"}"
+    },
+    "25849622.59": {
+        "predicted": "NCBIGene:6774",
+        "explanation": "{\"cui\": \"NCBIGene:6774\"}"
+    },
+    "25849622.60": {
+        "predicted": "NCBIGene:100334678",
+        "explanation": "{\"NCBIGene:100334678\"}"
+    },
+    "25849622.61": {
+        "predicted": "NCBIGene:100334678",
+        "explanation": "{\"NCBIGene:100334678\"}"
+    },
+    "25849622.62": {
+        "predicted": "NCBIGene:3565",
+        "explanation": "{\"NCBIGene:3565\"}"
+    },
+    "25849622.63": {
+        "predicted": "NCBIGene:5008",
+        "explanation": "{\"cui\": \"NCBIGene:5008\"}"
+    },
+    "25849622.64": {
+        "predicted": "NCBIGene:3596",
+        "explanation": "{\"cui\": \"NCBIGene:3596\"}"
+    },
+    "25849622.65": {
+        "predicted": "NCBIGene:5008",
+        "explanation": "{\"cui\": \"NCBIGene:5008\"}"
+    },
+    "25849622.66": {
+        "predicted": "NCBIGene:3605",
+        "explanation": "{\"cui\": \"NCBIGene:3605\"}"
+    },
+    "25849622.67": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"NCBIGene:6347\"}"
+    },
+    "25849622.69": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"NCBIGene:41957\"}"
+    },
+    "25849622.71": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"cui\": \"NCBIGene:6347\"}"
+    },
+    "25849622.72": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"cui\": \"NCBIGene:6347\"}"
+    },
+    "25849622.73": {
+        "predicted": "NCBIGene:395337",
+        "explanation": "{\"cui\": \"NCBIGene:395337\"}"
+    },
+    "25849622.75": {
+        "predicted": "NCBIGene:3605",
+        "explanation": "{\"NCBIGene:3605\"}"
+    },
+    "25849622.76": {
+        "predicted": "NCBIGene:100334678",
+        "explanation": "{\"NCBIGene:100334678\"}"
+    },
+    "25849622.77": {
+        "predicted": "NCBIGene:100334678",
+        "explanation": "{\"NCBIGene:100334678\"}"
+    },
+    "25849622.78": {
+        "predicted": "NCBIGene:3605",
+        "explanation": "{\"NCBIGene:3605\"}"
+    },
+    "25849622.79": {
+        "predicted": "NCBIGene:100334678",
+        "explanation": "{\"cui\": \"NCBIGene:100334678\"}"
+    },
+    "25849622.80": {
+        "predicted": "NCBIGene:3605",
+        "explanation": "{\"cui\": \"NCBIGene:3605\"}"
+    },
+    "25849622.81": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"cui\": \"NCBIGene:6347\"}"
+    },
+    "25849622.82": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"cui\": \"NCBIGene:6347\"}"
+    },
+    "25849622.83": {
+        "predicted": "NCBIGene:3569",
+        "explanation": "{\"cui\": \"NCBIGene:3569\"}"
+    },
+    "25849622.85": {
+        "predicted": "NCBIGene:100334678",
+        "explanation": "{\"cui\": \"NCBIGene:100334678\"}"
+    },
+    "25849622.86": {
+        "predicted": "NCBIGene:6774",
+        "explanation": "{\"cui\": \"NCBIGene:6774\"}"
+    },
+    "25980581.1": {
+        "predicted": "NCBIGene:34752",
+        "explanation": "{\"NCBIGene:34752\"}"
+    },
+    "25980581.2": {
+        "predicted": "NCBIGene:34752",
+        "explanation": "{\"NCBIGene:34752\"}"
+    },
+    "25980581.3": {
+        "predicted": "NCBIGene:34752",
+        "explanation": "{\"NCBIGene:34752\"}"
+    },
+    "25980581.4": {
+        "predicted": "NCBIGene:424852",
+        "explanation": "{\"cui\": \"NCBIGene:424852\"}"
+    },
+    "25980581.5": {
+        "predicted": "NCBIGene:36059",
+        "explanation": "{\"NCBIGene:36059\"}"
+    },
+    "25980581.6": {
+        "predicted": "NCBIGene:36854",
+        "explanation": "{\"NCBIGene:36854\"}"
+    },
+    "25980581.7": {
+        "predicted": "NCBIGene:3725",
+        "explanation": "{\"NCBIGene:3725\"}"
+    },
+    "25980581.8": {
+        "predicted": "NCBIGene:581",
+        "explanation": "{\"NCBIGene:581\"}"
+    },
+    "25980581.9": {
+        "predicted": "NCBIGene:53585",
+        "explanation": "{\"NCBIGene:53585\"}"
+    },
+    "25980581.10": {
+        "predicted": "NCBIGene:733532",
+        "explanation": "{\"cui\": \"NCBIGene:733532\"}"
+    },
+    "25980581.11": {
+        "predicted": "NCBIGene:36059",
+        "explanation": "{\"NCBIGene:36059\"}"
+    },
+    "25980581.13": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"NCBIGene:41957\"}"
+    },
+    "25980581.14": {
+        "predicted": "NCBIGene:100127158",
+        "explanation": "{\"NCBIGene:100127158\"}"
+    },
+    "25980581.15": {
+        "predicted": "NCBIGene:34752",
+        "explanation": "{\"NCBIGene:34752\"}"
+    },
+    "25980581.16": {
+        "predicted": "NCBIGene:379663",
+        "explanation": "{\"NCBIGene:379663\"}"
+    },
+    "25980581.17": {
+        "predicted": "NCBIGene:559032",
+        "explanation": "{\"NCBIGene:559032\"}"
+    },
+    "25980581.19": {
+        "predicted": "NCBIGene:34752",
+        "explanation": "{\"NCBIGene:34752\"}"
+    },
+    "25980581.20": {
+        "predicted": "NCBIGene:424852",
+        "explanation": "{\"NCBIGene:424852\"}"
+    },
+    "25980581.21": {
+        "predicted": "NCBIGene:31151",
+        "explanation": "{\"NCBIGene:31151\"}"
+    },
+    "25980581.22": {
+        "predicted": "NCBIGene:4790",
+        "explanation": "{\"NCBIGene:4790\"}"
+    },
+    "25980581.23": {
+        "predicted": "NCBIGene:31310",
+        "explanation": "{\"NCBIGene:31310\"}"
+    },
+    "25980581.24": {
+        "predicted": "NCBIGene:395909",
+        "explanation": "{\"NCBIGene:395909\"}"
+    },
+    "25980581.25": {
+        "predicted": "NCBIGene:396341",
+        "explanation": "{\"NCBIGene:396341\"}"
+    },
+    "25980581.26": {
+        "predicted": "NCBIGene:373110",
+        "explanation": "{\"NCBIGene:373110\"}"
+    },
+    "25980581.27": {
+        "predicted": "NCBIGene:3558",
+        "explanation": "{\"NCBIGene:3558\"}"
+    },
+    "25980581.28": {
+        "predicted": "NCBIGene:34752",
+        "explanation": "{\"NCBIGene:34752\"}"
+    },
+    "25980581.29": {
+        "predicted": "NCBIGene:822519",
+        "explanation": "{\"cui\": \"NCBIGene:822519\"}"
+    },
+    "25980581.30": {
+        "predicted": "NCBIGene:32133",
+        "explanation": "{\"NCBIGene:32133\"}"
+    },
+    "25980581.31": {
+        "predicted": "NCBIGene:386590",
+        "explanation": "{\"NCBIGene:386590\"}"
+    },
+    "25980581.33": {
+        "predicted": "NCBIGene:682",
+        "explanation": "{\"NCBIGene:682\"}"
+    },
+    "25980581.34": {
+        "predicted": "NCBIGene:55294",
+        "explanation": "{\"NCBIGene:55294\"}"
+    },
+    "25980581.35": {
+        "predicted": "NCBIGene:7150",
+        "explanation": "{\"cui\": \"NCBIGene:7150\"}"
+    },
+    "25980581.36": {
+        "predicted": "NCBIGene:830919",
+        "explanation": "{\"NCBIGene:830919\"}"
+    },
+    "25980581.37": {
+        "predicted": "NCBIGene:4292",
+        "explanation": "{\"cui\": \"NCBIGene:4292\"}"
+    },
+    "25980581.38": {
+        "predicted": "NCBIGene:839920",
+        "explanation": "{\"NCBIGene:839920\"}"
+    },
+    "25980581.40": {
+        "predicted": "NCBIGene:398321",
+        "explanation": "{\"NCBIGene:398321\"}"
+    },
+    "25980581.41": {
+        "predicted": "NCBIGene:34752",
+        "explanation": "{\"NCBIGene:34752\"}"
+    },
+    "25980581.42": {
+        "predicted": "NCBIGene:34752",
+        "explanation": "{\"NCBIGene:34752\"}"
+    },
+    "25980581.43": {
+        "predicted": "NCBIGene:424852",
+        "explanation": "{\"NCBIGene:424852\"}"
+    },
+    "25980581.44": {
+        "predicted": "NCBIGene:424852",
+        "explanation": "{\"NCBIGene:424852\"}"
+    },
+    "25980581.45": {
+        "predicted": "NCBIGene:31151",
+        "explanation": "{\"NCBIGene:31151\"}"
+    },
+    "25980581.46": {
+        "predicted": "NCBIGene:4790",
+        "explanation": "{\"NCBIGene:4790\"}"
+    },
+    "25980581.47": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"NCBIGene:41957\"}"
+    },
+    "26110643.1": {
+        "predicted": "NCBIGene:100006951",
+        "explanation": "{\"NCBIGene:100006951\"}"
+    },
+    "26110643.2": {
+        "predicted": "NCBIGene:1956",
+        "explanation": "{\"NCBIGene:1956\"}"
+    },
+    "26110643.3": {
+        "predicted": "NCBIGene:563428",
+        "explanation": "{\"cui\": \"NCBIGene:563428\"}"
+    },
+    "26110643.4": {
+        "predicted": "NCBIGene:558006",
+        "explanation": "{\"NCBIGene:558006\"}"
+    },
+    "26110643.5": {
+        "predicted": "NCBIGene:559150",
+        "explanation": "{\"cui\": \"NCBIGene:559150\"}"
+    },
+    "26110643.6": {
+        "predicted": "NCBIGene:30526",
+        "explanation": "{\"cui\": \"NCBIGene:30526\"}"
+    },
+    "26110643.7": {
+        "predicted": "NCBIGene:554270",
+        "explanation": "{\"cui\": \"NCBIGene:554270\"}"
+    },
+    "26110643.8": {
+        "predicted": "NCBIGene:559276",
+        "explanation": "{\"cui\": \"NCBIGene:559276\"}"
+    },
+    "26110643.9": {
+        "predicted": "NCBIGene:799247",
+        "explanation": "{\"cui\": \"NCBIGene:799247\"}"
+    },
+    "26110643.10": {
+        "predicted": "NCBIGene:100006951",
+        "explanation": "{\"NCBIGene:100006951\"}"
+    },
+    "26110643.11": {
+        "predicted": "NCBIGene:569561",
+        "explanation": "{\"NCBIGene:569561\"}"
+    },
+    "26110643.12": {
+        "predicted": "NCBIGene:324381",
+        "explanation": "{\"NCBIGene:324381\"}"
+    },
+    "26110643.13": {
+        "predicted": "NCBIGene:565108",
+        "explanation": "{\"NCBIGene:565108\"}"
+    },
+    "26110643.14": {
+        "predicted": "NCBIGene:100006951",
+        "explanation": "{\"cui\": \"NCBIGene:100006951\"}"
+    },
+    "26110643.15": {
+        "predicted": "NCBIGene:100006951",
+        "explanation": "{\"cui\": \"NCBIGene:100006951\"}"
+    },
+    "26110643.16": {
+        "predicted": "NCBIGene:100006951",
+        "explanation": "{\"cui\": \"NCBIGene:100006951\"}"
+    },
+    "26110643.17": {
+        "predicted": "NCBIGene:100006951",
+        "explanation": "{\"cui\": \"NCBIGene:100006951\"}"
+    },
+    "26110643.20": {
+        "predicted": "NCBIGene:100006951",
+        "explanation": "{\"cui\": \"NCBIGene:100006951\"}"
+    },
+    "26110643.22": {
+        "predicted": "NCBIGene:100006951",
+        "explanation": "{\"cui\": \"NCBIGene:100006951\"}"
+    },
+    "26110643.23": {
+        "predicted": "NCBIGene:1956",
+        "explanation": "{\"NCBIGene:1956\"}"
+    },
+    "26110643.24": {
+        "predicted": "NCBIGene:795670",
+        "explanation": "{\"NCBIGene:795670\"}"
+    },
+    "26110643.25": {
+        "predicted": "NCBIGene:100006951",
+        "explanation": "{\"cui\": \"NCBIGene:100006951\"}"
+    },
+    "26110643.26": {
+        "predicted": "NCBIGene:795670",
+        "explanation": "{\"NCBIGene:795670\"}"
+    },
+    "26110643.27": {
+        "predicted": "NCBIGene:100006951",
+        "explanation": "{\"NCBIGene:100006951\"}"
+    },
+    "26110643.28": {
+        "predicted": "NCBIGene:1956",
+        "explanation": "{\"NCBIGene:1956\"}"
+    },
+    "26110643.29": {
+        "predicted": "NCBIGene:795670",
+        "explanation": "{\"NCBIGene:795670\"}"
+    },
+    "26241122.9": {
+        "predicted": "NCBIGene:100754448",
+        "explanation": "{\"NCBIGene:100754448\"}"
+    },
+    "26356837.2": {
+        "predicted": "NCBIGene:31872",
+        "explanation": "{\"NCBIGene:31872\"}"
+    },
+    "26356837.3": {
+        "predicted": "NCBIGene:5594",
+        "explanation": "{\"NCBIGene:5594\"}"
+    },
+    "26356837.4": {
+        "predicted": "NCBIGene:173149",
+        "explanation": "{\"NCBIGene:173149\"}"
+    },
+    "26356837.5": {
+        "predicted": "NCBIGene:13982",
+        "explanation": "{\"NCBIGene:13982\"}"
+    },
+    "26356837.6": {
+        "predicted": "NCBIGene:2099",
+        "explanation": "{\"NCBIGene:2099\"}"
+    },
+    "26356837.18": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"cui\": \"NCBIGene:41957\"}"
+    },
+    "26356837.20": {
+        "predicted": "NCBIGene:56637",
+        "explanation": "{\"NCBIGene:56637\"}"
+    },
+    "26356837.21": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"cui\": \"NCBIGene:41957\"}"
+    },
+    "26356837.24": {
+        "predicted": "NCBIGene:31872",
+        "explanation": "{\"NCBIGene:31872\"}"
+    },
+    "26356837.27": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"NCBIGene:41957\"}"
+    },
+    "26356837.28": {
+        "predicted": "NCBIGene:31872",
+        "explanation": "{\"NCBIGene:31872\"}"
+    },
+    "26356837.30": {
+        "predicted": "NCBIGene:35424",
+        "explanation": "{\"NCBIGene:35424\"}"
+    },
+    "26356837.31": {
+        "predicted": "NCBIGene:3553",
+        "explanation": "{\"NCBIGene:3553\"}"
+    },
+    "26356837.36": {
+        "predicted": "NCBIGene:3557",
+        "explanation": "{\"NCBIGene:3557\"}"
+    },
+    "26479186.1": {
+        "predicted": "NCBIGene:443534",
+        "explanation": "{\"NCBIGene:443534\"}"
+    },
+    "26479186.2": {
+        "predicted": "NCBIGene:443534",
+        "explanation": "{\"NCBIGene:443534\"}"
+    },
+    "26479186.3": {
+        "predicted": "NCBIGene:3952",
+        "explanation": "{\"NCBIGene:3952\"}"
+    },
+    "26479186.4": {
+        "predicted": "NCBIGene:443534",
+        "explanation": "{\"NCBIGene:443534\"}"
+    },
+    "26479186.5": {
+        "predicted": "NCBIGene:443534",
+        "explanation": "{\"NCBIGene:443534\"}"
+    },
+    "26479186.6": {
+        "predicted": "NCBIGene:443534",
+        "explanation": "{\"NCBIGene:443534\"}"
+    },
+    "26479186.10": {
+        "predicted": "NCBIGene:443534",
+        "explanation": "{\"NCBIGene:443534\"}"
+    },
+    "26479186.11": {
+        "predicted": "NCBIGene:443534",
+        "explanation": "{\"NCBIGene:443534\"}"
+    },
+    "26479186.16": {
+        "predicted": "NCBIGene:779297",
+        "explanation": "{\"NCBIGene:779297\"}"
+    },
+    "26479186.18": {
+        "predicted": "NCBIGene:6774",
+        "explanation": "{\"NCBIGene:6774\"}"
+    },
+    "26479186.19": {
+        "predicted": "NCBIGene:20389",
+        "explanation": "{\"NCBIGene:20389\"}"
+    },
+    "26479186.22": {
+        "predicted": "NCBIGene:16542",
+        "explanation": "{\"NCBIGene:16542\"}"
+    },
+    "26479186.24": {
+        "predicted": "NCBIGene:5468",
+        "explanation": "{\"cui\": \"NCBIGene:5468\"}"
+    },
+    "26479186.25": {
+        "predicted": "NCBIGene:396281",
+        "explanation": "{\"NCBIGene:396281\"}"
+    },
+    "26479186.26": {
+        "predicted": "NCBIGene:443534",
+        "explanation": "{\"NCBIGene:443534\"}"
+    },
+    "26479186.27": {
+        "predicted": "NCBIGene:6439",
+        "explanation": "{\"NCBIGene:6439\"}"
+    },
+    "26515759.1": {
+        "predicted": "NCBIGene:31310",
+        "explanation": "{\"cui\": \"NCBIGene:31310\"}"
+    },
+    "26515759.2": {
+        "predicted": "NCBIGene:396282",
+        "explanation": "{\"cui\": \"NCBIGene:396282\"}"
+    },
+    "26515759.3": {
+        "predicted": "NCBIGene:395024",
+        "explanation": "{\"NCBIGene:395024\"}"
+    },
+    "26515759.4": {
+        "predicted": "NCBIGene:596",
+        "explanation": "{\"NCBIGene:596\"}"
+    },
+    "26515759.5": {
+        "predicted": "NCBIGene:31310",
+        "explanation": "{\"NCBIGene:31310\"}"
+    },
+    "26515759.6": {
+        "predicted": "NCBIGene:396282",
+        "explanation": "{\"NCBIGene:396282\"}"
+    },
+    "26515759.7": {
+        "predicted": "NCBIGene:4609",
+        "explanation": "{\"NCBIGene:4609\"}"
+    },
+    "26515759.8": {
+        "predicted": "NCBIGene:396282",
+        "explanation": "{\"NCBIGene:396282\"}"
+    },
+    "26515759.9": {
+        "predicted": "NCBIGene:4609",
+        "explanation": "{\"NCBIGene:4609\"}"
+    },
+    "26515759.10": {
+        "predicted": "NCBIGene:396282",
+        "explanation": "{\"NCBIGene:396282\"}"
+    },
+    "26515759.11": {
+        "predicted": "NCBIGene:4311",
+        "explanation": "{\"NCBIGene:4311\"}"
+    },
+    "26515759.12": {
+        "predicted": "NCBIGene:100496342",
+        "explanation": "{\"cui\": \"NCBIGene:100496342\"}"
+    },
+    "26515759.13": {
+        "predicted": "NCBIGene:931",
+        "explanation": "{\"NCBIGene:931\"}"
+    },
+    "26515759.14": {
+        "predicted": "NCBIGene:933",
+        "explanation": "{\"NCBIGene:933\"}"
+    },
+    "26515759.15": {
+        "predicted": "NCBIGene:496666",
+        "explanation": "{\"NCBIGene:496666\"}"
+    },
+    "26515759.16": {
+        "predicted": "NCBIGene:6693",
+        "explanation": "{\"NCBIGene:6693\"}"
+    },
+    "26515759.17": {
+        "predicted": "NCBIGene:960",
+        "explanation": "{\"NCBIGene:960\"}"
+    },
+    "26515759.18": {
+        "predicted": "NCBIGene:100329481",
+        "explanation": "{\"NCBIGene:100329481\"}"
+    },
+    "26515759.20": {
+        "predicted": "NCBIGene:100491070",
+        "explanation": "{\"NCBIGene:100491070\"}"
+    },
+    "26515759.21": {
+        "predicted": "NCBIGene:101883068",
+        "explanation": "{\"NCBIGene:101883068\"}"
+    },
+    "26515759.23": {
+        "predicted": "NCBIGene:16411",
+        "explanation": "{\"cui\": \"NCBIGene:16411\"}"
+    },
+    "26515759.24": {
+        "predicted": "NCBIGene:929",
+        "explanation": "{\"cui\": \"NCBIGene:929\"}"
+    },
+    "26515759.25": {
+        "predicted": "NCBIGene:395090",
+        "explanation": "{\"NCBIGene:395090\"}"
+    },
+    "26515759.26": {
+        "predicted": "NCBIGene:4684",
+        "explanation": "{\"NCBIGene:4684\"}"
+    },
+    "26515759.27": {
+        "predicted": "NCBIGene:418425",
+        "explanation": "{\"NCBIGene:418425\"}"
+    },
+    "26515759.28": {
+        "predicted": "NCBIGene:4609",
+        "explanation": "{\"cui\": \"NCBIGene:4609\"}"
+    },
+    "26515759.29": {
+        "predicted": "NCBIGene:396282",
+        "explanation": "{\"cui\": \"NCBIGene:396282\"}"
+    },
+    "26515759.30": {
+        "predicted": "NCBIGene:47396",
+        "explanation": "{\"cui\": \"NCBIGene:47396\"}"
+    },
+    "26515759.31": {
+        "predicted": "NCBIGene:2475",
+        "explanation": "{\"cui\": \"NCBIGene:2475\"}"
+    },
+    "26515759.32": {
+        "predicted": "NCBIGene:31310",
+        "explanation": "{\"NCBIGene:31310\"}"
+    },
+    "26515759.33": {
+        "predicted": "NCBIGene:596",
+        "explanation": "{\"NCBIGene:596\"}"
+    },
+    "26551667.1": {
+        "predicted": "NCBIGene:100491070",
+        "explanation": "{\"NCBIGene:100491070\"}"
+    },
+    "26551667.2": {
+        "predicted": "NCBIGene:7157",
+        "explanation": "{\"cui\": \"NCBIGene:7157\"}"
+    },
+    "26551667.3": {
+        "predicted": "NCBIGene:5925",
+        "explanation": "{\"NCBIGene:5925\"}"
+    },
+    "26551667.4": {
+        "predicted": "NCBIGene:5728",
+        "explanation": "{\"NCBIGene:5728\"}"
+    },
+    "26551667.5": {
+        "predicted": "NCBIGene:421991",
+        "explanation": "{\"cui\": \"NCBIGene:421991\"}"
+    },
+    "26551667.6": {
+        "predicted": "NCBIGene:1027",
+        "explanation": "{\"NCBIGene:1027\"}"
+    },
+    "26551667.7": {
+        "predicted": "NCBIGene:816477",
+        "explanation": "{\"cui\": \"NCBIGene:816477\"}"
+    },
+    "26551667.8": {
+        "predicted": "NCBIGene:416667",
+        "explanation": "{\"cui\": \"NCBIGene:416667\"}"
+    },
+    "26551667.9": {
+        "predicted": "NCBIGene:425846",
+        "explanation": "{\"NCBIGene:425846\"}"
+    },
+    "26551667.10": {
+        "predicted": "NCBIGene:100512962",
+        "explanation": "{\"NCBIGene:100512962\"}"
+    },
+    "26551667.11": {
+        "predicted": "NCBIGene:420437",
+        "explanation": "{\"NCBIGene:420437\"}"
+    },
+    "26551667.12": {
+        "predicted": "NCBIGene:420437",
+        "explanation": "{\"NCBIGene:420437\"}"
+    },
+    "26551667.13": {
+        "predicted": "NCBIGene:65980",
+        "explanation": "{\"NCBIGene:65980\"}"
+    },
+    "26551667.14": {
+        "predicted": "NCBIGene:6597",
+        "explanation": "{\"NCBIGene:6597\"}"
+    },
+    "26551667.15": {
+        "predicted": "NCBIGene:1107",
+        "explanation": "{\"cui\": \"NCBIGene:1107\"}"
+    },
+    "26551667.16": {
+        "predicted": "NCBIGene:5594",
+        "explanation": "{\"cui\": \"NCBIGene:5594\"}"
+    },
+    "26551667.17": {
+        "predicted": "NCBIGene:673",
+        "explanation": "{\"NCBIGene:673\"}"
+    },
+    "26551667.18": {
+        "predicted": "NCBIGene:416476",
+        "explanation": "{\"cui\": \"NCBIGene:416476\"}"
+    },
+    "26551667.19": {
+        "predicted": "NCBIGene:5592",
+        "explanation": "{\"NCBIGene:5592\"}"
+    },
+    "26551667.21": {
+        "predicted": "NCBIGene:4790",
+        "explanation": "{\"NCBIGene:4790\"}"
+    },
+    "26590805.1": {
+        "predicted": "NCBIGene:8852",
+        "explanation": "{\"NCBIGene:8852\"}"
+    },
+    "26590805.2": {
+        "predicted": "NCBIGene:8852",
+        "explanation": "{\"NCBIGene:8852\"}"
+    },
+    "26590805.3": {
+        "predicted": "NCBIGene:8852",
+        "explanation": "{\"NCBIGene:8852\"}"
+    },
+    "26590805.4": {
+        "predicted": "NCBIGene:8852",
+        "explanation": "{\"NCBIGene:8852\"}"
+    },
+    "26590805.5": {
+        "predicted": "NCBIGene:8852",
+        "explanation": "{\"cui\": \"NCBIGene:8852\"}"
+    },
+    "26590805.6": {
+        "predicted": "NCBIGene:8852",
+        "explanation": "{\"cui\": \"NCBIGene:8852\"}"
+    },
+    "26590805.7": {
+        "predicted": "NCBIGene:8852",
+        "explanation": "{\"NCBIGene:8852\"}"
+    },
+    "26590805.8": {
+        "predicted": "NCBIGene:8852",
+        "explanation": "{\"NCBIGene:8852\"}"
+    },
+    "26590805.10": {
+        "predicted": "NCBIGene:36854",
+        "explanation": "{\"NCBIGene:36854\"}"
+    },
+    "26590805.11": {
+        "predicted": "NCBIGene:34411",
+        "explanation": "{\"NCBIGene:34411\"}"
+    },
+    "26590805.12": {
+        "predicted": "NCBIGene:42453",
+        "explanation": "{\"NCBIGene:42453\"}"
+    },
+    "26590805.13": {
+        "predicted": "NCBIGene:36854",
+        "explanation": "{\"NCBIGene:36854\"}"
+    },
+    "26590805.14": {
+        "predicted": "NCBIGene:100034507",
+        "explanation": "{\"NCBIGene:100034507\"}"
+    },
+    "26590805.15": {
+        "predicted": "NCBIGene:31887",
+        "explanation": "{\"NCBIGene:31887\"}"
+    },
+    "26590805.16": {
+        "predicted": "NCBIGene:100151416",
+        "explanation": "{\"NCBIGene:100151416\"}"
+    },
+    "26590805.17": {
+        "predicted": "NCBIGene:33390",
+        "explanation": "{\"cui\": \"NCBIGene:33390\"}"
+    },
+    "26590805.18": {
+        "predicted": "NCBIGene:317",
+        "explanation": "{\"NCBIGene:317\"}"
+    },
+    "26590805.19": {
+        "predicted": "NCBIGene:572",
+        "explanation": "{\"cui\": \"NCBIGene:572\"}"
+    },
+    "26590805.20": {
+        "predicted": "NCBIGene:395236",
+        "explanation": "{\"cui\": \"NCBIGene:395236\"}"
+    },
+    "26590805.21": {
+        "predicted": "NCBIGene:578",
+        "explanation": "{\"cui\": \"NCBIGene:578\"}"
+    },
+    "26590805.22": {
+        "predicted": "NCBIGene:581",
+        "explanation": "{\"NCBIGene:581\"}"
+    },
+    "26590805.23": {
+        "predicted": "NCBIGene:142",
+        "explanation": "{\"NCBIGene:142\"}"
+    },
+    "26590805.24": {
+        "predicted": "NCBIGene:5366",
+        "explanation": "{\"NCBIGene:5366\"}"
+    },
+    "26590805.25": {
+        "predicted": "NCBIGene:27113",
+        "explanation": "{\"NCBIGene:27113\"}"
+    },
+    "26590805.28": {
+        "predicted": "NCBIGene:596",
+        "explanation": "{\"NCBIGene:596\"}"
+    },
+    "26590805.29": {
+        "predicted": "NCBIGene:282152",
+        "explanation": "{\"NCBIGene:282152\"}"
+    },
+    "26590805.30": {
+        "predicted": "NCBIGene:330",
+        "explanation": "{\"NCBIGene:330\"}"
+    },
+    "26590805.31": {
+        "predicted": "NCBIGene:331",
+        "explanation": "{\"cui\": \"NCBIGene:331\"}"
+    },
+    "26590805.32": {
+        "predicted": "NCBIGene:395152",
+        "explanation": "{\"cui\": \"NCBIGene:395152\"}"
+    },
+    "26590805.33": {
+        "predicted": "NCBIGene:733532",
+        "explanation": "{\"NCBIGene:733532\"}"
+    },
+    "26590805.37": {
+        "predicted": "NCBIGene:6591",
+        "explanation": "{\"NCBIGene:6591\"}"
+    },
+    "26590805.39": {
+        "predicted": "NCBIGene:34908",
+        "explanation": "{\"NCBIGene:34908\"}"
+    },
+    "26590805.40": {
+        "predicted": "NCBIGene:37655",
+        "explanation": "{\"NCBIGene:37655\"}"
+    },
+    "26590805.41": {
+        "predicted": "NCBIGene:420519",
+        "explanation": "{\"NCBIGene:420519\"}"
+    },
+    "26590805.42": {
+        "predicted": "NCBIGene:8852",
+        "explanation": "{\"cui\": \"NCBIGene:8852\"}"
+    },
+    "26590805.43": {
+        "predicted": "NCBIGene:843353",
+        "explanation": "{\"cui\": \"NCBIGene:843353\"}"
+    },
+    "26590805.44": {
+        "predicted": "NCBIGene:4313",
+        "explanation": "{\"NCBIGene:4313\"}"
+    },
+    "26590805.45": {
+        "predicted": "NCBIGene:428086",
+        "explanation": "{\"cui\": \"NCBIGene:428086\"}"
+    },
+    "26590805.46": {
+        "predicted": "NCBIGene:403885",
+        "explanation": "{\"cui\": \"NCBIGene:403885\"}"
+    },
+    "26590805.47": {
+        "predicted": "NCBIGene:8852",
+        "explanation": "{\"NCBIGene:8852\"}"
+    },
+    "26731607.14": {
+        "predicted": "NCBIGene:26416",
+        "explanation": "{\"NCBIGene:26416\"}"
+    },
+    "26900324.1": {
+        "predicted": "NCBIGene:41185",
+        "explanation": "{\"NCBIGene:41185\"}"
+    },
+    "26900324.3": {
+        "predicted": "NCBIGene:41185",
+        "explanation": "{\"NCBIGene:41185\"}"
+    },
+    "26900324.4": {
+        "predicted": "NCBIGene:41185",
+        "explanation": "{\"cui\": \"NCBIGene:41185\"}"
+    },
+    "26900324.5": {
+        "predicted": "NCBIGene:41185",
+        "explanation": "{\"NCBIGene:41185\"}"
+    },
+    "26900324.6": {
+        "predicted": "NCBIGene:41185",
+        "explanation": "{\"cui\": \"NCBIGene:41185\"}"
+    },
+    "26900324.7": {
+        "predicted": "NCBIGene:423338",
+        "explanation": "{\"NCBIGene:423338\"}"
+    },
+    "26900324.8": {
+        "predicted": "NCBIGene:41185",
+        "explanation": "{\"NCBIGene:41185\"}"
+    },
+    "26900324.9": {
+        "predicted": "NCBIGene:41185",
+        "explanation": "{\"NCBIGene:41185\"}"
+    },
+    "26900324.10": {
+        "predicted": "NCBIGene:41185",
+        "explanation": "{\"cui\": \"NCBIGene:41185\"}"
+    },
+    "26900324.13": {
+        "predicted": "NCBIGene:395594",
+        "explanation": "{\"cui\": \"NCBIGene:395594\"}"
+    },
+    "26900324.14": {
+        "predicted": "NCBIGene:3909",
+        "explanation": "{\"NCBIGene:3909\"}"
+    },
+    "26900324.16": {
+        "predicted": "NCBIGene:100485730",
+        "explanation": "{\"cui\": \"NCBIGene:100485730\"}"
+    },
+    "26900324.17": {
+        "predicted": "NCBIGene:41185",
+        "explanation": "{\"NCBIGene:41185\"}"
+    },
+    "26900324.18": {
+        "predicted": "NCBIGene:424220",
+        "explanation": "{\"NCBIGene:424220\"}"
+    },
+    "26900324.19": {
+        "predicted": "NCBIGene:100490625",
+        "explanation": "{\"cui\": \"NCBIGene:100490625\"}"
+    },
+    "26900324.20": {
+        "predicted": "NCBIGene:352940",
+        "explanation": "{\"NCBIGene:352940\"}"
+    },
+    "26900324.21": {
+        "predicted": "NCBIGene:5080",
+        "explanation": "{\"NCBIGene:5080\"}"
+    },
+    "26900324.22": {
+        "predicted": "NCBIGene:5916",
+        "explanation": "{\"NCBIGene:5916\"}"
+    },
+    "26900324.23": {
+        "predicted": "NCBIGene:140616",
+        "explanation": "{\"NCBIGene:140616\"}"
+    },
+    "26900324.24": {
+        "predicted": "NCBIGene:41185",
+        "explanation": "{\"cui\": \"NCBIGene:41185\"}"
+    },
+    "26900324.25": {
+        "predicted": "NCBIGene:41185",
+        "explanation": "{\"NCBIGene:41185\"}"
+    },
+    "26900324.26": {
+        "predicted": "NCBIGene:41185",
+        "explanation": "{\"cui\": \"NCBIGene:41185\"}"
+    },
+    "26900324.27": {
+        "predicted": "NCBIGene:41185",
+        "explanation": "{\"cui\": \"NCBIGene:41185\"}"
+    },
+    "26900324.28": {
+        "predicted": "NCBIGene:41185",
+        "explanation": "{\"cui\": \"NCBIGene:41185\"}"
+    },
+    "26900324.29": {
+        "predicted": "NCBIGene:41185",
+        "explanation": "{\"NCBIGene:41185\"}"
+    },
+    "26900324.30": {
+        "predicted": "NCBIGene:41185",
+        "explanation": "{\"NCBIGene:41185\"}"
+    },
+    "26937641.1": {
+        "predicted": "NCBIGene:423079",
+        "explanation": "{\"NCBIGene:423079\"}"
+    },
+    "26937641.2": {
+        "predicted": "NCBIGene:423079",
+        "explanation": "{\"NCBIGene:423079\"}"
+    },
+    "26937641.3": {
+        "predicted": "NCBIGene:423079",
+        "explanation": "{\"NCBIGene:423079\"}"
+    },
+    "26937641.4": {
+        "predicted": "NCBIGene:449557",
+        "explanation": "{\"NCBIGene:449557\"}"
+    },
+    "26937641.5": {
+        "predicted": "NCBIGene:449557",
+        "explanation": "{\"NCBIGene:449557\"}"
+    },
+    "26937641.7": {
+        "predicted": "NCBIGene:5599",
+        "explanation": "{\"NCBIGene:5599\"}"
+    },
+    "26937641.8": {
+        "predicted": "NCBIGene:5599",
+        "explanation": "{\"NCBIGene:5599\"}"
+    },
+    "26937641.9": {
+        "predicted": "NCBIGene:5594",
+        "explanation": "{\"NCBIGene:5594\"}"
+    },
+    "26937641.10": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"NCBIGene:41957\"}"
+    },
+    "26937641.11": {
+        "predicted": "NCBIGene:4790",
+        "explanation": "{\"NCBIGene:4790\"}"
+    },
+    "26937641.12": {
+        "predicted": "NCBIGene:6288",
+        "explanation": "{\"cui\": \"NCBIGene:6288\"}"
+    },
+    "26937641.13": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"NCBIGene:6347\"}"
+    },
+    "26937641.14": {
+        "predicted": "NCBIGene:6352",
+        "explanation": "{\"NCBIGene:6352\"}"
+    },
+    "26937641.16": {
+        "predicted": "NCBIGene:4790",
+        "explanation": "{\"cui\": \"NCBIGene:4790\"}"
+    },
+    "26937641.17": {
+        "predicted": "NCBIGene:5599",
+        "explanation": "{\"cui\": \"NCBIGene:5599\"}"
+    },
+    "26937641.18": {
+        "predicted": "NCBIGene:4790",
+        "explanation": "{\"NCBIGene:4790\"}"
+    },
+    "26937641.19": {
+        "predicted": "NCBIGene:423079",
+        "explanation": "{\"NCBIGene:423079\"}"
+    },
+    "26937641.23": {
+        "predicted": "NCBIGene:423079",
+        "explanation": "{\"NCBIGene:423079\"}"
+    },
+    "26937641.24": {
+        "predicted": "NCBIGene:5599",
+        "explanation": "{\"NCBIGene:5599\"}"
+    },
+    "26937641.25": {
+        "predicted": "NCBIGene:5594",
+        "explanation": "{\"NCBIGene:5594\"}"
+    },
+    "26937641.26": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"NCBIGene:41957\"}"
+    },
+    "26937641.27": {
+        "predicted": "NCBIGene:423079",
+        "explanation": "{\"NCBIGene:423079\"}"
+    },
+    "26937641.29": {
+        "predicted": "NCBIGene:4790",
+        "explanation": "{\"NCBIGene:4790\"}"
+    },
+    "26937641.30": {
+        "predicted": "NCBIGene:6288",
+        "explanation": "{\"NCBIGene:6288\"}"
+    },
+    "26937641.31": {
+        "predicted": "NCBIGene:733603",
+        "explanation": "{\"NCBIGene:733603\"}"
+    },
+    "26937641.32": {
+        "predicted": "NCBIGene:423079",
+        "explanation": "{\"NCBIGene:423079\"}"
+    },
+    "26971998.1": {
+        "predicted": "NCBIGene:419755",
+        "explanation": "{\"NCBIGene:419755\"}"
+    },
+    "26971998.4": {
+        "predicted": "NCBIGene:419755",
+        "explanation": "{\"cui\": \"NCBIGene:419755\"}"
+    },
+    "26971998.6": {
+        "predicted": "NCBIGene:4790",
+        "explanation": "{\"NCBIGene:4790\"}"
+    },
+    "26971998.7": {
+        "predicted": "NCBIGene:4790",
+        "explanation": "{\"NCBIGene:4790\"}"
+    },
+    "26971998.12": {
+        "predicted": "NCBIGene:395337",
+        "explanation": "{\"NCBIGene:395337\"}"
+    },
+    "26971998.13": {
+        "predicted": "NCBIGene:395337",
+        "explanation": "{\"NCBIGene:395337\"}"
+    },
+    "26971998.14": {
+        "predicted": "NCBIGene:419755",
+        "explanation": "{\"cui\": \"NCBIGene:419755\"}"
+    },
+    "26971998.18": {
+        "predicted": "NCBIGene:44642",
+        "explanation": "{\"NCBIGene:44642\"}"
+    },
+    "26971998.19": {
+        "predicted": "NCBIGene:4790",
+        "explanation": "{\"NCBIGene:4790\"}"
+    },
+    "26971998.21": {
+        "predicted": "NCBIGene:6774",
+        "explanation": "{\"NCBIGene:6774\"}"
+    },
+    "26971998.22": {
+        "predicted": "NCBIGene:395337",
+        "explanation": "{\"cui\": \"NCBIGene:395337\"}"
+    },
+    "26971998.23": {
+        "predicted": "NCBIGene:3570",
+        "explanation": "{\"NCBIGene:3570\"}"
+    },
+    "26971998.24": {
+        "predicted": "NCBIGene:3570",
+        "explanation": "{\"cui\": \"NCBIGene:3570\"}"
+    },
+    "26971998.28": {
+        "predicted": "NCBIGene:419755",
+        "explanation": "{\"NCBIGene:419755\"}"
+    },
+    "26971998.29": {
+        "predicted": "NCBIGene:3570",
+        "explanation": "{\"NCBIGene:3570\"}"
+    },
+    "26971998.30": {
+        "predicted": "NCBIGene:419755",
+        "explanation": "{\"NCBIGene:419755\"}"
+    },
+    "27090298.2": {
+        "predicted": "NCBIGene:2194",
+        "explanation": "{\"cui\": \"NCBIGene:2194\"}"
+    },
+    "27090298.4": {
+        "predicted": "NCBIGene:2194",
+        "explanation": "{\"NCBIGene:2194\"}"
+    },
+    "27090298.5": {
+        "predicted": "NCBIGene:2194",
+        "explanation": "{\"NCBIGene:2194\"}"
+    },
+    "27090298.6": {
+        "predicted": "NCBIGene:2194",
+        "explanation": "{\"NCBIGene:2194\"}"
+    },
+    "27090298.7": {
+        "predicted": "NCBIGene:3630",
+        "explanation": "{\"NCBIGene:3630\"}"
+    },
+    "27090298.9": {
+        "predicted": "NCBIGene:33524",
+        "explanation": "{\"NCBIGene:33524\"}"
+    },
+    "27090298.10": {
+        "predicted": "NCBIGene:396061",
+        "explanation": "{\"NCBIGene:396061\"}"
+    },
+    "27090298.11": {
+        "predicted": "NCBIGene:3630",
+        "explanation": "{\"cui\": \"NCBIGene:3630\"}"
+    },
+    "27090298.13": {
+        "predicted": "NCBIGene:33524",
+        "explanation": "{\"NCBIGene:33524\"}"
+    },
+    "27090298.14": {
+        "predicted": "NCBIGene:33524",
+        "explanation": "{\"NCBIGene:33524\"}"
+    },
+    "27090298.15": {
+        "predicted": "NCBIGene:33524",
+        "explanation": "{\"NCBIGene:33524\"}"
+    },
+    "27090298.16": {
+        "predicted": "NCBIGene:396061",
+        "explanation": "{\"NCBIGene:396061\"}"
+    },
+    "27090298.17": {
+        "predicted": "NCBIGene:396145",
+        "explanation": "{\"NCBIGene:396145\"}"
+    },
+    "27100831.3": {
+        "predicted": "NCBIGene:824351",
+        "explanation": "{\"NCBIGene:824351\"}"
+    },
+    "27100831.4": {
+        "predicted": "NCBIGene:7099",
+        "explanation": "{\"cui\": \"NCBIGene:7099\"}"
+    },
+    "27100831.6": {
+        "predicted": "NCBIGene:22341",
+        "explanation": "{\"cui\": \"NCBIGene:22341\"}"
+    },
+    "27100831.7": {
+        "predicted": "NCBIGene:7099",
+        "explanation": "{\"cui\": \"NCBIGene:7099\"}"
+    },
+    "27100831.15": {
+        "predicted": "NCBIGene:16409",
+        "explanation": "{\"NCBIGene:16409\"}"
+    },
+    "27100831.20": {
+        "predicted": "NCBIGene:22341",
+        "explanation": "{\"NCBIGene:22341\"}"
+    },
+    "27100831.21": {
+        "predicted": "NCBIGene:30121",
+        "explanation": "{\"NCBIGene:30121\"}"
+    },
+    "27100831.22": {
+        "predicted": "NCBIGene:395196",
+        "explanation": "{\"cui\": \"NCBIGene:395196\"}"
+    },
+    "27100831.23": {
+        "predicted": "NCBIGene:7124",
+        "explanation": "{\"cui\": \"NCBIGene:7124\"}"
+    },
+    "27100831.24": {
+        "predicted": "NCBIGene:4313",
+        "explanation": "{\"NCBIGene:4313\"}"
+    },
+    "27100831.25": {
+        "predicted": "NCBIGene:379663",
+        "explanation": "{\"NCBIGene:379663\"}"
+    },
+    "27100831.26": {
+        "predicted": "NCBIGene:19697",
+        "explanation": "{\"cui\": \"NCBIGene:19697\"}"
+    },
+    "27100831.30": {
+        "predicted": "NCBIGene:16409",
+        "explanation": "{\"NCBIGene:16409\"}"
+    },
+    "27110092.1": {
+        "predicted": "NCBIGene:407137",
+        "explanation": "{\"NCBIGene:407137\"}"
+    },
+    "27110092.2": {
+        "predicted": "NCBIGene:100134991",
+        "explanation": "{\"NCBIGene:100134991\"}"
+    },
+    "27110092.3": {
+        "predicted": "NCBIGene:280943",
+        "explanation": "{\"NCBIGene:280943\"}"
+    },
+    "27110092.6": {
+        "predicted": "NCBIGene:7082",
+        "explanation": "{\"cui\": \"NCBIGene:7082\"}"
+    },
+    "27110092.7": {
+        "predicted": "NCBIGene:7082",
+        "explanation": "{\"cui\": \"NCBIGene:7082\"}"
+    },
+    "27110092.10": {
+        "predicted": "NCBIGene:1728",
+        "explanation": "{\"NCBIGene:1728\"}"
+    },
+    "27110092.11": {
+        "predicted": "NCBIGene:2944",
+        "explanation": "{\"NCBIGene:2944\"}"
+    },
+    "27110092.13": {
+        "predicted": "NCBIGene:396287",
+        "explanation": "{\"NCBIGene:396287\"}"
+    },
+    "27110092.16": {
+        "predicted": "NCBIGene:280943",
+        "explanation": "{\"cui\": \"NCBIGene:280943\"}"
+    },
+    "27110092.17": {
+        "predicted": "NCBIGene:16176",
+        "explanation": "{\"cui\": \"NCBIGene:16176\"}"
+    },
+    "27110092.18": {
+        "predicted": "NCBIGene:3569",
+        "explanation": "{\"NCBIGene:3569\"}"
+    },
+    "27110092.19": {
+        "predicted": "NCBIGene:20297",
+        "explanation": "{\"NCBIGene:20297\"}"
+    },
+    "27110092.20": {
+        "predicted": "NCBIGene:100494617",
+        "explanation": "{\"NCBIGene:100494617\"}"
+    },
+    "27110092.21": {
+        "predicted": "NCBIGene:395909",
+        "explanation": "{\"NCBIGene:395909\"}"
+    },
+    "27110092.22": {
+        "predicted": "NCBIGene:395909",
+        "explanation": "{\"NCBIGene:395909\"}"
+    },
+    "27110092.23": {
+        "predicted": "NCBIGene:100134991",
+        "explanation": "{\"NCBIGene:100134991\"}"
+    },
+    "27110092.24": {
+        "predicted": "NCBIGene:37196",
+        "explanation": "{\"NCBIGene:37196\"}"
+    },
+    "27248656.1": {
+        "predicted": "NCBIGene:30573",
+        "explanation": "{\"NCBIGene:30573\"}"
+    },
+    "27248656.2": {
+        "predicted": "NCBIGene:30573",
+        "explanation": "{\"NCBIGene:30573\"}"
+    },
+    "27248656.3": {
+        "predicted": "NCBIGene:7040",
+        "explanation": "{\"NCBIGene:7040\"}"
+    },
+    "27248656.4": {
+        "predicted": "NCBIGene:43580",
+        "explanation": "{\"NCBIGene:43580\"}"
+    },
+    "27248656.7": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"NCBIGene:6347\"}"
+    },
+    "27248656.8": {
+        "predicted": "NCBIGene:30573",
+        "explanation": "{\"NCBIGene:30573\"}"
+    },
+    "27248656.9": {
+        "predicted": "NCBIGene:4790",
+        "explanation": "{\"NCBIGene:4790\"}"
+    },
+    "27248656.12": {
+        "predicted": "NCBIGene:30573",
+        "explanation": "{\"NCBIGene:30573\"}"
+    },
+    "27248656.13": {
+        "predicted": "NCBIGene:30573",
+        "explanation": "{\"NCBIGene:30573\"}"
+    },
+    "27248656.14": {
+        "predicted": "NCBIGene:35045",
+        "explanation": "{\"NCBIGene:35045\"}"
+    },
+    "27248656.17": {
+        "predicted": "NCBIGene:30573",
+        "explanation": "{\"NCBIGene:30573\"}"
+    },
+    "27248656.19": {
+        "predicted": "NCBIGene:43904",
+        "explanation": "{\"NCBIGene:43904\"}"
+    },
+    "27248656.20": {
+        "predicted": "NCBIGene:1147",
+        "explanation": "{\"NCBIGene:1147\"}"
+    },
+    "27248656.21": {
+        "predicted": "NCBIGene:43580",
+        "explanation": "{\"NCBIGene:43580\"}"
+    },
+    "27248656.23": {
+        "predicted": "NCBIGene:30573",
+        "explanation": "{\"NCBIGene:30573\"}"
+    },
+    "27248656.24": {
+        "predicted": "NCBIGene:30573",
+        "explanation": "{\"NCBIGene:30573\"}"
+    },
+    "27248656.25": {
+        "predicted": "NCBIGene:30573",
+        "explanation": "{\"NCBIGene:30573\"}"
+    },
+    "27292643.5": {
+        "predicted": "NCBIGene:2064",
+        "explanation": "{\"NCBIGene:2064\"}"
+    },
+    "27322685.3": {
+        "predicted": "NCBIGene:100498056",
+        "explanation": "{\"NCBIGene:100498056\"}"
+    },
+    "27322685.4": {
+        "predicted": "NCBIGene:4208",
+        "explanation": "{\"NCBIGene:4208\"}"
+    },
+    "27322685.5": {
+        "predicted": "NCBIGene:36032",
+        "explanation": "{\"NCBIGene:36032\"}"
+    },
+    "27322685.6": {
+        "predicted": "NCBIGene:36032",
+        "explanation": "{\"NCBIGene:36032\"}"
+    },
+    "27322685.7": {
+        "predicted": "NCBIGene:64940",
+        "explanation": "{\"cui\": \"NCBIGene:64940\"}"
+    },
+    "27322685.8": {
+        "predicted": "NCBIGene:368890",
+        "explanation": "{\"NCBIGene:368890\"}"
+    },
+    "27322685.9": {
+        "predicted": "NCBIGene:64940",
+        "explanation": "{\"cui\": \"NCBIGene:64940\"}"
+    },
+    "27322685.10": {
+        "predicted": "NCBIGene:100498056",
+        "explanation": "{\"NCBIGene:100498056\"}"
+    },
+    "27322685.11": {
+        "predicted": "NCBIGene:417481",
+        "explanation": "{\"NCBIGene:417481\"}"
+    },
+    "27322685.12": {
+        "predicted": "NCBIGene:100498056",
+        "explanation": "{\"cui\": \"NCBIGene:100498056\"}"
+    },
+    "27322685.13": {
+        "predicted": "NCBIGene:420193",
+        "explanation": "{\"NCBIGene:420193\"}"
+    },
+    "27322685.14": {
+        "predicted": "NCBIGene:3575",
+        "explanation": "{\"NCBIGene:3575\"}"
+    },
+    "27322685.15": {
+        "predicted": "NCBIGene:6776",
+        "explanation": "{\"cui\": \"NCBIGene:6776\"}"
+    },
+    "27322685.16": {
+        "predicted": "NCBIGene:36032",
+        "explanation": "{\"cui\": \"NCBIGene:36032\"}"
+    },
+    "27322685.17": {
+        "predicted": "NCBIGene:100498056",
+        "explanation": "{\"cui\": \"NCBIGene:100498056\"}"
+    },
+    "27322685.18": {
+        "predicted": "NCBIGene:423796",
+        "explanation": "{\"NCBIGene:423796\"}"
+    },
+    "27322685.20": {
+        "predicted": "NCBIGene:417481",
+        "explanation": "{\"cui\": \"NCBIGene:417481\"}"
+    },
+    "27322685.21": {
+        "predicted": "NCBIGene:423796",
+        "explanation": "{\"NCBIGene:423796\"}"
+    },
+    "27322685.22": {
+        "predicted": "NCBIGene:394692",
+        "explanation": "{\"NCBIGene:394692\"}"
+    },
+    "27322685.23": {
+        "predicted": "NCBIGene:39203",
+        "explanation": "{\"NCBIGene:39203\"}"
+    },
+    "27322685.24": {
+        "predicted": "NCBIGene:2146",
+        "explanation": "{\"NCBIGene:2146\"}"
+    },
+    "27322685.25": {
+        "predicted": "NCBIGene:396484",
+        "explanation": "{\"cui\": \"NCBIGene:396484\"}"
+    },
+    "27322685.26": {
+        "predicted": "NCBIGene:100498056",
+        "explanation": "{\"NCBIGene:100498056\"}"
+    },
+    "27322685.27": {
+        "predicted": "NCBIGene:4208",
+        "explanation": "{\"cui\": \"NCBIGene:4208\"}"
+    },
+    "27322685.29": {
+        "predicted": "NCBIGene:100498056",
+        "explanation": "{\"cui\": \"NCBIGene:100498056\"}"
+    },
+    "27322685.30": {
+        "predicted": "NCBIGene:2146",
+        "explanation": "{\"NCBIGene:2146\"}"
+    },
+    "27457246.1": {
+        "predicted": "NCBIGene:406987",
+        "explanation": "{\"cui\": \"NCBIGene:406987\"}"
+    },
+    "27457246.2": {
+        "predicted": "NCBIGene:406987",
+        "explanation": "{\"NCBIGene:406987\"}"
+    },
+    "27457246.3": {
+        "predicted": "NCBIGene:406987",
+        "explanation": "{\"cui\": \"NCBIGene:406987\"}"
+    },
+    "27457246.4": {
+        "predicted": "NCBIGene:420027",
+        "explanation": "{\"cui\": \"NCBIGene:420027\"}"
+    },
+    "27457246.5": {
+        "predicted": "NCBIGene:5781",
+        "explanation": "{\"NCBIGene:5781\"}"
+    },
+    "27457246.6": {
+        "predicted": "NCBIGene:406987",
+        "explanation": "{\"NCBIGene:406987\"}"
+    },
+    "27457246.7": {
+        "predicted": "NCBIGene:406987",
+        "explanation": "{\"cui\": \"NCBIGene:406987\"}"
+    },
+    "27457246.8": {
+        "predicted": "NCBIGene:406987",
+        "explanation": "{\"NCBIGene:406987\"}"
+    },
+    "27457246.9": {
+        "predicted": "NCBIGene:406987",
+        "explanation": "{\"NCBIGene:406987\"}"
+    },
+    "27457246.10": {
+        "predicted": "NCBIGene:6774",
+        "explanation": "{\"NCBIGene:6774\"}"
+    },
+    "27457246.12": {
+        "predicted": "NCBIGene:5781",
+        "explanation": "{\"NCBIGene:5781\"}"
+    },
+    "27457246.14": {
+        "predicted": "NCBIGene:406987",
+        "explanation": "{\"NCBIGene:406987\"}"
+    },
+    "27457246.15": {
+        "predicted": "NCBIGene:6774",
+        "explanation": "{\"NCBIGene:6774\"}"
+    },
+    "27457246.16": {
+        "predicted": "NCBIGene:6774",
+        "explanation": "{\"NCBIGene:6774\"}"
+    },
+    "27457246.17": {
+        "predicted": "NCBIGene:6774",
+        "explanation": "{\"NCBIGene:6774\"}"
+    },
+    "27457246.18": {
+        "predicted": "NCBIGene:406987",
+        "explanation": "{\"cui\": \"NCBIGene:406987\"}"
+    },
+    "27457246.20": {
+        "predicted": "NCBIGene:420027",
+        "explanation": "{\"NCBIGene:420027\"}"
+    },
+    "27491646.2": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"cui\": \"NCBIGene:41957\"}"
+    },
+    "27491646.3": {
+        "predicted": "NCBIGene:36264",
+        "explanation": "{\"cui\": \"NCBIGene:36264\"}"
+    },
+    "27491646.5": {
+        "predicted": "NCBIGene:396341",
+        "explanation": "{\"NCBIGene:396341\"}"
+    },
+    "27491646.7": {
+        "predicted": "NCBIGene:1027",
+        "explanation": "{\"NCBIGene:1027\"}"
+    },
+    "27491646.8": {
+        "predicted": "NCBIGene:4318",
+        "explanation": "{\"NCBIGene:4318\"}"
+    },
+    "27491646.9": {
+        "predicted": "NCBIGene:17395",
+        "explanation": "{\"NCBIGene:17395\"}"
+    },
+    "27491646.12": {
+        "predicted": "NCBIGene:84557",
+        "explanation": "{\"NCBIGene:84557\"}"
+    },
+    "27491646.13": {
+        "predicted": "NCBIGene:42850",
+        "explanation": "{\"cui\": \"NCBIGene:42850\"}"
+    },
+    "27491646.14": {
+        "predicted": "NCBIGene:380234",
+        "explanation": "{\"NCBIGene:380234\"}"
+    },
+    "27491646.17": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"NCBIGene:41957\"}"
+    },
+    "27491646.18": {
+        "predicted": "NCBIGene:47396",
+        "explanation": "{\"cui\": \"NCBIGene:47396\"}"
+    },
+    "27491646.20": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"cui\": \"NCBIGene:41957\"}"
+    },
+    "27491646.21": {
+        "predicted": "NCBIGene:2475",
+        "explanation": "{\"cui\": \"NCBIGene:2475\"}"
+    },
+    "27491646.22": {
+        "predicted": "NCBIGene:4318",
+        "explanation": "{\"NCBIGene:4318\"}"
+    },
+    "27517319.1": {
+        "predicted": "NCBIGene:3791",
+        "explanation": "{\"NCBIGene:3791\"}"
+    },
+    "27517319.2": {
+        "predicted": "NCBIGene:2321",
+        "explanation": "{\"NCBIGene:2321\"}"
+    },
+    "27517319.3": {
+        "predicted": "NCBIGene:395323",
+        "explanation": "{\"NCBIGene:395323\"}"
+    },
+    "27517319.4": {
+        "predicted": "NCBIGene:37233",
+        "explanation": "{\"cui\": \"NCBIGene:37233\"}"
+    },
+    "27517319.5": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"NCBIGene:41957\"}"
+    },
+    "27517319.6": {
+        "predicted": "NCBIGene:3354888",
+        "explanation": "{\"NCBIGene:3354888\"}"
+    },
+    "27517319.7": {
+        "predicted": "NCBIGene:6774",
+        "explanation": "{\"cui\": \"NCBIGene:6774\"}"
+    },
+    "27517319.9": {
+        "predicted": "NCBIGene:3791",
+        "explanation": "{\"NCBIGene:3791\"}"
+    },
+    "27517319.10": {
+        "predicted": "NCBIGene:37233",
+        "explanation": "{\"NCBIGene:37233\"}"
+    },
+    "27517319.11": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"cui\": \"NCBIGene:41957\"}"
+    },
+    "27517319.13": {
+        "predicted": "NCBIGene:3791",
+        "explanation": "{\"cui\": \"NCBIGene:3791\"}"
+    },
+    "27599751.1": {
+        "predicted": "NCBIGene:100495231",
+        "explanation": "{\"NCBIGene:100495231\"}"
+    },
+    "27599751.2": {
+        "predicted": "NCBIGene:7040",
+        "explanation": "{\"cui\": \"NCBIGene:7040\"}"
+    },
+    "27599751.4": {
+        "predicted": "NCBIGene:100495231",
+        "explanation": "{\"NCBIGene:100495231\"}"
+    },
+    "27599751.6": {
+        "predicted": "NCBIGene:100495231",
+        "explanation": "{\"cui\": \"NCBIGene:100495231\"}"
+    },
+    "27599751.7": {
+        "predicted": "NCBIGene:100495231",
+        "explanation": "{\"cui\": \"NCBIGene:100495231\"}"
+    },
+    "27599751.8": {
+        "predicted": "NCBIGene:100495231",
+        "explanation": "{\"cui\": \"NCBIGene:100495231\"}"
+    },
+    "27599751.9": {
+        "predicted": "NCBIGene:100495231",
+        "explanation": "{\"NCBIGene:100495231\"}"
+    },
+    "27599751.10": {
+        "predicted": "NCBIGene:100495231",
+        "explanation": "{\"cui\": \"NCBIGene:100495231\"}"
+    },
+    "27599751.11": {
+        "predicted": "NCBIGene:100519997",
+        "explanation": "{\"NCBIGene:100519997\"}"
+    },
+    "27599751.12": {
+        "predicted": "NCBIGene:7040",
+        "explanation": "{\"NCBIGene:7040\"}"
+    },
+    "27599751.13": {
+        "predicted": "NCBIGene:7040",
+        "explanation": "{\"NCBIGene:7040\"}"
+    },
+    "27599751.14": {
+        "predicted": "NCBIGene:418657",
+        "explanation": "{\"cui\": \"NCBIGene:418657\"}"
+    },
+    "27599751.15": {
+        "predicted": "NCBIGene:7040",
+        "explanation": "{\"cui\": \"NCBIGene:7040\"}"
+    },
+    "27599751.16": {
+        "predicted": "NCBIGene:100495231",
+        "explanation": "{\"NCBIGene:100495231\"}"
+    },
+    "27599751.17": {
+        "predicted": "NCBIGene:7040",
+        "explanation": "{\"cui\": \"NCBIGene:7040\"}"
+    },
+    "27599751.18": {
+        "predicted": "NCBIGene:7046",
+        "explanation": "{\"cui\": \"NCBIGene:7046\"}"
+    },
+    "27599751.19": {
+        "predicted": "NCBIGene:7046",
+        "explanation": "{\"NCBIGene:7046\"}"
+    },
+    "27599751.20": {
+        "predicted": "NCBIGene:399295",
+        "explanation": "{\"NCBIGene:399295\"}"
+    },
+    "27599751.21": {
+        "predicted": "NCBIGene:395988",
+        "explanation": "{\"NCBIGene:395988\"}"
+    },
+    "27599751.22": {
+        "predicted": "NCBIGene:8742",
+        "explanation": "{\"NCBIGene:8742\"}"
+    },
+    "27599751.23": {
+        "predicted": "NCBIGene:100495231",
+        "explanation": "{\"NCBIGene:100495231\"}"
+    },
+    "27599751.24": {
+        "predicted": "NCBIGene:100495231",
+        "explanation": "{\"cui\": \"NCBIGene:100495231\"}"
+    },
+    "27599751.25": {
+        "predicted": "NCBIGene:100495231",
+        "explanation": "{\"cui\": \"NCBIGene:100495231\"}"
+    },
+    "27599751.26": {
+        "predicted": "NCBIGene:8742",
+        "explanation": "{\"NCBIGene:8742\"}"
+    },
+    "27599751.27": {
+        "predicted": "NCBIGene:100495231",
+        "explanation": "{\"NCBIGene:100495231\"}"
+    },
+    "27599751.28": {
+        "predicted": "NCBIGene:7040",
+        "explanation": "{\"NCBIGene:7040\"}"
+    },
+    "27599751.29": {
+        "predicted": "NCBIGene:7428",
+        "explanation": "{\"cui\": \"NCBIGene:7428\"}"
+    },
+    "27599751.30": {
+        "predicted": "NCBIGene:7428",
+        "explanation": "{\"cui\": \"NCBIGene:7428\"}"
+    },
+    "27599751.31": {
+        "predicted": "NCBIGene:100495231",
+        "explanation": "{\"NCBIGene:100495231\"}"
+    },
+    "27599751.32": {
+        "predicted": "NCBIGene:100495231",
+        "explanation": "{\"NCBIGene:100495231\"}"
+    },
+    "27599751.33": {
+        "predicted": "NCBIGene:7040",
+        "explanation": "{\"cui\": \"NCBIGene:7040\"}"
+    },
+    "27599751.34": {
+        "predicted": "NCBIGene:53433",
+        "explanation": "{\"cui\": \"NCBIGene:53433\"}"
+    },
+    "27599751.35": {
+        "predicted": "NCBIGene:100495231",
+        "explanation": "{\"NCBIGene:100495231\"}"
+    },
+    "27666119.1": {
+        "predicted": "NCBIGene:6472",
+        "explanation": "{\"NCBIGene:6472\"}"
+    },
+    "27666119.2": {
+        "predicted": "NCBIGene:6472",
+        "explanation": "{\"NCBIGene:6472\"}"
+    },
+    "27666119.3": {
+        "predicted": "NCBIGene:6472",
+        "explanation": "{\"NCBIGene:6472\"}"
+    },
+    "27666119.4": {
+        "predicted": "NCBIGene:6472",
+        "explanation": "{\"NCBIGene:6472\"}"
+    },
+    "27666119.5": {
+        "predicted": "NCBIGene:6472",
+        "explanation": "{\"NCBIGene:6472\"}"
+    },
+    "27666119.6": {
+        "predicted": "NCBIGene:6472",
+        "explanation": "{\"cui\": \"NCBIGene:6472\"}"
+    },
+    "27666119.7": {
+        "predicted": "NCBIGene:6472",
+        "explanation": "{\"cui\": \"NCBIGene:6472\"}"
+    },
+    "27666119.8": {
+        "predicted": "NCBIGene:6472",
+        "explanation": "{\"NCBIGene:6472\"}"
+    },
+    "27666119.9": {
+        "predicted": "NCBIGene:31524",
+        "explanation": "{\"NCBIGene:31524\"}"
+    },
+    "27666119.10": {
+        "predicted": "NCBIGene:6472",
+        "explanation": "{\"NCBIGene:6472\"}"
+    },
+    "27666119.11": {
+        "predicted": "NCBIGene:6472",
+        "explanation": "{\"NCBIGene:6472\"}"
+    },
+    "27666119.12": {
+        "predicted": "NCBIGene:10178",
+        "explanation": "{\"NCBIGene:10178\"}"
+    },
+    "27666119.13": {
+        "predicted": "NCBIGene:6472",
+        "explanation": "{\"NCBIGene:6472\"}"
+    },
+    "27666119.14": {
+        "predicted": "NCBIGene:10178",
+        "explanation": "{\"NCBIGene:10178\"}"
+    },
+    "27666119.15": {
+        "predicted": "NCBIGene:6472",
+        "explanation": "{\"NCBIGene:6472\"}"
+    },
+    "27666119.16": {
+        "predicted": "NCBIGene:398734",
+        "explanation": "{\"cui\": \"NCBIGene:398734\"}"
+    },
+    "27666119.17": {
+        "predicted": "NCBIGene:2099",
+        "explanation": "{\"NCBIGene:2099\"}"
+    },
+    "27666119.18": {
+        "predicted": "NCBIGene:2099",
+        "explanation": "{\"NCBIGene:2099\"}"
+    },
+    "27666119.19": {
+        "predicted": "NCBIGene:6472",
+        "explanation": "{\"NCBIGene:6472\"}"
+    },
+    "27666119.20": {
+        "predicted": "NCBIGene:31524",
+        "explanation": "{\"NCBIGene:31524\"}"
+    },
+    "27666119.21": {
+        "predicted": "NCBIGene:13982",
+        "explanation": "{\"cui\": \"NCBIGene:13982\"}"
+    },
+    "27666119.22": {
+        "predicted": "NCBIGene:31524",
+        "explanation": "{\"NCBIGene:31524\"}"
+    },
+    "27708139.2": {
+        "predicted": "NCBIGene:41054",
+        "explanation": "{\"NCBIGene:41054\"}"
+    },
+    "27708139.8": {
+        "predicted": "NCBIGene:41054",
+        "explanation": "{\"NCBIGene:41054\"}"
+    },
+    "27708139.9": {
+        "predicted": "NCBIGene:100537296",
+        "explanation": "{\"NCBIGene:100537296\"}"
+    },
+    "27708139.10": {
+        "predicted": "NCBIGene:6915",
+        "explanation": "{\"NCBIGene:6915\"}"
+    },
+    "27708139.12": {
+        "predicted": "NCBIGene:41054",
+        "explanation": "{\"NCBIGene:41054\"}"
+    },
+    "27708139.14": {
+        "predicted": "NCBIGene:100144654",
+        "explanation": "{\"cui\": \"NCBIGene:100144654\"}"
+    },
+    "27708139.15": {
+        "predicted": "NCBIGene:154",
+        "explanation": "{\"NCBIGene:154\"}"
+    },
+    "27708139.16": {
+        "predicted": "NCBIGene:154",
+        "explanation": "{\"cui\": \"NCBIGene:154\"}"
+    },
+    "27708139.17": {
+        "predicted": "NCBIGene:41054",
+        "explanation": "{\"NCBIGene:41054\"}"
+    },
+    "27708139.19": {
+        "predicted": "NCBIGene:100144654",
+        "explanation": "{\"cui\": \"NCBIGene:100144654\"}"
+    },
+    "27708139.20": {
+        "predicted": "NCBIGene:3320",
+        "explanation": "{\"NCBIGene:3320\"}"
+    },
+    "27708139.21": {
+        "predicted": "NCBIGene:100144654",
+        "explanation": "{\"cui\": \"NCBIGene:100144654\"}"
+    },
+    "27708139.24": {
+        "predicted": "NCBIGene:41054",
+        "explanation": "{\"NCBIGene:41054\"}"
+    },
+    "27708139.26": {
+        "predicted": "NCBIGene:41054",
+        "explanation": "{\"NCBIGene:41054\"}"
+    },
+    "27708139.29": {
+        "predicted": "NCBIGene:41054",
+        "explanation": "{\"NCBIGene:41054\"}"
+    },
+    "27798239.1": {
+        "predicted": "NCBIGene:830794",
+        "explanation": "{\"cui\": \"NCBIGene:830794\"}"
+    },
+    "27798239.2": {
+        "predicted": "NCBIGene:830794",
+        "explanation": "{\"NCBIGene:830794\"}"
+    },
+    "27798239.3": {
+        "predicted": "NCBIGene:55361",
+        "explanation": "{\"NCBIGene:55361\"}"
+    },
+    "27798239.4": {
+        "predicted": "NCBIGene:55361",
+        "explanation": "{\"NCBIGene:55361\"}"
+    },
+    "27798239.5": {
+        "predicted": "NCBIGene:55300",
+        "explanation": "{\"NCBIGene:55300\"}"
+    },
+    "27798239.6": {
+        "predicted": "NCBIGene:55300",
+        "explanation": "{\"NCBIGene:55300\"}"
+    },
+    "27798239.7": {
+        "predicted": "NCBIGene:17387",
+        "explanation": "{\"NCBIGene:17387\"}"
+    },
+    "27798239.8": {
+        "predicted": "NCBIGene:4323",
+        "explanation": "{\"cui\": \"NCBIGene:4323\"}"
+    },
+    "27798239.9": {
+        "predicted": "NCBIGene:40670",
+        "explanation": "{\"NCBIGene:40670\"}"
+    },
+    "27798239.10": {
+        "predicted": "NCBIGene:55300",
+        "explanation": "{\"NCBIGene:55300\"}"
+    },
+    "27798239.11": {
+        "predicted": "NCBIGene:4323",
+        "explanation": "{\"cui\": \"NCBIGene:4323\"}"
+    },
+    "27798239.12": {
+        "predicted": "NCBIGene:4323",
+        "explanation": "{\"NCBIGene:4323\"}"
+    },
+    "27798239.13": {
+        "predicted": "NCBIGene:33418",
+        "explanation": "{\"cui\": \"NCBIGene:33418\"}"
+    },
+    "27798239.14": {
+        "predicted": "NCBIGene:42841",
+        "explanation": "{\"cui\": \"NCBIGene:42841\"}"
+    },
+    "27798239.15": {
+        "predicted": "NCBIGene:824529",
+        "explanation": "{\"cui\": \"NCBIGene:824529\"}"
+    },
+    "27798239.16": {
+        "predicted": "NCBIGene:55300",
+        "explanation": "{\"NCBIGene:55300\"}"
+    },
+    "27798239.17": {
+        "predicted": "NCBIGene:422807",
+        "explanation": "{\"NCBIGene:422807\"}"
+    },
+    "27798239.18": {
+        "predicted": "NCBIGene:55300",
+        "explanation": "{\"NCBIGene:55300\"}"
+    },
+    "27798239.19": {
+        "predicted": "NCBIGene:55300",
+        "explanation": "{\"NCBIGene:55300\"}"
+    },
+    "27798239.20": {
+        "predicted": "NCBIGene:55300",
+        "explanation": "{\"NCBIGene:55300\"}"
+    },
+    "27798239.21": {
+        "predicted": "NCBIGene:4323",
+        "explanation": "{\"NCBIGene:4323\"}"
+    },
+    "27860185.4": {
+        "predicted": "NCBIGene:16542",
+        "explanation": "{\"cui\": \"NCBIGene:16542\"}"
+    },
+    "27860185.6": {
+        "predicted": "NCBIGene:496583",
+        "explanation": "{\"NCBIGene:496583\"}"
+    },
+    "27871326.1": {
+        "predicted": "NCBIGene:352943",
+        "explanation": "{\"NCBIGene:352943\"}"
+    },
+    "27871326.2": {
+        "predicted": "NCBIGene:43669",
+        "explanation": "{\"cui\": \"NCBIGene:43669\"}"
+    },
+    "27871326.3": {
+        "predicted": "NCBIGene:395909",
+        "explanation": "{\"NCBIGene:395909\"}"
+    },
+    "27871326.4": {
+        "predicted": "NCBIGene:395909",
+        "explanation": "{\"NCBIGene:395909\"}"
+    },
+    "27871326.5": {
+        "predicted": "NCBIGene:43669",
+        "explanation": "{\"NCBIGene:43669\"}"
+    },
+    "27871326.6": {
+        "predicted": "NCBIGene:352943",
+        "explanation": "{\"NCBIGene:352943\"}"
+    },
+    "27871326.7": {
+        "predicted": "NCBIGene:7166",
+        "explanation": "{\"NCBIGene:7166\"}"
+    },
+    "27871326.8": {
+        "predicted": "NCBIGene:15566",
+        "explanation": "{\"cui\": \"NCBIGene:15566\"}"
+    },
+    "27871326.14": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"NCBIGene:41957\"}"
+    },
+    "27871326.15": {
+        "predicted": "NCBIGene:352943",
+        "explanation": "{\"cui\": \"NCBIGene:352943\"}"
+    },
+    "27871326.16": {
+        "predicted": "NCBIGene:395909",
+        "explanation": "{\"NCBIGene:395909\"}"
+    },
+    "27871326.17": {
+        "predicted": "NCBIGene:43669",
+        "explanation": "{\"NCBIGene:43669\"}"
+    },
+    "27871326.18": {
+        "predicted": "NCBIGene:43669",
+        "explanation": "{\"NCBIGene:43669\"}"
+    },
+    "27871326.19": {
+        "predicted": "NCBIGene:43669",
+        "explanation": "{\"NCBIGene:43669\"}"
+    },
+    "27941998.4": {
+        "predicted": "NCBIGene:820914",
+        "explanation": "{\"cui\": \"NCBIGene:820914\"}"
+    },
+    "27941998.5": {
+        "predicted": "NCBIGene:820914",
+        "explanation": "{\"NCBIGene:820914\"}"
+    },
+    "27941998.6": {
+        "predicted": "NCBIGene:820914",
+        "explanation": "{\"cui\": \"NCBIGene:820914\"}"
+    },
+    "27941998.9": {
+        "predicted": "NCBIGene:394793",
+        "explanation": "{\"NCBIGene:394793\"}"
+    },
+    "27941998.11": {
+        "predicted": "NCBIGene:53585",
+        "explanation": "{\"NCBIGene:53585\"}"
+    },
+    "27941998.12": {
+        "predicted": "NCBIGene:398251",
+        "explanation": "{\"cui\": \"NCBIGene:398251\"}"
+    },
+    "27941998.13": {
+        "predicted": "NCBIGene:3099",
+        "explanation": "{\"NCBIGene:3099\"}"
+    },
+    "27941998.16": {
+        "predicted": "NCBIGene:394793",
+        "explanation": "{\"cui\": \"NCBIGene:394793\"}"
+    },
+    "27941998.18": {
+        "predicted": "NCBIGene:53585",
+        "explanation": "{\"NCBIGene:53585\"}"
+    },
+    "27941998.19": {
+        "predicted": "NCBIGene:398251",
+        "explanation": "{\"cui\": \"NCBIGene:398251\"}"
+    },
+    "27941998.20": {
+        "predicted": "NCBIGene:833552",
+        "explanation": "{\"NCBIGene:833552\"}"
+    },
+    "27959382.12": {
+        "predicted": "NCBIGene:100008919",
+        "explanation": "{\"NCBIGene:100008919\"}"
+    },
+    "27959382.14": {
+        "predicted": "NCBIGene:21803",
+        "explanation": "{\"cui\": \"NCBIGene:21803\"}"
+    },
+    "27959382.15": {
+        "predicted": "NCBIGene:395337",
+        "explanation": "{\"NCBIGene:395337\"}"
+    },
+    "28075473.3": {
+        "predicted": "NCBIGene:395111",
+        "explanation": "{\"NCBIGene:395111\"}"
+    },
+    "28075473.4": {
+        "predicted": "NCBIGene:51561",
+        "explanation": "{\"NCBIGene:51561\"}"
+    },
+    "28075473.5": {
+        "predicted": "NCBIGene:403801",
+        "explanation": "{\"NCBIGene:403801\"}"
+    },
+    "28075473.7": {
+        "predicted": "NCBIGene:395111",
+        "explanation": "{\"cui\": \"NCBIGene:395111\"}"
+    },
+    "28075473.8": {
+        "predicted": "NCBIGene:395337",
+        "explanation": "{\"NCBIGene:395337\"}"
+    },
+    "28075473.9": {
+        "predicted": "NCBIGene:51561",
+        "explanation": "{\"cui\": \"NCBIGene:51561\"}"
+    },
+    "28075473.12": {
+        "predicted": "NCBIGene:3569",
+        "explanation": "{\"NCBIGene:3569\"}"
+    },
+    "28075473.13": {
+        "predicted": "NCBIGene:51561",
+        "explanation": "{\"NCBIGene:51561\"}"
+    },
+    "28075473.16": {
+        "predicted": "NCBIGene:395111",
+        "explanation": "{\"NCBIGene:395111\"}"
+    },
+    "28075473.17": {
+        "predicted": "NCBIGene:51561",
+        "explanation": "{\"cui\": \"NCBIGene:51561\"}"
+    },
+    "28075473.18": {
+        "predicted": "NCBIGene:403801",
+        "explanation": "{\"NCBIGene:403801\"}"
+    },
+    "28075473.19": {
+        "predicted": "NCBIGene:403801",
+        "explanation": "{\"cui\": \"NCBIGene:403801\"}"
+    },
+    "28075473.20": {
+        "predicted": "NCBIGene:3605",
+        "explanation": "{\"cui\": \"NCBIGene:3605\"}"
+    },
+    "28075473.22": {
+        "predicted": "NCBIGene:3605",
+        "explanation": "{\"cui\": \"NCBIGene:3605\"}"
+    },
+    "28075473.23": {
+        "predicted": "NCBIGene:403801",
+        "explanation": "{\"cui\": \"NCBIGene:403801\"}"
+    },
+    "28075473.24": {
+        "predicted": "NCBIGene:403801",
+        "explanation": "{\"cui\": \"NCBIGene:403801\"}"
+    },
+    "28075473.25": {
+        "predicted": "NCBIGene:395111",
+        "explanation": "{\"cui\": \"NCBIGene:395111\"}"
+    },
+    "28075473.26": {
+        "predicted": "NCBIGene:51561",
+        "explanation": "{\"cui\": \"NCBIGene:51561\"}"
+    },
+    "28075473.27": {
+        "predicted": "NCBIGene:403801",
+        "explanation": "{\"NCBIGene:403801\"}"
+    },
+    "28075473.28": {
+        "predicted": "NCBIGene:395111",
+        "explanation": "{\"cui\": \"NCBIGene:395111\"}"
+    },
+    "28075473.29": {
+        "predicted": "NCBIGene:27178",
+        "explanation": "{\"NCBIGene:27178\"}"
+    },
+    "28075473.30": {
+        "predicted": "NCBIGene:403801",
+        "explanation": "{\"cui\": \"NCBIGene:403801\"}"
+    },
+    "28101574.1": {
+        "predicted": "NCBIGene:819641",
+        "explanation": "{\"NCBIGene:819641\"}"
+    },
+    "28101574.3": {
+        "predicted": "NCBIGene:819641",
+        "explanation": "{\"cui\": \"NCBIGene:819641\"}"
+    },
+    "28101574.5": {
+        "predicted": "NCBIGene:819641",
+        "explanation": "{\"NCBIGene:819641\"}"
+    },
+    "28101574.6": {
+        "predicted": "NCBIGene:819641",
+        "explanation": "{\"cui\": \"NCBIGene:819641\"}"
+    },
+    "28101574.7": {
+        "predicted": "NCBIGene:819641",
+        "explanation": "{\"NCBIGene:819641\"}"
+    },
+    "28101574.8": {
+        "predicted": "NCBIGene:819641",
+        "explanation": "{\"NCBIGene:819641\"}"
+    },
+    "28101574.9": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"cui\": \"NCBIGene:41957\"}"
+    },
+    "28101574.10": {
+        "predicted": "NCBIGene:4313",
+        "explanation": "{\"NCBIGene:4313\"}"
+    },
+    "28101574.11": {
+        "predicted": "NCBIGene:819641",
+        "explanation": "{\"NCBIGene:819641\"}"
+    },
+    "28101574.12": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"NCBIGene:41957\"}"
+    },
+    "28101574.13": {
+        "predicted": "NCBIGene:4313",
+        "explanation": "{\"NCBIGene:4313\"}"
+    },
+    "28101574.14": {
+        "predicted": "NCBIGene:819641",
+        "explanation": "{\"NCBIGene:819641\"}"
+    },
+    "28101574.15": {
+        "predicted": "NCBIGene:819641",
+        "explanation": "{\"cui\": \"NCBIGene:819641\"}"
+    },
+    "28101574.16": {
+        "predicted": "NCBIGene:819641",
+        "explanation": "{\"cui\": \"NCBIGene:819641\"}"
+    },
+    "28101574.17": {
+        "predicted": "NCBIGene:819641",
+        "explanation": "{\"NCBIGene:819641\"}"
+    },
+    "28101574.18": {
+        "predicted": "NCBIGene:819641",
+        "explanation": "{\"cui\": \"NCBIGene:819641\"}"
+    },
+    "28101574.19": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"NCBIGene:41957\"}"
+    },
+    "28101574.20": {
+        "predicted": "NCBIGene:4313",
+        "explanation": "{\"NCBIGene:4313\"}"
+    },
+    "28101574.21": {
+        "predicted": "NCBIGene:819641",
+        "explanation": "{\"NCBIGene:819641\"}"
+    },
+    "28101574.22": {
+        "predicted": "NCBIGene:819641",
+        "explanation": "{\"NCBIGene:819641\"}"
+    },
+    "28101574.23": {
+        "predicted": "NCBIGene:819641",
+        "explanation": "{\"cui\": \"NCBIGene:819641\"}"
+    },
+    "28101574.24": {
+        "predicted": "NCBIGene:41957",
+        "explanation": "{\"NCBIGene:41957\"}"
+    },
+    "28101574.25": {
+        "predicted": "NCBIGene:4313",
+        "explanation": "{\"NCBIGene:4313\"}"
+    },
+    "28106131.1": {
+        "predicted": "NCBIGene:43580",
+        "explanation": "{\"NCBIGene:43580\"}"
+    },
+    "28106131.2": {
+        "predicted": "NCBIGene:387146",
+        "explanation": "{\"NCBIGene:387146\"}"
+    },
+    "28106131.3": {
+        "predicted": "NCBIGene:43580",
+        "explanation": "{\"NCBIGene:43580\"}"
+    },
+    "28106131.5": {
+        "predicted": "NCBIGene:43580",
+        "explanation": "{\"NCBIGene:43580\"}"
+    },
+    "28106131.6": {
+        "predicted": "NCBIGene:496583",
+        "explanation": "{\"NCBIGene:496583\"}"
+    },
+    "28106131.16": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"NCBIGene:6347\"}"
+    },
+    "28106131.18": {
+        "predicted": "NCBIGene:443119",
+        "explanation": "{\"cui\": \"NCBIGene:443119\"}"
+    },
+    "28106131.20": {
+        "predicted": "NCBIGene:43580",
+        "explanation": "{\"NCBIGene:43580\"}"
+    },
+    "28106131.22": {
+        "predicted": "NCBIGene:100314190",
+        "explanation": "{\"NCBIGene:100314190\"}"
+    },
+    "28106131.24": {
+        "predicted": "NCBIGene:406914",
+        "explanation": "{\"NCBIGene:406914\"}"
+    },
+    "28106131.25": {
+        "predicted": "NCBIGene:387146",
+        "explanation": "{\"NCBIGene:387146\"}"
+    },
+    "28106131.29": {
+        "predicted": "NCBIGene:43580",
+        "explanation": "{\"NCBIGene:43580\"}"
+    },
+    "28143425.1": {
+        "predicted": "NCBIGene:397270",
+        "explanation": "{\"cui\": \"NCBIGene:397270\"}"
+    },
+    "28143425.2": {
+        "predicted": "NCBIGene:114433",
+        "explanation": "{\"cui\": \"NCBIGene:114433\"}"
+    },
+    "28143425.6": {
+        "predicted": "NCBIGene:16000",
+        "explanation": "{\"NCBIGene:16000\"}"
+    },
+    "28143425.7": {
+        "predicted": "NCBIGene:3481",
+        "explanation": "{\"NCBIGene:3481\"}"
+    },
+    "28143425.9": {
+        "predicted": "NCBIGene:3484",
+        "explanation": "{\"NCBIGene:3484\"}"
+    },
+    "28143425.10": {
+        "predicted": "NCBIGene:396315",
+        "explanation": "{\"NCBIGene:396315\"}"
+    },
+    "28143425.11": {
+        "predicted": "NCBIGene:448812",
+        "explanation": "{\"NCBIGene:448812\"}"
+    },
+    "28143425.12": {
+        "predicted": "NCBIGene:3487",
+        "explanation": "{\"NCBIGene:3487\"}"
+    },
+    "28143425.13": {
+        "predicted": "NCBIGene:443134",
+        "explanation": "{\"NCBIGene:443134\"}"
+    },
+    "28143425.14": {
+        "predicted": "NCBIGene:3484",
+        "explanation": "{\"NCBIGene:3484\"}"
+    },
+    "28143425.15": {
+        "predicted": "NCBIGene:16000",
+        "explanation": "{\"NCBIGene:16000\"}"
+    },
+    "28143425.16": {
+        "predicted": "NCBIGene:397270",
+        "explanation": "{\"NCBIGene:397270\"}"
+    },
+    "28143425.17": {
+        "predicted": "NCBIGene:16000",
+        "explanation": "{\"NCBIGene:16000\"}"
+    },
+    "28143425.18": {
+        "predicted": "NCBIGene:397270",
+        "explanation": "{\"NCBIGene:397270\"}"
+    },
+    "28143425.19": {
+        "predicted": "NCBIGene:114433",
+        "explanation": "{\"NCBIGene:114433\"}"
+    },
+    "28143425.20": {
+        "predicted": "NCBIGene:397270",
+        "explanation": "{\"NCBIGene:397270\"}"
+    },
+    "28143425.21": {
+        "predicted": "NCBIGene:114433",
+        "explanation": "{\"NCBIGene:114433\"}"
+    },
+    "28143425.22": {
+        "predicted": "NCBIGene:16002",
+        "explanation": "{\"cui\": \"NCBIGene:16002\"}"
+    },
+    "28143425.23": {
+        "predicted": "NCBIGene:397270",
+        "explanation": "{\"NCBIGene:397270\"}"
+    },
+    "28143425.24": {
+        "predicted": "NCBIGene:397270",
+        "explanation": "{\"NCBIGene:397270\"}"
+    },
+    "28143425.25": {
+        "predicted": "NCBIGene:114433",
+        "explanation": "{\"NCBIGene:114433\"}"
+    },
+    "28143425.26": {
+        "predicted": "NCBIGene:397270",
+        "explanation": "{\"cui\": \"NCBIGene:397270\"}"
+    },
+    "28143425.27": {
+        "predicted": "NCBIGene:16000",
+        "explanation": "{\"NCBIGene:16000\"}"
+    },
+    "28143425.28": {
+        "predicted": "NCBIGene:397270",
+        "explanation": "{\"NCBIGene:397270\"}"
+    },
+    "28143425.29": {
+        "predicted": "NCBIGene:114433",
+        "explanation": "{\"NCBIGene:114433\"}"
+    },
+    "28143425.30": {
+        "predicted": "NCBIGene:397270",
+        "explanation": "{\"cui\": \"NCBIGene:397270\"}"
+    },
+    "28143425.31": {
+        "predicted": "NCBIGene:397270",
+        "explanation": "{\"NCBIGene:397270\"}"
+    },
+    "28143425.32": {
+        "predicted": "NCBIGene:443318",
+        "explanation": "{\"NCBIGene:443318\"}"
+    },
+    "28143425.33": {
+        "predicted": "NCBIGene:397270",
+        "explanation": "{\"NCBIGene:397270\"}"
+    },
+    "28143425.34": {
+        "predicted": "NCBIGene:397270",
+        "explanation": "{\"cui\": \"NCBIGene:397270\"}"
+    },
+    "28143425.35": {
+        "predicted": "NCBIGene:114433",
+        "explanation": "{\"cui\": \"NCBIGene:114433\"}"
+    },
+    "28143425.36": {
+        "predicted": "NCBIGene:397270",
+        "explanation": "{\"NCBIGene:397270\"}"
+    },
+    "28143425.37": {
+        "predicted": "NCBIGene:16000",
+        "explanation": "{\"NCBIGene:16000\"}"
+    },
+    "28143425.38": {
+        "predicted": "NCBIGene:397270",
+        "explanation": "{\"NCBIGene:397270\"}"
+    },
+    "28143425.39": {
+        "predicted": "NCBIGene:397270",
+        "explanation": "{\"NCBIGene:397270\"}"
+    },
+    "28143425.40": {
+        "predicted": "NCBIGene:16000",
+        "explanation": "{\"NCBIGene:16000\"}"
+    },
+    "28242756.1": {
+        "predicted": "NCBIGene:27000",
+        "explanation": "{\"cui\": \"NCBIGene:27000\"}"
+    },
+    "28242756.2": {
+        "predicted": "NCBIGene:38654",
+        "explanation": "{\"NCBIGene:38654\"}"
+    },
+    "28242756.3": {
+        "predicted": "NCBIGene:38654",
+        "explanation": "{\"NCBIGene:38654\"}"
+    },
+    "28242756.4": {
+        "predicted": "NCBIGene:38654",
+        "explanation": "{\"NCBIGene:38654\"}"
+    },
+    "28242756.7": {
+        "predicted": "NCBIGene:6198",
+        "explanation": "{\"NCBIGene:6198\"}"
+    },
+    "28242756.8": {
+        "predicted": "NCBIGene:6198",
+        "explanation": "{\"NCBIGene:6198\"}"
+    },
+    "28242756.9": {
+        "predicted": "NCBIGene:27000",
+        "explanation": "{\"cui\": \"NCBIGene:27000\"}"
+    },
+    "28242756.11": {
+        "predicted": "NCBIGene:22791",
+        "explanation": "{\"cui\": \"NCBIGene:22791\"}"
+    },
+    "28242756.13": {
+        "predicted": "NCBIGene:38654",
+        "explanation": "{\"NCBIGene:38654\"}"
+    },
+    "28242756.14": {
+        "predicted": "NCBIGene:27000",
+        "explanation": "{\"cui\": \"NCBIGene:27000\"}"
+    },
+    "28242756.15": {
+        "predicted": "NCBIGene:27000",
+        "explanation": "{\"NCBIGene:27000\"}"
+    },
+    "28242756.16": {
+        "predicted": "NCBIGene:38654",
+        "explanation": "{\"NCBIGene:38654\"}"
+    },
+    "28242756.17": {
+        "predicted": "NCBIGene:100329528",
+        "explanation": "{\"NCBIGene:100329528\"}"
+    },
+    "28242756.19": {
+        "predicted": "NCBIGene:38654",
+        "explanation": "{\"NCBIGene:38654\"}"
+    },
+    "28242756.20": {
+        "predicted": "NCBIGene:27000",
+        "explanation": "{\"NCBIGene:27000\"}"
+    },
+    "28260042.1": {
+        "predicted": "NCBIGene:1571",
+        "explanation": "{\"cui\": \"NCBIGene:1571\"}"
+    },
+    "28260042.2": {
+        "predicted": "NCBIGene:1571",
+        "explanation": "{\"cui\": \"NCBIGene:1571\"}"
+    },
+    "28260042.5": {
+        "predicted": "NCBIGene:15368",
+        "explanation": "{\"cui\": \"NCBIGene:15368\"}"
+    },
+    "28260042.6": {
+        "predicted": "NCBIGene:396287",
+        "explanation": "{\"cui\": \"NCBIGene:396287\"}"
+    },
+    "28260042.16": {
+        "predicted": "NCBIGene:5743",
+        "explanation": "{\"NCBIGene:5743\"}"
+    },
+    "28260042.17": {
+        "predicted": "NCBIGene:5743",
+        "explanation": "{\"NCBIGene:5743\"}"
+    },
+    "28273463.3": {
+        "predicted": "NCBIGene:823899",
+        "explanation": "{\"NCBIGene:823899\"}"
+    },
+    "28273463.6": {
+        "predicted": "NCBIGene:2539087",
+        "explanation": "{\"cui\": \"NCBIGene:2539087\"}"
+    },
+    "28273463.7": {
+        "predicted": "NCBIGene:398599",
+        "explanation": "{\"NCBIGene:398599\"}"
+    },
+    "28273463.10": {
+        "predicted": "NCBIGene:816142",
+        "explanation": "{\"NCBIGene:816142\"}"
+    },
+    "28273463.11": {
+        "predicted": "NCBIGene:841056",
+        "explanation": "{\"cui\": \"NCBIGene:841056\"}"
+    },
+    "28273463.17": {
+        "predicted": "NCBIGene:823899",
+        "explanation": "{\"cui\": \"NCBIGene:823899\"}"
+    },
+    "28273463.18": {
+        "predicted": "NCBIGene:823899",
+        "explanation": "{\"NCBIGene:823899\"}"
+    },
+    "28273463.20": {
+        "predicted": "NCBIGene:823899",
+        "explanation": "{\"cui\": \"NCBIGene:823899\"}"
+    },
+    "28273463.22": {
+        "predicted": "NCBIGene:2539087",
+        "explanation": "{\"cui\": \"NCBIGene:2539087\"}"
+    },
+    "28273463.25": {
+        "predicted": "NCBIGene:823899",
+        "explanation": "{\"NCBIGene:823899\"}"
+    },
+    "28279980.1": {
+        "predicted": "NCBIGene:444033",
+        "explanation": "{\"NCBIGene:444033\"}"
+    },
+    "28279980.2": {
+        "predicted": "NCBIGene:444033",
+        "explanation": "{\"NCBIGene:444033\"}"
+    },
+    "28279980.3": {
+        "predicted": "NCBIGene:444033",
+        "explanation": "{\"cui\": \"NCBIGene:444033\"}"
+    },
+    "28279980.4": {
+        "predicted": "NCBIGene:6517",
+        "explanation": "{\"cui\": \"NCBIGene:6517\"}"
+    },
+    "28279980.5": {
+        "predicted": "NCBIGene:6517",
+        "explanation": "{\"NCBIGene:6517\"}"
+    },
+    "28279980.6": {
+        "predicted": "NCBIGene:34251",
+        "explanation": "{\"NCBIGene:34251\"}"
+    },
+    "28279980.7": {
+        "predicted": "NCBIGene:20525",
+        "explanation": "{\"NCBIGene:20525\"}"
+    },
+    "28279980.8": {
+        "predicted": "NCBIGene:20525",
+        "explanation": "{\"NCBIGene:20525\"}"
+    },
+    "28279980.9": {
+        "predicted": "NCBIGene:396272",
+        "explanation": "{\"cui\": \"NCBIGene:396272\"}"
+    },
+    "28279980.10": {
+        "predicted": "NCBIGene:108695844",
+        "explanation": "{\"NCBIGene:108695844\"}"
+    },
+    "28279980.11": {
+        "predicted": "NCBIGene:39458",
+        "explanation": "{\"NCBIGene:39458\"}"
+    },
+    "28279980.12": {
+        "predicted": "NCBIGene:734962",
+        "explanation": "{\"NCBIGene:734962\"}"
+    },
+    "28279980.13": {
+        "predicted": "NCBIGene:38109",
+        "explanation": "{\"NCBIGene:38109\"}"
+    },
+    "28279980.15": {
+        "predicted": "NCBIGene:42036",
+        "explanation": "{\"NCBIGene:42036\"}"
+    },
+    "28279980.16": {
+        "predicted": "NCBIGene:447505",
+        "explanation": "{\"NCBIGene:447505\"}"
+    },
+    "28279980.17": {
+        "predicted": "NCBIGene:81031",
+        "explanation": "{\"NCBIGene:81031\"}"
+    },
+    "28279980.18": {
+        "predicted": "NCBIGene:6517",
+        "explanation": "{\"cui\": \"NCBIGene:6517\"}"
+    },
+    "28279980.20": {
+        "predicted": "NCBIGene:6515",
+        "explanation": "{\"NCBIGene:6515\"}"
+    },
+    "28279980.21": {
+        "predicted": "NCBIGene:447505",
+        "explanation": "{\"NCBIGene:447505\"}"
+    },
+    "28279980.22": {
+        "predicted": "NCBIGene:81031",
+        "explanation": "{\"NCBIGene:81031\"}"
+    },
+    "28319065.2": {
+        "predicted": "NCBIGene:22924",
+        "explanation": "{\"NCBIGene:22924\"}"
+    },
+    "28319065.4": {
+        "predicted": "NCBIGene:22924",
+        "explanation": "{\"cui\": \"NCBIGene:22924\"}"
+    },
+    "28319065.10": {
+        "predicted": "NCBIGene:395180",
+        "explanation": "{\"cui\": \"NCBIGene:395180\"}"
+    },
+    "28319065.12": {
+        "predicted": "NCBIGene:22924",
+        "explanation": "{\"cui\": \"NCBIGene:22924\"}"
+    },
+    "28319065.16": {
+        "predicted": "NCBIGene:22924",
+        "explanation": "{\"NCBIGene:22924\"}"
+    },
+    "28319065.17": {
+        "predicted": "NCBIGene:22924",
+        "explanation": "{\"NCBIGene:22924\"}"
+    },
+    "28319065.21": {
+        "predicted": "NCBIGene:22924",
+        "explanation": "{\"NCBIGene:22924\"}"
+    },
+    "28339057.1": {
+        "predicted": "NCBIGene:393795",
+        "explanation": "{\"NCBIGene:393795\"}"
+    },
+    "28339057.2": {
+        "predicted": "NCBIGene:393795",
+        "explanation": "{\"NCBIGene:393795\"}"
+    },
+    "28339057.3": {
+        "predicted": "NCBIGene:418652",
+        "explanation": "{\"NCBIGene:418652\"}"
+    },
+    "28339057.4": {
+        "predicted": "NCBIGene:418652",
+        "explanation": "{\"cui\": \"NCBIGene:418652\"}"
+    },
+    "28339057.5": {
+        "predicted": "NCBIGene:393795",
+        "explanation": "{\"NCBIGene:393795\"}"
+    },
+    "28339057.6": {
+        "predicted": "NCBIGene:418652",
+        "explanation": "{\"NCBIGene:418652\"}"
+    },
+    "28346429.1": {
+        "predicted": "NCBIGene:41673",
+        "explanation": "{\"NCBIGene:41673\"}"
+    },
+    "28346429.3": {
+        "predicted": "NCBIGene:41673",
+        "explanation": "{\"NCBIGene:41673\"}"
+    },
+    "28346429.4": {
+        "predicted": "NCBIGene:41673",
+        "explanation": "{\"NCBIGene:41673\"}"
+    },
+    "28346429.6": {
+        "predicted": "NCBIGene:41673",
+        "explanation": "{\"NCBIGene:41673\"}"
+    },
+    "28346429.7": {
+        "predicted": "NCBIGene:41673",
+        "explanation": "{\"NCBIGene:41673\"}"
+    },
+    "28346429.8": {
+        "predicted": "NCBIGene:41673",
+        "explanation": "{\"NCBIGene:41673\"}"
+    },
+    "28346429.10": {
+        "predicted": "NCBIGene:39441",
+        "explanation": "{\"NCBIGene:39441\"}"
+    },
+    "28346429.11": {
+        "predicted": "NCBIGene:41673",
+        "explanation": "{\"NCBIGene:41673\"}"
+    },
+    "28346429.14": {
+        "predicted": "NCBIGene:41673",
+        "explanation": "{\"cui\": \"NCBIGene:41673\"}"
+    },
+    "28346429.15": {
+        "predicted": "NCBIGene:41673",
+        "explanation": "{\"NCBIGene:41673\"}"
+    },
+    "28346429.16": {
+        "predicted": "NCBIGene:41673",
+        "explanation": "{\"NCBIGene:41673\"}"
+    },
+    "28346429.17": {
+        "predicted": "NCBIGene:41673",
+        "explanation": "{\"NCBIGene:41673\"}"
+    },
+    "28346429.18": {
+        "predicted": "NCBIGene:41673",
+        "explanation": "{\"NCBIGene:41673\"}"
+    },
+    "28346429.20": {
+        "predicted": "NCBIGene:41673",
+        "explanation": "{\"NCBIGene:41673\"}"
+    },
+    "28346429.21": {
+        "predicted": "NCBIGene:16542",
+        "explanation": "{\"NCBIGene:16542\"}"
+    },
+    "28346429.22": {
+        "predicted": "NCBIGene:41673",
+        "explanation": "{\"NCBIGene:41673\"}"
+    },
+    "28346429.23": {
+        "predicted": "NCBIGene:41673",
+        "explanation": "{\"NCBIGene:41673\"}"
+    },
+    "28346429.30": {
+        "predicted": "NCBIGene:41673",
+        "explanation": "{\"NCBIGene:41673\"}"
+    },
+    "28381574.1": {
+        "predicted": "NCBIGene:1525",
+        "explanation": "{\"NCBIGene:1525\"}"
+    },
+    "28381574.3": {
+        "predicted": "NCBIGene:395876",
+        "explanation": "{\"NCBIGene:395876\"}"
+    },
+    "28381574.4": {
+        "predicted": "NCBIGene:395876",
+        "explanation": "{\"NCBIGene:395876\"}"
+    },
+    "28381574.5": {
+        "predicted": "NCBIGene:548370",
+        "explanation": "{\"NCBIGene:548370\"}"
+    },
+    "28381574.7": {
+        "predicted": "NCBIGene:395876",
+        "explanation": "{\"NCBIGene:395876\"}"
+    },
+    "28381574.8": {
+        "predicted": "NCBIGene:16019",
+        "explanation": "{\"NCBIGene:16019\"}"
+    },
+    "28381574.9": {
+        "predicted": "NCBIGene:30658",
+        "explanation": "{\"cui\": \"NCBIGene:30658\"}"
+    },
+    "28381574.10": {
+        "predicted": "NCBIGene:395876",
+        "explanation": "{\"NCBIGene:395876\"}"
+    },
+    "28381574.11": {
+        "predicted": "NCBIGene:395876",
+        "explanation": "{\"NCBIGene:395876\"}"
+    },
+    "28381574.12": {
+        "predicted": "NCBIGene:30658",
+        "explanation": "{\"NCBIGene:30658\"}"
+    },
+    "28381574.13": {
+        "predicted": "NCBIGene:30658",
+        "explanation": "{\"cui\": \"NCBIGene:30658\"}"
+    },
+    "28381574.14": {
+        "predicted": "NCBIGene:395876",
+        "explanation": "{\"NCBIGene:395876\"}"
+    },
+    "28381574.15": {
+        "predicted": "NCBIGene:30658",
+        "explanation": "{\"NCBIGene:30658\"}"
+    },
+    "28381574.16": {
+        "predicted": "NCBIGene:395876",
+        "explanation": "{\"NCBIGene:395876\"}"
+    },
+    "28381574.17": {
+        "predicted": "NCBIGene:1525",
+        "explanation": "{\"NCBIGene:1525\"}"
+    },
+    "28381574.18": {
+        "predicted": "NCBIGene:1525",
+        "explanation": "{\"NCBIGene:1525\"}"
+    },
+    "28381574.19": {
+        "predicted": "NCBIGene:1525",
+        "explanation": "{\"NCBIGene:1525\"}"
+    },
+    "28381574.20": {
+        "predicted": "NCBIGene:32947",
+        "explanation": "{\"NCBIGene:32947\"}"
+    },
+    "28381574.21": {
+        "predicted": "NCBIGene:395623",
+        "explanation": "{\"cui\": \"NCBIGene:395623\"}"
+    },
+    "28381574.22": {
+        "predicted": "NCBIGene:791793",
+        "explanation": "{\"NCBIGene:791793\"}"
+    },
+    "28381574.23": {
+        "predicted": "NCBIGene:791793",
+        "explanation": "{\"NCBIGene:791793\"}"
+    },
+    "28381574.24": {
+        "predicted": "NCBIGene:30658",
+        "explanation": "{\"NCBIGene:30658\"}"
+    },
+    "28381574.25": {
+        "predicted": "NCBIGene:791793",
+        "explanation": "{\"NCBIGene:791793\"}"
+    },
+    "28381574.26": {
+        "predicted": "NCBIGene:395876",
+        "explanation": "{\"cui\": \"NCBIGene:395876\"}"
+    },
+    "28381574.27": {
+        "predicted": "NCBIGene:1525",
+        "explanation": "{\"NCBIGene:1525\"}"
+    },
+    "28381574.28": {
+        "predicted": "NCBIGene:32947",
+        "explanation": "{\"NCBIGene:32947\"}"
+    },
+    "28406477.5": {
+        "predicted": "NCBIGene:5465",
+        "explanation": "{\"cui\": \"NCBIGene:5465\"}"
+    },
+    "28406477.9": {
+        "predicted": "NCBIGene:30614",
+        "explanation": "{\"NCBIGene:30614\"}"
+    },
+    "28406477.10": {
+        "predicted": "NCBIGene:30614",
+        "explanation": "{\"NCBIGene:30614\"}"
+    },
+    "28406477.11": {
+        "predicted": "NCBIGene:777914",
+        "explanation": "{\"NCBIGene:777914\"}"
+    },
+    "28406477.12": {
+        "predicted": "NCBIGene:5465",
+        "explanation": "{\"cui\": \"NCBIGene:5465\"}"
+    },
+    "28406477.14": {
+        "predicted": "NCBIGene:30614",
+        "explanation": "{\"cui\": \"NCBIGene:30614\"}"
+    },
+    "28418444.1": {
+        "predicted": "NCBIGene:672",
+        "explanation": "{\"cui\": \"NCBIGene:672\"}"
+    },
+    "28418444.2": {
+        "predicted": "NCBIGene:675",
+        "explanation": "{\"NCBIGene:675\"}"
+    },
+    "28418444.3": {
+        "predicted": "NCBIGene:672",
+        "explanation": "{\"cui\": \"NCBIGene:672\"}"
+    },
+    "28418444.4": {
+        "predicted": "NCBIGene:675",
+        "explanation": "{\"NCBIGene:675\"}"
+    },
+    "28418444.5": {
+        "predicted": "NCBIGene:672",
+        "explanation": "{\"cui\": \"NCBIGene:672\"}"
+    },
+    "28418444.6": {
+        "predicted": "NCBIGene:675",
+        "explanation": "{\"NCBIGene:675\"}"
+    },
+    "28418444.7": {
+        "predicted": "NCBIGene:672",
+        "explanation": "{\"cui\": \"NCBIGene:672\"}"
+    },
+    "28418444.8": {
+        "predicted": "NCBIGene:675",
+        "explanation": "{\"NCBIGene:675\"}"
+    },
+    "28418444.9": {
+        "predicted": "NCBIGene:45922",
+        "explanation": "{\"NCBIGene:45922\"}"
+    },
+    "28418444.10": {
+        "predicted": "NCBIGene:5728",
+        "explanation": "{\"NCBIGene:5728\"}"
+    },
+    "28418444.11": {
+        "predicted": "NCBIGene:7157",
+        "explanation": "{\"NCBIGene:7157\"}"
+    },
+    "28418444.12": {
+        "predicted": "NCBIGene:472",
+        "explanation": "{\"cui\": \"NCBIGene:472\"}"
+    },
+    "28418444.13": {
+        "predicted": "NCBIGene:839329",
+        "explanation": "{\"cui\": \"NCBIGene:839329\"}"
+    },
+    "28418444.14": {
+        "predicted": "NCBIGene:11200",
+        "explanation": "{\"NCBIGene:11200\"}"
+    },
+    "28418444.15": {
+        "predicted": "NCBIGene:79728",
+        "explanation": "{\"NCBIGene:79728\"}"
+    },
+    "28418444.16": {
+        "predicted": "NCBIGene:837289",
+        "explanation": "{\"cui\": \"NCBIGene:837289\"}"
+    },
+    "28418444.17": {
+        "predicted": "NCBIGene:417642",
+        "explanation": "{\"NCBIGene:417642\"}"
+    },
+    "28418444.18": {
+        "predicted": "NCBIGene:819136",
+        "explanation": "{\"cui\": \"NCBIGene:819136\"}"
+    },
+    "28418444.19": {
+        "predicted": "NCBIGene:4361",
+        "explanation": "{\"cui\": \"NCBIGene:4361\"}"
+    },
+    "28418444.20": {
+        "predicted": "NCBIGene:817756",
+        "explanation": "{\"NCBIGene:817756\"}"
+    },
+    "28418444.21": {
+        "predicted": "NCBIGene:4683",
+        "explanation": "{\"NCBIGene:4683\"}"
+    },
+    "28418444.23": {
+        "predicted": "NCBIGene:4292",
+        "explanation": "{\"NCBIGene:4292\"}"
+    },
+    "28418444.24": {
+        "predicted": "NCBIGene:5395",
+        "explanation": "{\"NCBIGene:5395\"}"
+    },
+    "28418444.25": {
+        "predicted": "NCBIGene:4763",
+        "explanation": "{\"NCBIGene:4763\"}"
+    },
+    "28449664.1": {
+        "predicted": "NCBIGene:4311",
+        "explanation": "{\"NCBIGene:4311\"}"
+    },
+    "28449664.2": {
+        "predicted": "NCBIGene:43264",
+        "explanation": "{\"NCBIGene:43264\"}"
+    },
+    "28449664.3": {
+        "predicted": "NCBIGene:2768677",
+        "explanation": "{\"NCBIGene:2768677\"}"
+    },
+    "28449664.4": {
+        "predicted": "NCBIGene:53585",
+        "explanation": "{\"NCBIGene:53585\"}"
+    },
+    "28449664.5": {
+        "predicted": "NCBIGene:420519",
+        "explanation": "{\"NCBIGene:420519\"}"
+    },
+    "28449664.8": {
+        "predicted": "NCBIGene:3855",
+        "explanation": "{\"cui\": \"NCBIGene:3855\"}"
+    },
+    "28449664.9": {
+        "predicted": "NCBIGene:477601",
+        "explanation": "{\"cui\": \"NCBIGene:477601\"}"
+    },
+    "28449664.10": {
+        "predicted": "NCBIGene:43264",
+        "explanation": "{\"NCBIGene:43264\"}"
+    },
+    "28449664.11": {
+        "predicted": "NCBIGene:4311",
+        "explanation": "{\"NCBIGene:4311\"}"
+    },
+    "28449664.12": {
+        "predicted": "NCBIGene:7849",
+        "explanation": "{\"NCBIGene:7849\"}"
+    },
+    "28449664.13": {
+        "predicted": "NCBIGene:43264",
+        "explanation": "{\"NCBIGene:43264\"}"
+    },
+    "28449664.14": {
+        "predicted": "NCBIGene:4311",
+        "explanation": "{\"NCBIGene:4311\"}"
+    },
+    "28449664.15": {
+        "predicted": "NCBIGene:140599",
+        "explanation": "{\"NCBIGene:140599\"}"
+    },
+    "28449664.16": {
+        "predicted": "NCBIGene:3855",
+        "explanation": "{\"NCBIGene:3855\"}"
+    },
+    "28449664.17": {
+        "predicted": "NCBIGene:3815",
+        "explanation": "{\"NCBIGene:3815\"}"
+    },
+    "28449664.18": {
+        "predicted": "NCBIGene:43264",
+        "explanation": "{\"NCBIGene:43264\"}"
+    },
+    "28449664.19": {
+        "predicted": "NCBIGene:397926",
+        "explanation": "{\"NCBIGene:397926\"}"
+    },
+    "28449664.20": {
+        "predicted": "NCBIGene:596",
+        "explanation": "{\"NCBIGene:596\"}"
+    },
+    "28449664.21": {
+        "predicted": "NCBIGene:7849",
+        "explanation": "{\"NCBIGene:7849\"}"
+    },
+    "28449664.22": {
+        "predicted": "NCBIGene:43264",
+        "explanation": "{\"NCBIGene:43264\"}"
+    },
+    "28449664.23": {
+        "predicted": "NCBIGene:4311",
+        "explanation": "{\"NCBIGene:4311\"}"
+    },
+    "28449664.24": {
+        "predicted": "NCBIGene:43264",
+        "explanation": "{\"NCBIGene:43264\"}"
+    },
+    "28449664.25": {
+        "predicted": "NCBIGene:2768677",
+        "explanation": "{\"NCBIGene:2768677\"}"
+    },
+    "28449664.26": {
+        "predicted": "NCBIGene:53585",
+        "explanation": "{\"NCBIGene:53585\"}"
+    },
+    "28487437.4": {
+        "predicted": "NCBIGene:100487356",
+        "explanation": "{\"NCBIGene:100487356\"}"
+    },
+    "28487437.6": {
+        "predicted": "NCBIGene:396145",
+        "explanation": "{\"NCBIGene:396145\"}"
+    },
+    "28487437.7": {
+        "predicted": "NCBIGene:2641",
+        "explanation": "{\"NCBIGene:2641\"}"
+    },
+    "28553016.1": {
+        "predicted": "NCBIGene:395196",
+        "explanation": "{\"cui\": \"NCBIGene:395196\"}"
+    },
+    "28553016.2": {
+        "predicted": "NCBIGene:2668",
+        "explanation": "{\"cui\": \"NCBIGene:2668\"}"
+    },
+    "28553016.4": {
+        "predicted": "NCBIGene:395196",
+        "explanation": "{\"cui\": \"NCBIGene:395196\"}"
+    },
+    "28553016.5": {
+        "predicted": "NCBIGene:395337",
+        "explanation": "{\"cui\": \"NCBIGene:395337\"}"
+    },
+    "28553016.6": {
+        "predicted": "NCBIGene:16153",
+        "explanation": "{\"NCBIGene:16153\"}"
+    },
+    "28553016.7": {
+        "predicted": "NCBIGene:7124",
+        "explanation": "{\"cui\": \"NCBIGene:7124\"}"
+    },
+    "28553016.8": {
+        "predicted": "NCBIGene:3593",
+        "explanation": "{\"NCBIGene:3593\"}"
+    },
+    "28553016.10": {
+        "predicted": "NCBIGene:3576",
+        "explanation": "{\"cui\": \"NCBIGene:3576\"}"
+    },
+    "28553016.12": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"cui\": \"NCBIGene:6347\"}"
+    },
+    "28553016.13": {
+        "predicted": "NCBIGene:6347",
+        "explanation": "{\"NCBIGene:6347\"}"
+    },
+    "28553016.14": {
+        "predicted": "NCBIGene:100496523",
+        "explanation": "{\"NCBIGene:100496523\"}"
+    },
+    "28553016.15": {
+        "predicted": "NCBIGene:6352",
+        "explanation": "{\"NCBIGene:6352\"}"
+    },
+    "28553016.16": {
+        "predicted": "NCBIGene:3627",
+        "explanation": "{\"cui\": \"NCBIGene:3627\"}"
+    },
+    "28553016.17": {
+        "predicted": "NCBIGene:3627",
+        "explanation": "{\"NCBIGene:3627\"}"
+    },
+    "28553016.18": {
+        "predicted": "NCBIGene:4283",
+        "explanation": "{\"cui\": \"NCBIGene:4283\"}"
+    },
+    "28553016.19": {
+        "predicted": "NCBIGene:36571",
+        "explanation": "{\"NCBIGene:36571\"}"
+    },
+    "28553016.20": {
+        "predicted": "NCBIGene:396186",
+        "explanation": "{\"cui\": \"NCBIGene:396186\"}"
+    },
+    "28553016.21": {
+        "predicted": "NCBIGene:2668",
+        "explanation": "{\"cui\": \"NCBIGene:2668\"}"
+    },
+    "28553016.22": {
+        "predicted": "NCBIGene:2668",
+        "explanation": "{\"NCBIGene:2668\"}"
+    },
+    "28553016.23": {
+        "predicted": "NCBIGene:395196",
+        "explanation": "{\"NCBIGene:395196\"}"
+    },
+    "28553016.24": {
+        "predicted": "NCBIGene:3576",
+        "explanation": "{\"NCBIGene:3576\"}"
+    },
+    "28607106.1": {
+        "predicted": "NCBIGene:42840",
+        "explanation": "{\"NCBIGene:42840\"}"
+    },
+    "28607106.3": {
+        "predicted": "NCBIGene:4790",
+        "explanation": "{\"NCBIGene:4790\"}"
+    },
+    "28607106.4": {
+        "predicted": "NCBIGene:42840",
+        "explanation": "{\"NCBIGene:42840\"}"
+    },
+    "28607106.5": {
+        "predicted": "NCBIGene:42840",
+        "explanation": "{\"NCBIGene:42840\"}"
+    },
+    "28607106.6": {
+        "predicted": "NCBIGene:42840",
+        "explanation": "{\"NCBIGene:42840\"}"
+    },
+    "28607106.7": {
+        "predicted": "NCBIGene:42840",
+        "explanation": "{\"cui\": \"NCBIGene:42840\"}"
+    },
+    "28607106.8": {
+        "predicted": "NCBIGene:4790",
+        "explanation": "{\"NCBIGene:4790\"}"
+    },
+    "28607106.12": {
+        "predicted": "NCBIGene:42840",
+        "explanation": "{\"cui\": \"NCBIGene:42840\"}"
+    },
+    "28607106.14": {
+        "predicted": "NCBIGene:6885",
+        "explanation": "{\"cui\": \"NCBIGene:6885\"}"
+    },
+    "28607106.15": {
+        "predicted": "NCBIGene:38890",
+        "explanation": "{\"NCBIGene:38890\"}"
+    },
+    "28607106.16": {
+        "predicted": "NCBIGene:42840",
+        "explanation": "{\"NCBIGene:42840\"}"
+    },
+    "28607106.17": {
+        "predicted": "NCBIGene:4790",
+        "explanation": "{\"NCBIGene:4790\"}"
+    },
+    "28607106.19": {
+        "predicted": "NCBIGene:42840",
+        "explanation": "{\"NCBIGene:42840\"}"
+    },
+    "28607106.20": {
+        "predicted": "NCBIGene:42840",
+        "explanation": "{\"cui\": \"NCBIGene:42840\"}"
+    },
+    "28607106.21": {
+        "predicted": "NCBIGene:100491070",
+        "explanation": "{\"NCBIGene:100491070\"}"
+    },
+    "28607106.23": {
+        "predicted": "NCBIGene:4790",
+        "explanation": "{\"NCBIGene:4790\"}"
+    },
+    "28607106.25": {
+        "predicted": "NCBIGene:3558",
+        "explanation": "{\"NCBIGene:3558\"}"
+    },
+    "28687666.1": {
+        "predicted": "NCBIGene:140439",
+        "explanation": "{\"cui\": \"NCBIGene:140439\"}"
+    },
+    "28687666.6": {
+        "predicted": "NCBIGene:140439",
+        "explanation": "{\"NCBIGene:140439\"}"
+    },
+    "28687666.7": {
+        "predicted": "NCBIGene:140439",
+        "explanation": "{\"cui\": \"NCBIGene:140439\"}"
+    },
+    "28687666.8": {
+        "predicted": "NCBIGene:140439",
+        "explanation": "{\"cui\": \"NCBIGene:140439\"}"
+    },
+    "28687666.11": {
+        "predicted": "NCBIGene:35966",
+        "explanation": "{\"NCBIGene:35966\"}"
+    },
+    "28687666.12": {
+        "predicted": "NCBIGene:53558",
+        "explanation": "{\"NCBIGene:53558\"}"
+    },
+    "28687666.13": {
+        "predicted": "NCBIGene:140439",
+        "explanation": "{\"cui\": \"NCBIGene:140439\"}"
+    },
+    "28687666.14": {
+        "predicted": "NCBIGene:36775",
+        "explanation": "{\"NCBIGene:36775\"}"
+    },
+    "28687666.15": {
+        "predicted": "NCBIGene:114424",
+        "explanation": "{\"NCBIGene:114424\"}"
+    },
+    "28687666.17": {
+        "predicted": "NCBIGene:140439",
+        "explanation": "{\"cui\": \"NCBIGene:140439\"}"
+    },
+    "28706108.6": {
+        "predicted": "NCBIGene:856802",
+        "explanation": "{\"NCBIGene:856802\"}"
+    },
+    "28706108.7": {
+        "predicted": "NCBIGene:856802",
+        "explanation": "{\"NCBIGene:856802\"}"
+    },
+    "28706108.8": {
+        "predicted": "NCBIGene:856802",
+        "explanation": "{\"NCBIGene:856802\"}"
+    },
+    "28706108.10": {
+        "predicted": "NCBIGene:856802",
+        "explanation": "{\"cui\": \"NCBIGene:856802\"}"
+    },
+    "28706108.12": {
+        "predicted": "NCBIGene:856802",
+        "explanation": "{\"NCBIGene:856802\"}"
+    },
+    "28706108.13": {
+        "predicted": "NCBIGene:854819",
+        "explanation": "{\"cui\": \"NCBIGene:854819\"}"
+    },
+    "28706108.17": {
+        "predicted": "NCBIGene:824062",
+        "explanation": "{\"cui\": \"NCBIGene:824062\"}"
+    },
+    "28706108.18": {
+        "predicted": "NCBIGene:856802",
+        "explanation": "{\"cui\": \"NCBIGene:856802\"}"
+    },
+    "28706108.19": {
+        "predicted": "NCBIGene:854819",
+        "explanation": "{\"cui\": \"NCBIGene:854819\"}"
+    },
+    "28706108.20": {
+        "predicted": "NCBIGene:824062",
+        "explanation": "{\"cui\": \"NCBIGene:824062\"}"
+    },
+    "28706108.22": {
+        "predicted": "NCBIGene:856802",
+        "explanation": "{\"NCBIGene:856802\"}"
+    },
+    "28706108.23": {
+        "predicted": "NCBIGene:854819",
+        "explanation": "{\"NCBIGene:854819\"}"
+    },
+    "28883038.1": {
+        "predicted": "NCBIGene:851813",
+        "explanation": "{\"NCBIGene:851813\"}"
+    },
+    "28883038.4": {
+        "predicted": "NCBIGene:851813",
+        "explanation": "{\"NCBIGene:851813\"}"
+    },
+    "28883038.5": {
+        "predicted": "NCBIGene:855259",
+        "explanation": "{\"cui\": \"NCBIGene:855259\"}"
+    },
+    "28883038.7": {
+        "predicted": "NCBIGene:9063",
+        "explanation": "{\"NCBIGene:9063\"}"
+    },
+    "28883038.9": {
+        "predicted": "NCBIGene:34481",
+        "explanation": "{\"NCBIGene:34481\"}"
+    },
+    "28883038.15": {
+        "predicted": "NCBIGene:851813",
+        "explanation": "{\"NCBIGene:851813\"}"
+    },
+    "28968468.1": {
+        "predicted": "NCBIGene:3394",
+        "explanation": "{\"cui\": \"NCBIGene:3394\"}"
+    },
+    "28968468.3": {
+        "predicted": "NCBIGene:3394",
+        "explanation": "{\"cui\": \"NCBIGene:3394\"}"
+    },
+    "28968468.4": {
+        "predicted": "NCBIGene:3394",
+        "explanation": "{\"NCBIGene:3394\"}"
+    },
+    "28968468.5": {
+        "predicted": "NCBIGene:3394",
+        "explanation": "{\"cui\": \"NCBIGene:3394\"}"
+    },
+    "28968468.7": {
+        "predicted": "NCBIGene:3394",
+        "explanation": "{\"cui\": \"NCBIGene:3394\"}"
+    },
+    "28968468.12": {
+        "predicted": "NCBIGene:3394",
+        "explanation": "{\"cui\": \"NCBIGene:3394\"}"
+    },
+    "28968468.13": {
+        "predicted": "NCBIGene:3394",
+        "explanation": "{\"cui\": \"NCBIGene:3394\"}"
+    },
+    "28968468.14": {
+        "predicted": "NCBIGene:16189",
+        "explanation": "{\"cui\": \"NCBIGene:16189\"}"
+    },
+    "28968468.15": {
+        "predicted": "NCBIGene:299354",
+        "explanation": "{\"NCBIGene:299354\"}"
+    },
+    "28968468.19": {
+        "predicted": "NCBIGene:3683",
+        "explanation": "{\"cui\": \"NCBIGene:3683\"}"
+    },
+    "28968468.20": {
+        "predicted": "NCBIGene:3676",
+        "explanation": "{\"cui\": \"NCBIGene:3676\"}"
+    },
+    "28968468.22": {
+        "predicted": "NCBIGene:6402",
+        "explanation": "{\"cui\": \"NCBIGene:6402\"}"
+    },
+    "28968468.27": {
+        "predicted": "NCBIGene:100135068",
+        "explanation": "{\"NCBIGene:100135068\"}"
+    },
+    "28968468.29": {
+        "predicted": "NCBIGene:16409",
+        "explanation": "{\"NCBIGene:16409\"}"
+    },
+    "28968468.30": {
+        "predicted": "NCBIGene:14782",
+        "explanation": "{\"NCBIGene:14782\"}"
+    },
+    "28968468.33": {
+        "predicted": "NCBIGene:100135068",
+        "explanation": "{\"NCBIGene:100135068\"}"
+    },
+    "28968468.37": {
+        "predicted": "NCBIGene:16184",
+        "explanation": "{\"NCBIGene:16184\"}"
+    },
+    "28968468.40": {
+        "predicted": "NCBIGene:474360",
+        "explanation": "{\"cui\": \"NCBIGene:474360\"}"
+    },
+    "28968468.41": {
+        "predicted": "NCBIGene:3596",
+        "explanation": "{\"cui\": \"NCBIGene:3596\"}"
+    },
+    "28968468.42": {
+        "predicted": "NCBIGene:3569",
+        "explanation": "{\"cui\": \"NCBIGene:3569\"}"
+    },
+    "28968468.43": {
+        "predicted": "NCBIGene:3394",
+        "explanation": "{\"cui\": \"NCBIGene:3394\"}"
+    },
+    "29183288.7": {
+        "predicted": "NCBIGene:21687",
+        "explanation": "{\"cui\": \"NCBIGene:21687\"}"
+    },
+    "29183288.19": {
+        "predicted": "NCBIGene:16191",
+        "explanation": "{\"NCBIGene:16191\"}"
+    },
+    "29183288.22": {
+        "predicted": "NCBIGene:20296",
+        "explanation": "{\"NCBIGene:20296\"}"
+    },
+    "29183288.23": {
+        "predicted": "NCBIGene:6356",
+        "explanation": "{\"NCBIGene:6356\"}"
+    },
+    "29183288.27": {
+        "predicted": "NCBIGene:108715671",
+        "explanation": "{\"NCBIGene:108715671\"}"
+    },
+    "29183288.30": {
+        "predicted": "NCBIGene:428264",
+        "explanation": "{\"NCBIGene:428264\"}"
+    },
+    "29183288.31": {
+        "predicted": "NCBIGene:100188894",
+        "explanation": "{\"cui\": \"NCBIGene:100188894\"}"
+    },
+    "29183288.32": {
+        "predicted": "NCBIGene:16191",
+        "explanation": "{\"NCBIGene:16191\"}"
+    },
+    "29183288.33": {
+        "predicted": "NCBIGene:3596",
+        "explanation": "{\"NCBIGene:3596\"}"
+    },
+    "29183288.34": {
+        "predicted": "NCBIGene:21926",
+        "explanation": "{\"NCBIGene:21926\"}"
+    },
+    "29222418.1": {
+        "predicted": "NCBIGene:21406",
+        "explanation": "{\"NCBIGene:21406\"}"
+    },
+    "29222418.2": {
+        "predicted": "NCBIGene:395111",
+        "explanation": "{\"NCBIGene:395111\"}"
+    },
+    "29222418.3": {
+        "predicted": "NCBIGene:395111",
+        "explanation": "{\"NCBIGene:395111\"}"
+    },
+    "29222418.4": {
+        "predicted": "NCBIGene:21406",
+        "explanation": "{\"NCBIGene:21406\"}"
+    },
+    "29222418.7": {
+        "predicted": "NCBIGene:4907",
+        "explanation": "{\"NCBIGene:4907\"}"
+    },
+    "29222418.8": {
+        "predicted": "NCBIGene:21406",
+        "explanation": "{\"cui\": \"NCBIGene:21406\"}"
+    },
+    "29222418.9": {
+        "predicted": "NCBIGene:100859742",
+        "explanation": "{\"NCBIGene:100859742\"}"
+    },
+    "29222418.10": {
+        "predicted": "NCBIGene:4907",
+        "explanation": "{\"NCBIGene:4907\"}"
+    },
+    "29222418.14": {
+        "predicted": "NCBIGene:21406",
+        "explanation": "{\"cui\": \"NCBIGene:21406\"}"
+    },
+    "29222418.16": {
+        "predicted": "NCBIGene:21406",
+        "explanation": "{\"cui\": \"NCBIGene:21406\"}"
+    },
+    "29222418.17": {
+        "predicted": "NCBIGene:4907",
+        "explanation": "{\"NCBIGene:4907\"}"
+    },
+    "29222418.18": {
+        "predicted": "NCBIGene:6097",
+        "explanation": "{\"cui\": \"NCBIGene:6097\"}"
+    },
+    "29222418.19": {
+        "predicted": "NCBIGene:395111",
+        "explanation": "{\"NCBIGene:395111\"}"
+    },
+    "29222418.20": {
+        "predicted": "NCBIGene:100381039",
+        "explanation": "{\"NCBIGene:100381039\"}"
+    },
+    "29222418.21": {
+        "predicted": "NCBIGene:6977",
+        "explanation": "{\"NCBIGene:6977\"}"
+    },
+    "29222418.23": {
+        "predicted": "NCBIGene:21406",
+        "explanation": "{\"cui\": \"NCBIGene:21406\"}"
+    },
+    "29222418.24": {
+        "predicted": "NCBIGene:21406",
+        "explanation": "{\"NCBIGene:21406\"}"
+    },
+    "29222418.25": {
+        "predicted": "NCBIGene:4907",
+        "explanation": "{\"cui\": \"NCBIGene:4907\"}"
+    },
+    "29222418.26": {
+        "predicted": "NCBIGene:4907",
+        "explanation": "{\"NCBIGene:4907\"}"
+    },
+    "29222418.27": {
+        "predicted": "NCBIGene:21406",
+        "explanation": "{\"cui\": \"NCBIGene:21406\"}"
+    },
+    "30202097.5": {
+        "predicted": "NCBIGene:422730",
+        "explanation": "{\"NCBIGene:422730\"}"
+    },
+    "30202097.11": {
+        "predicted": "NCBIGene:395196",
+        "explanation": "{\"NCBIGene:395196\"}"
+    },
+    "30202097.13": {
+        "predicted": "NCBIGene:395196",
+        "explanation": "{\"NCBIGene:395196\"}"
+    },
+    "30202097.14": {
+        "predicted": "NCBIGene:2919",
+        "explanation": "{\"NCBIGene:2919\"}"
+    },
+    "30202097.15": {
+        "predicted": "NCBIGene:6374",
+        "explanation": "{\"NCBIGene:6374\"}"
+    },
+    "30202097.16": {
+        "predicted": "NCBIGene:474356",
+        "explanation": "{\"NCBIGene:474356\"}"
+    },
+    "30202097.17": {
+        "predicted": "NCBIGene:100498017",
+        "explanation": "{\"NCBIGene:100498017\"}"
+    },
+    "30202097.18": {
+        "predicted": "NCBIGene:6348",
+        "explanation": "{\"NCBIGene:6348\"}"
+    },
+    "30202097.19": {
+        "predicted": "NCBIGene:100497163",
+        "explanation": "{\"NCBIGene:100497163\"}"
+    },
+    "30202097.20": {
+        "predicted": "NCBIGene:100135068",
+        "explanation": "{\"NCBIGene:100135068\"}"
+    },
+    "30202097.21": {
+        "predicted": "NCBIGene:4283",
+        "explanation": "{\"NCBIGene:4283\"}"
+    },
+    "30202097.22": {
+        "predicted": "NCBIGene:3627",
+        "explanation": "{\"NCBIGene:3627\"}"
+    },
+    "30202097.24": {
+        "predicted": "NCBIGene:16409",
+        "explanation": "{\"NCBIGene:16409\"}"
+    },
+    "30202097.26": {
+        "predicted": "NCBIGene:16409",
+        "explanation": "{\"NCBIGene:16409\"}"
+    },
+    "30280191.3": {
+        "predicted": "NCBIGene:493211",
+        "explanation": "{\"NCBIGene:493211\"}"
+    },
+    "30280191.16": {
+        "predicted": "NCBIGene:17126",
+        "explanation": "{\"NCBIGene:17126\"}"
+    },
+    "30280191.21": {
+        "predicted": "NCBIGene:7040",
+        "explanation": "{\"NCBIGene:7040\"}"
+    },
+    "30280191.22": {
+        "predicted": "NCBIGene:496586",
+        "explanation": "{\"NCBIGene:496586\"}"
+    },
+    "30836660.1": {
+        "predicted": "NCBIGene:7099",
+        "explanation": "{\"cui\": \"NCBIGene:7099\"}"
+    },
+    "30836660.2": {
+        "predicted": "NCBIGene:4790",
+        "explanation": "{\"NCBIGene:4790\"}"
+    },
+    "30836660.7": {
+        "predicted": "NCBIGene:7431",
+        "explanation": "{\"NCBIGene:7431\"}"
+    },
+    "30836660.8": {
+        "predicted": "NCBIGene:7040",
+        "explanation": "{\"NCBIGene:7040\"}"
+    },
+    "30836660.9": {
+        "predicted": "NCBIGene:34908",
+        "explanation": "{\"NCBIGene:34908\"}"
+    },
+    "30836660.10": {
+        "predicted": "NCBIGene:494038",
+        "explanation": "{\"NCBIGene:494038\"}"
+    },
+    "30836660.12": {
+        "predicted": "NCBIGene:16176",
+        "explanation": "{\"NCBIGene:16176\"}"
+    },
+    "30836660.13": {
+        "predicted": "NCBIGene:395196",
+        "explanation": "{\"cui\": \"NCBIGene:395196\"}"
+    },
+    "30836660.14": {
+        "predicted": "NCBIGene:16193",
+        "explanation": "{\"NCBIGene:16193\"}"
+    },
+    "30836660.15": {
+        "predicted": "NCBIGene:36054",
+        "explanation": "{\"NCBIGene:36054\"}"
+    },
+    "30836660.16": {
+        "predicted": "NCBIGene:7099",
+        "explanation": "{\"NCBIGene:7099\"}"
+    },
+    "30836660.17": {
+        "predicted": "NCBIGene:448138",
+        "explanation": "{\"NCBIGene:448138\"}"
+    },
+    "30836660.18": {
+        "predicted": "NCBIGene:18033",
+        "explanation": "{\"NCBIGene:18033\"}"
+    },
+    "30836660.21": {
+        "predicted": "NCBIGene:7099",
+        "explanation": "{\"cui\": \"NCBIGene:7099\"}"
+    },
+    "30836660.22": {
+        "predicted": "NCBIGene:4790",
+        "explanation": "{\"NCBIGene:4790\"}"
+    }
+}

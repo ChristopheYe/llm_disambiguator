@@ -105,11 +105,11 @@ ontology2 = BiomedicalOntology.load_entrez(**entrez_dict)
 # ontology2 = BiomedicalOntology.load_umls(**umls_dict_st21pv)
 
 
-number_candidates = 10
+number_candidates = 50
 print("number of candidates to consider :", number_candidates)
 
-# EL_model = "arboel"
-EL_model = "sapbert"
+EL_model = "arboel"
+# EL_model = "sapbert"
 
 device = device_1
 
@@ -119,8 +119,8 @@ recall = False
 recall_k = 5
 k = 3
 
-llm_model = "Qwen/Qwen2.5-7B-Instruct"
-llm_subname = "Qwen2.5-7B-Instruct"
+llm_model = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+llm_subname = "Meta-Llama-3.1-8B-Instruct"
 
 # llm_subname = "gpt-4o-2024-08-06"
 
@@ -172,13 +172,17 @@ model_names = [f"{EL_model}"]
 path_to_result = {f"{dataset_name}": {}}
 if EL_model == "arboel":  # arboel
     path_to_result[dataset_name][
-        "arboel"
+        EL_model
     ] = f"candidates/{dataset_name}/arboel_{dataset_name}.json"
 elif EL_model == "sapbert":
-    path_to_result[dataset_name][
-        "sapbert"
-    ] = f"candidates/{dataset_name}/sapbert_{dataset_name}_real2.json"  # _real2.json
-
+    if dataset_name == ("nlm_gene" or "gnormplus"):
+        path_to_result[dataset_name][
+            EL_model
+        ] = f"candidates/{dataset_name}/{EL_model}_{dataset_name}_real2.json"  # _real2.json
+    else:
+        path_to_result[dataset_name][
+            EL_model
+        ] = f"candidates/{dataset_name}/{EL_model}_{dataset_name}_real.json"
 
 eval_strategies = ["basic"]
 evaluator = Evaluate(

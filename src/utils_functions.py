@@ -43,6 +43,9 @@ from bioel.evaluate import Evaluate
 
 from torch.utils.data import DataLoader
 
+from statsmodels.stats.contingency_tables import mcnemar
+from statsmodels.stats.proportion import proportions_ztest
+
 
 def set_seed(seed):
     np.random.seed(seed)
@@ -957,136 +960,46 @@ def evaluate(
     return results
 
 
-"""-----------------------------------------------------------------------------------------------------------------"""
+def mcnemar_test(target, base_predictions, llm_predictions):
+    """
+    Function to perform McNemar's test for comparing two models.
+    ------
+    Parameters:
+    - target: dict (mention_id : gold CUI)
+    - base_predictions: dict (mention_id : predicted CUI from base model)
+    - llm_predictions: dict (mention_id : predicted CUI from base model + LLM)
+    """
+    both_correct = 0
+    base_correct_llm_incorrect = 0
+    llm_correct_base_incorrect = 0
+    both_incorrect = 0
+    # Iterate through each example in the dictionaries
+    for cui, truth in target.items():
+        pred1 = base_predictions.get(cui)
+        pred2 = llm_predictions.get(cui)
 
-# def prompt_vllm_aqlm(
-#     mention,
-#     context,
-#     system_instructions,
-#     candidates,
-#     topk_examples,
-#     llm,
-#     tokenizer,
-#     sampling_params,
-# ):
-#     """
-#     mention : str (name of the mention to be linked)
-#     context : str (context where the mention appears)
-#     system_instructions : str (instructions for the LLM)
-#     candidates : list of list of CUIs : [[cui1], [cui2, cui3], ...]
-#     topk_examples : str (top k examples of similar contexts)
-#     llm : LLM model
-#     tokenizer : AutoTokenizer
-#     sampling_params : SamplingParams config
-#     """
+        if pred1 == truth and pred2 == truth:
+            both_correct += 1
+        elif pred1 == truth and pred2 != truth:
+            base_correct_llm_incorrect += 1
+        elif pred1 != truth and pred2 == truth:
+            llm_correct_base_incorrect += 1
+        elif pred1 != truth and pred2 != truth:
+            both_incorrect += 1
 
-#     prompt_text = f"""
-#     System Instructions: {system_instructions} \n
+    # Create the contingency table
+    # Contingency table format:
+    # [[both correct, model1 correct and model2 incorrect],
+    #  [model2 correct and model1 incorrect, both incorrect]]
+    contingency_table = np.array(
+        [
+            [both_correct, base_correct_llm_incorrect],
+            [llm_correct_base_incorrect, both_incorrect],
+        ]
+    )
 
-#     Here are a few examples: \n
-#     {topk_examples} \n
-
-#     This is the specific mention that needs to be linked to the correct entity: {mention} \n
-
-#     This is the context where the mention appears: \n
-#     {context} \n
-
-#     These are the candidate entities to choose from: \n
-#     {candidates} \n
-
-#     You MUST PROVIDE an ANSWER among the candidates. \n
-
-#     Return the answer in the following format: CUI
-#     For instance : "MESH:D000000" "OMIM:000000" are valid answers. \n
-#     Do not add provide any explanations ! But you MUST give ONE answer.
-#     """
-#     conversations = tokenizer.apply_chat_template(
-#         [{"role": "user", "content": prompt_text}],
-#         tokenize=False,
-#     )
-
-#     # Decode the generated tokens into text
-#     outputs = llm.generate(
-#         [conversations], sampling_params=sampling_params, use_tqdm=False
-#     )
-#     answer = outputs[0].outputs[0].text
-
-#     return answer
-
-
-# def evaluate_vllm_aqlm(
-#     llm,
-#     nlp_model,
-#     tokenizer,
-#     index,
-#     system_instructions,
-#     mentions,
-#     ontology,
-#     corpus,
-#     mention2context,
-#     mention2biencoder_candidates,
-#     mention2text,
-#     TrainMap_context2mention,
-#     train_mention2text,
-#     train_mention2gold,
-#     k,
-#     sampling_params,
-# ):
-#     """
-#     Run "prompt" function for each mention in the list of mentions.
-#     Returns a dictionary {mention_id : predicted CUI}
-#     -------
-#     llm : LLM model
-#     nlp_model : SentenceTransformer model
-#     tokenizer : AutoTokenizer
-#     index : faiss index
-#     system_instructions : str (instructions for the LLM)
-#     mentions : list (mention_ids)
-#     ontology : BiomedicalOntology object
-#     corpus : list of str (all context sentences)
-#     mention2context : dict (mention_id : context)
-#     mention2biencoder_candidates : dict (mention_id : list of candidate CUIs)
-#     mention2text : dict (mention_id : mention name)
-#     TrainMap_context2mention : dict (context sentence to mention_id)
-#     train_mention2text : dict (mention_id to mention name)
-#     train_mention2gold : dict (mention_id to gold CUI)
-#     k : int (number of nearest neighbors)
-#     sampling_params : SamplingParams config
-#     """
-#     results = {}
-#     for i in range(len(mentions)):
-#         mention_id = mentions[i]
-#         mention_name = mention2text[mention_id]
-#         context = mention2context[mention_id]
-#         candidates = get_candidates_data(
-#             mention2biencoder_candidates[mentions[i]], ontology
-#         )
-#         # candidates = get_candidates_data_v2(mention2crossencoder_candidates[mention])
-#         topk = topk_examples(
-#             model=nlp_model,  # sentence transformer model
-#             index=index,
-#             query=context,
-#             corpus=corpus,
-#             TrainMap_context2mention=TrainMap_context2mention,
-#             train_mention2text=train_mention2text,
-#             train_mention2gold=train_mention2gold,
-#             ontology=ontology,
-#             k=k,
-#         )
-#         text = prompt_vllm_aqlm(
-#             mention=mention_name,
-#             context=context,
-#             system_instructions=system_instructions,
-#             candidates=candidates,
-#             topk_examples=topk,
-#             llm=llm,
-#             tokenizer=tokenizer,
-#             sampling_params=sampling_params,
-#         )
-#         print("mention ID :", mention_id, "|| LLM answer :", text)
-#         cand = extract_cui(text)
-#         results[mention_id] = cand
-#         if i % 20 == 0:
-#             print(f"i = {i}")
-
-#     return results
+    # Apply McNemar's test
+    result = mcnemar(
+        contingency_table, exact=True
+    )  # Use exact=True for small sample sizes
+    return result
