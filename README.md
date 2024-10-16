@@ -1,12 +1,13 @@
-# LLM as a Reasoning Entity Disambiguator.
+# LLM for Reasoning Entity Disambiguator.
 
 ## Installation
 
 In order to run this, please install the following conda environment : 
 
 ```bash
-conda env create -f llm_disambiguator_env.yaml
-conda activate llm_disambiguator
+conda create -n llm python=3.9
+conda activate llm
+pip install -e .
 ```
 
 ## Example Usage: Run Inference and Evaluation on NCBI-Disease
@@ -16,4 +17,4 @@ python src/llm_disambiguator_main.py --dataset_name ncbi_disease --EL_model arbo
 
 ## Candidates
 
-"Candidates for the NCBI-Dataset from SapBERT and ArboEL are available in `src/candidates`, and the corresponding MEDIC ontology is located in `src/ontology`."
+Candidates for the NCBI-Dataset from SapBERT and ArboEL are available in `src/candidates`, and the corresponding MEDIC ontology is located in `src/ontology`
