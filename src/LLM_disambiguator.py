@@ -105,7 +105,7 @@ ontology2 = BiomedicalOntology.load_entrez(**entrez_dict)
 # ontology2 = BiomedicalOntology.load_umls(**umls_dict_st21pv)
 
 
-number_candidates = 40
+number_candidates = 50
 print("number of candidates to consider :", number_candidates)
 
 EL_model = "arboel"
