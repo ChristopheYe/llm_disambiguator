@@ -11,7 +11,7 @@ conda activate llm_disambiguator
 
 ## Example Usage: Run Inference and Evaluation on NCBI-Disease
 ```
-python llm_disambiguator_main.py --dataset_name ncbi_disease --EL_model arboel --llm_model "Qwen/Qwen2.5-7B-Instruct" --llm_subname "Qwen2.5-7B-Instruct"
+python src/llm_disambiguator_main.py --dataset_name ncbi_disease --EL_model arboel --llm_model "Qwen/Qwen2.5-7B-Instruct" --llm_subname "Qwen2.5-7B-Instruct"
 ```
 
 ## Candidates

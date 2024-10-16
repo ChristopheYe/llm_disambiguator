@@ -105,7 +105,7 @@ ontology2 = BiomedicalOntology.load_entrez(**entrez_dict)
 # ontology2 = BiomedicalOntology.load_umls(**umls_dict_st21pv)
 
 
-number_candidates = 50
+number_candidates = 40
 print("number of candidates to consider :", number_candidates)
 
 EL_model = "arboel"
@@ -119,8 +119,8 @@ recall = False
 recall_k = 5
 k = 3
 
-llm_model = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-llm_subname = "Meta-Llama-3.1-8B-Instruct"
+llm_model = "mistralai/Mistral-Nemo-Instruct-2407"
+llm_subname = "Mistral-Nemo-Instruct-2407"
 
 # llm_subname = "gpt-4o-2024-08-06"
 

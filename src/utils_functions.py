@@ -1,4 +1,3 @@
-import pickle
 import ujson
 import json
 import sys
@@ -18,13 +17,6 @@ from tqdm import tqdm
 from collections import defaultdict
 from typing import Optional
 
-from bioel.utils.umls_utils import UmlsMappings
-from bioel.utils.bigbio_utils import (
-    CUIS_TO_REMAP,
-    CUIS_TO_EXCLUDE,
-    DATASET_NAMES,
-    VALIDATION_DOCUMENT_IDS,
-)
 from bioel.utils.bigbio_utils import (
     load_bigbio_dataset,
     add_deabbreviations,
@@ -36,9 +28,7 @@ from bioel.utils.bigbio_utils import (
     dataset_unique_tax_ids,
 )
 from bioel.utils.solve_abbreviation.solve_abbreviations import create_abbrev
-
 from bioel.ontology import BiomedicalOntology
-from bioel.models.arboel.biencoder.data.data_utils import process_ontology
 from bioel.evaluate import Evaluate
 
 from torch.utils.data import DataLoader
@@ -77,107 +67,6 @@ def get_word_indices(doc, offsets):
     return start_word_idx, end_word_idx
 
 
-def process_ontology(
-    ontology: BiomedicalOntology,
-    # data_path: str,
-    tax2name_filepath: str = None,
-):
-    """
-    This function prepares the entity data : dictionary.pickle
-
-    Parameters
-    ----------
-    - ontology : str (only umls for now)
-        Ontology associated with the dataset
-    - data_path : str
-        Path where to load and save dictionary.pickle
-    - tax2name_filepath : str
-        Path to the taxonomy to name file
-    """
-
-    # Check if equivalent CUIs are present for the first entity
-    first_entity_cui = next(iter(ontology.entities))
-    equivalant_cuis = bool(ontology.entities[first_entity_cui].equivalant_cuis)
-    print("equivalant cuis :", equivalant_cuis)
-    # "If dictionary already processed, load it else process and load it"
-    # entity_dictionary_pkl_path = os.path.join(data_path, "dictionary.pickle")
-
-    # if os.path.isfile(entity_dictionary_pkl_path):
-    #     print("Loading stored processed entity dictionary...")
-    #     with open(entity_dictionary_pkl_path, "rb") as read_handle:
-    #         entities = pickle.load(read_handle)
-
-    #     return entities, equivalant_cuis
-
-    if tax2name_filepath:
-        with open(tax2name_filepath, "r") as f:
-            tax2name = ujson.load(f)
-
-    ontology_entities = []
-    for cui, entity in tqdm(ontology.entities.items()):
-        new_entity = {}
-
-        # if ontology.name.lower() in ["umls"]:
-        #     with open(os.path.join(data_path, "tui2type_hierarchy.json"), "r") as f:
-        #         type2geneology = ujson.load(f)
-        #     entity.types = get_type_gcd(entity.types, type2geneology)
-
-        new_entity["cui"] = entity.cui
-        new_entity["title"] = entity.name
-        new_entity["types"] = f"{entity.types}"
-
-        if entity.aliases:
-            if entity.definition:
-                if entity.taxonomy:
-                    new_entity["description"] = (
-                        f"{entity.name} ( {tax2name[str(entity.taxonomy)]}, {entity.types} : {entity.aliases} ) [{entity.definition}]"
-                    )
-
-                else:
-                    new_entity["description"] = (
-                        f"{entity.name} ( {entity.types} : {entity.aliases} ) [{entity.definition}]"
-                    )
-
-            else:
-                if entity.taxonomy:
-                    new_entity["description"] = (
-                        f"{entity.name} ( {tax2name[str(entity.taxonomy)]}, {entity.types} : {entity.aliases} )"
-                    )
-                else:
-                    new_entity["description"] = (
-                        f"{entity.name} ( {entity.types} : {entity.aliases} )"
-                    )
-
-        else:
-            if entity.definition:
-                if entity.taxonomy:
-                    new_entity["description"] = (
-                        f"{entity.name} ( {tax2name[str(entity.taxonomy)]}, {entity.types}) [{entity.definition}]"
-                    )
-
-                else:
-                    new_entity["description"] = (
-                        f"{entity.name} ( {entity.types}) [{entity.definition}]"
-                    )
-            else:
-                if entity.taxonomy:
-                    new_entity["description"] = (
-                        f"{entity.name} ( {tax2name[str(entity.taxonomy)]}, {entity.types})"
-                    )
-                else:
-                    new_entity["description"] = f"{entity.name} ({entity.types})"
-
-        if hasattr(entity, "metadata") and entity.metadata:
-            new_entity["description"] += f" {entity.metadata}"
-
-        if equivalant_cuis:
-            new_entity["cuis"] = entity.equivalant_cuis
-
-        ontology_entities.append(new_entity)
-
-    return ontology_entities, equivalant_cuis
-
-
 def process_candidates_sapbert(sapbert_res, max_candidates=None):
     maxi = (
         max_candidates
@@ -199,25 +88,6 @@ def process_candidates_sapbert(sapbert_res, max_candidates=None):
         # Replace the original 'candidates' with the processed one
         entry["candidates"] = new_candidates
     return sapbert_res
-
-
-# ## ORIGINAL VERSION
-# def number_hit(df, hit_index_column, hit_range):
-#     """
-#     Count the number of hits for each hit index.
-#     ------
-#     df : DataFrame
-#     hit_index_column : str (column name of the hit index)
-#     hit_range : int (Number of hits to consider = recall@k)
-#     """
-#     results = {i + 1: 0 for i in range(hit_range)}
-#     res = 0
-#     for hit_index in range(hit_range):
-#         for idx, row in df.iterrows():
-#             if row[hit_index_column] == hit_index:
-#                 res += 1
-#         results[hit_index + 1] = res
-#     return results
 
 
 ### SECOND VERSION that incorporates sapbert case
@@ -247,34 +117,6 @@ def number_hit(candidates_cuis, gold_cuis, hit_range):
                 break  # Stop after the first hit, since we only count the first hit
 
     return results
-
-
-# ## ORIGINAL VERSION
-# def compute_recall(df, hit_index_column, hit_range, total_nb_mentions):
-#     """
-#     Function to compute the recall of the intial model (biencoder, crossencoder).
-#     ------
-#     df : DataFrame
-#     hit_index_column : str ("biencoder_hit_index" or "crossencoder_hit_index")
-#     hit_range : int (Number of hits to consider = recall@k)
-#     total_nb_mentions : int (For unnormalized result = true performance)
-#     """
-#     unnormalized_recall = 0
-#     normalized_recall = 0
-#     results = []
-
-#     for hit_index in range(hit_range):
-#         res = 0
-#         for idx, row in df.iterrows():
-#             if row[hit_index_column] == hit_index:
-#                 res += 1
-#         unnormalized_recall += res / total_nb_mentions
-#         normalized_recall += res / len(df)
-
-#         # Store the cumulative results for this hit_index
-#         results.append((unnormalized_recall, normalized_recall))
-
-#     return results
 
 
 ### SECOND VERSION that incorporates sapbert case

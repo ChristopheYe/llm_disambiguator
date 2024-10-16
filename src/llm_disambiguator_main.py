@@ -156,8 +156,10 @@ def main(config):
     # ----------------- END ARGUMENTS ----------------- #
 
     ############ I) LOAD THE DATA (ONTOLOGY + MENTIONS) ############
-
-    with gzip.open("ontology/medic_ontology.pkl.gz", "rb") as f:
+    script_dir = os.path.dirname(__file__)
+    ontology_path = os.path.join(script_dir, "ontology/medic_ontology.pkl.gz")
+    # with gzip.open("ontology/medic_ontology.pkl.gz", "rb") as f:
+    with gzip.open(ontology_path, "rb") as f:
         ontology2 = pickle.load(f)
 
     # Load the df from a CSV file
