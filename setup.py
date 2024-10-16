@@ -6,7 +6,6 @@ here = os.path.abspath(os.path.dirname(__file__))
 
 setup(
     name="llm_disambiguator",
-    version="0.1.0",
     description="LLM for named entity disambiguation",
     # long_description=long_description,
     url="",
@@ -14,8 +13,6 @@ setup(
     author_email="",
     keywords=[
         "biomedical",
-        "entity",
-        "linking",
         "entity-linking",
         "biomedical-entity-linking",
         "named entity disambiguation",
