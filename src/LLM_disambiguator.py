@@ -40,7 +40,8 @@ from bioel.evaluate import Evaluate
 from torch.utils.data import DataLoader
 from sentence_transformers import SentenceTransformer
 
-from transformers import AutoTokenizer
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
 from vllm import LLM, SamplingParams
 from ids import open_ai_api_key
 
@@ -67,6 +68,7 @@ sampling_params = SamplingParams(
 
 set_seed(12)
 
+
 # Start time
 start_time = time.time()
 
@@ -74,26 +76,26 @@ start_time = time.time()
 
 # ----------------- START ARGUMENTS ----------------- #
 
-# # ncbi_disease
+# ncbi_disease
 # dataset_name = "ncbi_disease"
 # ontology_dir = "/mitchell/entity-linking/kbs/medic.tsv"
 # name = "medic"
 # ontology2 = BiomedicalOntology.load_medic(filepath=ontology_dir, name=name)
 
-# gnormplus & nlm_gene
-dataset_name = "nlm_gene"
-# dataset_name = "gnormplus"
-entrez_dict = {
-    "name": "entrez",
-    "filepath": "/mitchell/entity-linking/el-robustness-comparison/data/gene_info.tsv",
-    "dataset": f"{dataset_name}",
-}
-ontology2 = BiomedicalOntology.load_entrez(**entrez_dict)
+# # gnormplus & nlm_gene
+# dataset_name = "nlm_gene"
+# # dataset_name = "gnormplus"
+# entrez_dict = {
+#     "name": "entrez",
+#     "filepath": "/mitchell/entity-linking/el-robustness-comparison/data/gene_info.tsv",
+#     "dataset": f"{dataset_name}",
+# }
+# ontology2 = BiomedicalOntology.load_entrez(**entrez_dict)
 
-# # nlm_chem
-# dataset_name = "nlmchem"
-# mesh_dict = {"name": "mesh", "filepath": "/mitchell/entity-linking/2017AA/META/"}
-# ontology2 = BiomedicalOntology.load_mesh(**mesh_dict)
+# nlm_chem
+dataset_name = "nlmchem"
+mesh_dict = {"name": "mesh", "filepath": "/mitchell/entity-linking/2017AA/META/"}
+ontology2 = BiomedicalOntology.load_mesh(**mesh_dict)
 
 # # mm_st21pv
 # dataset_name = "medmentions_st21pv"
@@ -104,12 +106,47 @@ ontology2 = BiomedicalOntology.load_entrez(**entrez_dict)
 # }
 # ontology2 = BiomedicalOntology.load_umls(**umls_dict_st21pv)
 
+# llm_name = "Qwen/Qwen2.5-7B-Instruct"
+# save_dir = (
+#     f"./trained_model_{dataset_name}_v3"  # The directory where you saved the model
+# )
 
-number_candidates = 50
+# llm = LLM(
+#     # model=llm_model,
+#     model=save_dir,
+#     tensor_parallel_size=1,
+#     dtype="auto",
+#     gpu_memory_utilization=0.5,  # % of memory of the gpu that KV caching will take (allows for higher "max_model_len").
+#     max_logprobs=1000,
+#     # device=device,
+#     max_model_len=30000,
+# )
+# # tokenizer = llm.get_tokenizer()
+# tokenizer = AutoTokenizer.from_pretrained(llm_name)
+
+llm_name = "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
+
+llm = LLM(
+    model=llm_name,
+    tensor_parallel_size=1,
+    dtype="half",
+    gpu_memory_utilization=0.8,
+    max_logprobs=1000,
+    device=device_1,
+    max_model_len=20000,
+)
+
+tokenizer = llm.get_tokenizer()
+
+
+number_candidates = 20
 print("number of candidates to consider :", number_candidates)
 
-EL_model = "arboel"
-# EL_model = "sapbert"
+# EL_model = "arboel"
+EL_model = "sapbert"
+
+reasoning = True
+# reasoning = False
 
 device = device_1
 
@@ -119,8 +156,8 @@ recall = False
 recall_k = 5
 k = 3
 
-llm_model = "mistralai/Mistral-Nemo-Instruct-2407"
-llm_subname = "Mistral-Nemo-Instruct-2407"
+version = "v5"
+llm_subname = "DeepSeek-R1-Distill-Qwen-7B"
 
 # llm_subname = "gpt-4o-2024-08-06"
 
@@ -170,19 +207,9 @@ dataset_names = [f"{dataset_name}"]
 model_names = [f"{EL_model}"]
 
 path_to_result = {f"{dataset_name}": {}}
-if EL_model == "arboel":  # arboel
-    path_to_result[dataset_name][
-        EL_model
-    ] = f"candidates/{dataset_name}/arboel_{dataset_name}.json"
-elif EL_model == "sapbert":
-    if dataset_name == ("nlm_gene" or "gnormplus"):
-        path_to_result[dataset_name][
-            EL_model
-        ] = f"candidates/{dataset_name}/{EL_model}_{dataset_name}_real2.json"  # _real2.json
-    else:
-        path_to_result[dataset_name][
-            EL_model
-        ] = f"candidates/{dataset_name}/{EL_model}_{dataset_name}_real.json"
+path_to_result[dataset_name][
+    EL_model
+] = f"candidates/{dataset_name}/{EL_model}_{dataset_name}.json"
 
 eval_strategies = ["basic"]
 evaluator = Evaluate(
@@ -289,7 +316,7 @@ number_hits_sapbert = 0
 #### ARBOEL
 if EL_model == "arboel":
     number_hits_arboel = number_hit(
-        mention2arboel_candidates, mention2gold, number_candidates
+        filtered_results, f"{EL_model}_hit_index", number_candidates
     )
     print("number hits arboel :", number_hits_arboel)
 
@@ -305,7 +332,7 @@ if EL_model == "arboel":
 #### SAPBERT
 if EL_model == "sapbert":
     number_hits_sapbert = number_hit(
-        mention2sapbert_candidates, mention2gold, number_candidates
+        filtered_results, f"{EL_model}_hit_index", number_candidates
     )
     print("number hits sapbert :", number_hits_sapbert)
 
@@ -357,29 +384,51 @@ mode = "recall" if recall else "simple"
 system_instructions = system_instructions_dict[mode]
 repo = "recall" if recall else "accuracy"
 
+# llm_name = "Qwen/Qwen2.5-7B-Instruct"
+# save_dir = f"./trained_model_{dataset_name}"  # The directory where you saved the model
 
-llm = LLM(
-    model=llm_model,
-    tensor_parallel_size=1,
-    dtype="half",
-    gpu_memory_utilization=0.85,  # % of memory of the gpu that KV caching will take (allows for higher "max_model_len").
-    max_logprobs=1000,
-    device=device,
-    max_model_len=30000,
-)
+# llm = LLM.from_pretrained(
+#     # model=llm_model,
+#     model=save_dir,
+#     tensor_parallel_size=1,
+#     dtype="auto",
+#     gpu_memory_utilization=0.75,  # % of memory of the gpu that KV caching will take (allows for higher "max_model_len").
+#     max_logprobs=1000,
+#     # device=device,
+#     max_model_len=30000,
+# )
+# # tokenizer = llm.get_tokenizer()
+# tokenizer = AutoTokenizer.from_pretrained(llm_name)
 
-tokenizer = llm.get_tokenizer()
+# # FINE-TUNED LLM
+# # max_memory = {0: "30GiB", 1: "30GiB"}
+# tokenizer = AutoTokenizer.from_pretrained(llm_name)
+# llm = AutoModelForCausalLM.from_pretrained(
+#   save_dir,
+#   torch_dtype="auto",
+#   device_map="auto",
+#   torch_dtype="half",
+# )
+
+
+# if save_dir:
+#     print(f"Model loaded from {save_dir}")
 
 # Path to the results
 directory = f"results/{dataset_name}/{EL_model}/{repo}"
-filename = f"{llm_subname}_k={k}_cands={number_candidates}_recall={recall}{recall_k}_true_results2.json"
-path = os.path.join(directory, filename)
+raw_directory = f"raw_results/{dataset_name}/{EL_model}/{repo}"
+filename = f"{llm_subname}_reasoning={reasoning}_k={k}_cands={number_candidates}_recall={recall}{recall_k}_version={version}.json"
+result_path = os.path.join(directory, filename)
+raw_result_path = os.path.join(raw_directory, filename)
 
 # Create the directory if it doesn't exist
 if not os.path.exists(directory):
     os.makedirs(directory)
 
-print("path :", path)
+if not os.path.exists(raw_directory):
+    os.makedirs(raw_directory)
+
+print("path to result:", result_path)
 
 results = evaluate(
     llm=llm,
@@ -390,18 +439,20 @@ results = evaluate(
     nlp_model=model,
     index=index,
     system_instructions=system_instructions,
-    mentions=mentions,
+    mentions=mentions[8500:],
     ontology=ontology2,
     corpus=corpus,
     mention2context=mention2context,
     mention2candidates=mention2candidates,
     mention2text=mention2text,
+    mention2gold=mention2gold,
     TrainMap_context2mention=TrainMap_context2mention,
     train_mention2text=train_mention2text,
     train_mention2gold=train_mention2gold,
     k=k,
+    raw_result_path=raw_result_path,
     sampling_params=sampling_params,
-    reasoning=False,
+    reasoning=reasoning,
     analysis_version=analysis_version,
     analysis=analysis,
     recall=recall,
@@ -409,7 +460,7 @@ results = evaluate(
 )
 
 
-with open(path, "w") as f:
+with open(result_path, "w") as f:
     json.dump(results, f, indent=4)
 
 if recall:
@@ -461,4 +512,4 @@ hours, rem = divmod(running_time, 3600)
 minutes, seconds = divmod(rem, 60)
 
 print(f"Script executed in: {int(hours)}h,{int(minutes)}mins,{seconds:.2f}s")
-print(f"Results saved in: {path}")
+print(f"Results saved in: {result_path}")
