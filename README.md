@@ -9,8 +9,7 @@ conda create -n llm python=3.9
 conda activate llm
 pip install -e .
 ```
-
-Results from the Entity Linking models are obtained using the BioEL package : 
+The results from the Entity Linking models are generated using the BioEL package. To reproduce these results, you need to clone the following repository:
 https://github.com/pathology-dynamics/biomedical-entity-linking/tree/main/bioel
 
 ## Example Usage: Run Inference and Evaluation on NCBI-Disease
