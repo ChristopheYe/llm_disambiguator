@@ -1,5 +1,19 @@
 # LLM as Entity Disambiguator for Biomedical Entity Linking.
 
+## Citation
+If you have found our manuscript useful in your work, please consider citing:
+> @inproceedings{ye-mitchell-2025-llm,
+    title = "{LLM} as Entity Disambiguator for Biomedical Entity-Linking",
+    author = "Ye, Christophe  and
+      Mitchell, Cassie S.",
+    booktitle = "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.acl-short.25/"
+}
+
 ## Installation
 
 In order to run this, please install the following conda environment : 
